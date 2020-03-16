@@ -49,7 +49,65 @@ class loginViewController: UIViewController {
         
         return nil
     }
+    
+    
+    @IBAction func btnLogin(_ sender: UIButton)
+        
+    {
+        guard let access = getPlist(withName: "Access") else{
+            print("no no")
+            return
+        }
+        
+        var canEnter = false
+        for (k,v) in access
+        {
+            if txtUserName.text! == k && txtPassword.text! == v
+            {
+                canEnter = true
+            }
+        }
+        if canEnter
+        {
 
+                if switchRememberMe.isOn
+                {
+                    UserDefaults.standard.set(txtUserName.text, forKey: "email")
+                    UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                    
+                    let ud = UserDefaults.standard
+                    let email = ud.string(forKey: "email")
+                    txtUserName.text = email
+                    let password = ud.string(forKey: "password")
+                    txtPassword.text = password
+                    
+                }else
+                {
+                    UserDefaults.standard.removeObject(forKey: "email")
+                    UserDefaults.standard.removeObject(forKey: "password")
+                    txtUserName.text = ""
+                    txtPassword.text = ""
+                }
+                
+           
+            
+        }
+        else
+        {
+            
+            let alertController = UIAlertController(title: "Username or Password Incorrect", message: "Please check Username or password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+        }
+        
+        
+    }
+    
     
     
 

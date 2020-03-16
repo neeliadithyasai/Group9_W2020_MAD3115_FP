@@ -26,6 +26,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgq-UL-rHk"/>
+                                    <segue destination="mgX-pF-Crz" kind="show" id="EuS-jr-hId"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dub-IC-35O">
                                 <rect key="frame" x="115" y="400" width="49" height="31"/>
@@ -59,6 +63,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hr7-kP-D8A">
+            <objects>
+                <viewController id="mgX-pF-Crz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRc-kb-wfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Jv-ct-BWa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QVB-Q0-5uJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubv-lO-hJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TrO-N0-nF8">
