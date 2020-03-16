@@ -49,6 +49,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SB7-Gx-eZu"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="jgo-0S-dCp" id="yXL-fQ-H7P"/>
+                        <outlet property="lblPassword" destination="7Ka-xw-nx2" id="o2R-wN-g0i"/>
+                        <outlet property="lblUserName" destination="4up-kZ-0LU" id="Zsn-zX-HDF"/>
+                        <outlet property="switchRememberMe" destination="Dub-IC-35O" id="fgQ-QJ-28H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
