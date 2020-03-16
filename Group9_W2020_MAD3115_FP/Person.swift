@@ -7,3 +7,24 @@
 //
 
 import Foundation
+enum Gender
+{
+    case Male,Female,Other
+}
+
+protocol Person
+{
+    var Id:String{ get}
+    var firstName:String{get }
+    var lastName:String{get}
+    var gender: Gender{get}
+    var birthDate:Date{get}
+    var age:Int{get}
+    var mobileNumber:String{get set}
+    var emailId:String{get set}
+    var userName:String{get set}
+    var password:String{get }
+    
+    func display()
+}
+
