@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="loginViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SB7-Gx-eZu"/>
+                    <navigationItem key="navigationItem" title="Login Screen" id="SB7-Gx-eZu"/>
                     <connections>
                         <outlet property="btnLogin" destination="jgo-0S-dCp" id="yXL-fQ-H7P"/>
                         <outlet property="switchRememberMe" destination="Dub-IC-35O" id="fgQ-QJ-28H"/>
