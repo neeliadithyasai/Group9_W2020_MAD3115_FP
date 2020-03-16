@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Access.plist
-   Group9_W2020_MAD3115_FP
-
-   Created by adithyasai neeli on 2020-03-15.
-   Copyright (c) 2020 adithyasai neeli. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>barryallen@gmail.com</key>
+	<string>barry@flash</string>
+	<key>joewest@gmail.com</key>
+	<string>joe$west</string>
+	<key>admin@gmail.com</key>
+	<string>admin@123</string>
+	<key>rob.s@gmail.com</key>
+	<string>ram@123</string>
+	<key>sarah@gmail.com</key>
+	<string>Sarah321</string>
+</dict>
 </plist>
