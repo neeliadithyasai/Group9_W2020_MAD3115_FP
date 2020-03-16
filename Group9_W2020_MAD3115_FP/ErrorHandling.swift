@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum validEmail: Error{
+    case invalidEmail(error : String)
+}
+enum mobileCount: Error{
+    case invalidMobile(error: String)
+}
