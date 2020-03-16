@@ -26,6 +26,9 @@
 		7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C81B241F2167005707E2 /* VehicleRent.swift */; };
 		7A24C81E241F21FB005707E2 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C81D241F21FB005707E2 /* IntExtension.swift */; };
 		7A24C820241F2215005707E2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C81F241F2215005707E2 /* StringExtension.swift */; };
+		7A24C822241F225B005707E2 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C821241F225B005707E2 /* ErrorHandling.swift */; };
+		7A24C824241F227D005707E2 /* DataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C823241F227D005707E2 /* DataRepo.swift */; };
+		7A24C826241F2290005707E2 /* dateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C825241F2290005707E2 /* dateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		7A24C81B241F2167005707E2 /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
 		7A24C81D241F21FB005707E2 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		7A24C81F241F2215005707E2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7A24C821241F225B005707E2 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		7A24C823241F227D005707E2 /* DataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepo.swift; sourceTree = "<group>"; };
+		7A24C825241F2290005707E2 /* dateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				7A24C81B241F2167005707E2 /* VehicleRent.swift */,
 				7A24C81D241F21FB005707E2 /* IntExtension.swift */,
 				7A24C81F241F2215005707E2 /* StringExtension.swift */,
+				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
+				7A24C823241F227D005707E2 /* DataRepo.swift */,
+				7A24C825241F2290005707E2 /* dateExtensions.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -184,6 +193,8 @@
 				7A24C816241F20E7005707E2 /* Car.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
 				7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */,
+				7A24C824241F227D005707E2 /* DataRepo.swift in Sources */,
+				7A24C826241F2290005707E2 /* dateExtensions.swift in Sources */,
 				7A24C810241F1FA6005707E2 /* Customer.swift in Sources */,
 				7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */,
 				7A24C820241F2215005707E2 /* StringExtension.swift in Sources */,
@@ -191,6 +202,7 @@
 				7A24C81E241F21FB005707E2 /* IntExtension.swift in Sources */,
 				7A24C80A241F1AEB005707E2 /* Person.swift in Sources */,
 				7A24C814241F20B9005707E2 /* Driver.swift in Sources */,
+				7A24C822241F225B005707E2 /* ErrorHandling.swift in Sources */,
 				7A24C80C241F1BFE005707E2 /* Vehicle.swift in Sources */,
 				7A24C7F6241F05A6005707E2 /* SceneDelegate.swift in Sources */,
 			);
