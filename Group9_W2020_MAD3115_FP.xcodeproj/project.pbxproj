@@ -18,6 +18,7 @@
 		7A24C80C241F1BFE005707E2 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C80B241F1BFE005707E2 /* Vehicle.swift */; };
 		7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C80D241F1D6E005707E2 /* DisplayDelegate.swift */; };
 		7A24C810241F1FA6005707E2 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C80F241F1FA6005707E2 /* Customer.swift */; };
+		7A24C812241F2067005707E2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C811241F2067005707E2 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7A24C80B241F1BFE005707E2 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		7A24C80D241F1D6E005707E2 /* DisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDelegate.swift; sourceTree = "<group>"; };
 		7A24C80F241F1FA6005707E2 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		7A24C811241F2067005707E2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				7A24C809241F1AEB005707E2 /* Person.swift */,
 				7A24C80B241F1BFE005707E2 /* Vehicle.swift */,
 				7A24C80F241F1FA6005707E2 /* Customer.swift */,
+				7A24C811241F2067005707E2 /* Owner.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A24C7F8241F05A6005707E2 /* loginViewController.swift in Sources */,
+				7A24C812241F2067005707E2 /* Owner.swift in Sources */,
 				7A24C810241F1FA6005707E2 /* Customer.swift in Sources */,
 				7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */,
 				7A24C7F4241F05A6005707E2 /* AppDelegate.swift in Sources */,

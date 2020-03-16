@@ -1,5 +1,5 @@
 //
-//  Customer.swift
+//  Owner.swift
 //  Group9_W2020_MAD3115_FP
 //
 //  Created by adithyasai neeli on 2020-03-15.
@@ -7,4 +7,3 @@
 //
 
 import Foundation
-
