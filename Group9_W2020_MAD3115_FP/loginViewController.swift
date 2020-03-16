@@ -10,20 +10,48 @@ import UIKit
 
 class loginViewController: UIViewController {
     
-    @IBOutlet weak var lblUserName: UITextField!
+    @IBOutlet weak var txtUserName: UITextField!
     
-    @IBOutlet weak var lblPassword: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     
     @IBOutlet weak var btnLogin: UIButton!
     
     @IBOutlet weak var switchRememberMe: UISwitch!
     
+    enum LoginError: Error{
+        case emailError, passwordError, incomplete
+    }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+         
+               let ud = UserDefaults.standard
+               let e = ud.string(forKey: "email")
+               let p = ud.string(forKey: "password")
+               
+               if let em = e {
+                   txtUserName.text = "\(em)"
+               }
+               
+               if let pa = p {
+                   txtPassword.text = "\(pa)"
+               }
+    }
+    
+    func getPlist(withName name: String) -> [String: String]?
+    {
+        if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+            let xml = FileManager.default.contents(atPath: path)
+        {
+            return (try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)) as? [String: String]
+        }
+        
+        return nil
     }
 
+    
+    
 
 }
 
