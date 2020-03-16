@@ -20,6 +20,7 @@
 		7A24C810241F1FA6005707E2 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C80F241F1FA6005707E2 /* Customer.swift */; };
 		7A24C812241F2067005707E2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C811241F2067005707E2 /* Owner.swift */; };
 		7A24C814241F20B9005707E2 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C813241F20B9005707E2 /* Driver.swift */; };
+		7A24C816241F20E7005707E2 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C815241F20E7005707E2 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7A24C80F241F1FA6005707E2 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		7A24C811241F2067005707E2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		7A24C813241F20B9005707E2 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		7A24C815241F20E7005707E2 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				7A24C80F241F1FA6005707E2 /* Customer.swift */,
 				7A24C811241F2067005707E2 /* Owner.swift */,
 				7A24C813241F20B9005707E2 /* Driver.swift */,
+				7A24C815241F20E7005707E2 /* Car.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				7A24C7F8241F05A6005707E2 /* loginViewController.swift in Sources */,
 				7A24C812241F2067005707E2 /* Owner.swift in Sources */,
+				7A24C816241F20E7005707E2 /* Car.swift in Sources */,
 				7A24C810241F1FA6005707E2 /* Customer.swift in Sources */,
 				7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */,
 				7A24C7F4241F05A6005707E2 /* AppDelegate.swift in Sources */,
