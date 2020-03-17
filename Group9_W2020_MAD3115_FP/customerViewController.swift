@@ -9,22 +9,55 @@
 import UIKit
 
 class customerViewController: UIViewController {
-
+    @IBOutlet weak var tblCustomers: UITableView!
+    
+    lazy var customerNames : [Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Customer"
 
-        // Do any additional setup after loading the view.
+        
+    }
+   
+    override func viewWillAppear(_ animated: Bool) {
+           customerNames = DataRepo.getInstance().getAllCustomers()
+           tblCustomers.reloadData()
+    
+    }
+   
+}
+
+extension customerViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:  Int) -> Int {
+        return customerNames.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+        let customer = customerNames[indexPath.row]
+        cell?.textLabel?.text = customer.fullName
+        
+        return cell!
+        
+    }
+    
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedTrail = customerNames[indexPath.row]
+//        
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        if let viewController = sb.instantiateViewController(identifier: "billDetails") as? billDetailsViewController {
+//            navigationController?.pushViewController(viewController, animated: true)
+//            viewController.customerBill = selectedTrail
+//        }
+//        
+//    }
+    
 }
+
