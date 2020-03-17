@@ -13,6 +13,7 @@ class DataRepo{
     
     private lazy var customers : [Customer] = []
     private lazy var owners : [Owner] = []
+    private lazy var drivers : [Driver] = []
     private init(){
         
     }
@@ -29,11 +30,53 @@ class DataRepo{
         return self.customers
     }
     func addowner(owner: Owner){
-           self.owners.append(owner)
-       }
-       func getAllOwners()->[Owner]{
-           return self.owners
-       }
+        self.owners.append(owner)
+    }
+    func getAllOwners()->[Owner]{
+        return self.owners
+    }
+    func addriver(driver: Driver){
+          self.drivers.append(driver)
+      }
+      func getAlldrivers()->[Driver]{
+          return self.drivers
+      }
+    
+    
+    func loadDrivers()
+       {
+        do{
+        let D1date = DateComponents( year: 1980, month: 10, day: 15)
+        let D1date1 = calendar.date(from: D1date)
+            let D1 = try Driver(Id: "D01", firstName: "Ben", lastName: "Slate", gender: Gender.Male, birthDate: D1date1!, mobileNumber: "5496467890", emailId: "slate123ben@yahoo.com", userName: "ben12345", password: "slate09", driverLicenceNumber: "DL579390375", driverHistoryClear: true, salary: 5000.0)
+                    drivers.append(D1)
+        let D2date = DateComponents( year: 1993, month: 02, day: 18)
+        let D2date1 = calendar.date(from: D2date)
+            let D2 = try Driver(Id: "D02", firstName: "Andrew", lastName: "Finn", gender: Gender.Male, birthDate: D2date1!, mobileNumber: "9823745740", emailId: "finnand@gmail.com", userName: "finnandr1", password: "andr321", driverLicenceNumber: "DL745279864760", driverHistoryClear: true, salary: 8000.0)
+        drivers.append(D2)
+            
+        let D3date = DateComponents( year: 1981, month: 06, day: 23)
+        let D3date1 = calendar.date(from: D3date)
+            let D3 = try Driver(Id: "D03", firstName: "Tina", lastName: "Stone", gender: Gender.Female, birthDate: D3date1!, mobileNumber: "6783745740", emailId: "stone67890@gmail.com", userName: "myselftina", password: "stoned", driverLicenceNumber: "DL784669374", driverHistoryClear: true, salary: 10000.0)
+      drivers.append(D3)
+         let D4date = DateComponents( year: 1995, month: 12, day: 25)
+         let D4date1 = calendar.date(from: D4date)
+            let D4 = try Driver(Id: "D04", firstName: "Sara", lastName: "Paul", gender: Gender.Female, birthDate: D4date1!, mobileNumber: "7893427310", emailId: "paulsara@icloud.com", userName: "saradriver", password: "paulst123", driverLicenceNumber: "DL780427548", driverHistoryClear: true, salary: 6000.0)
+            drivers.append(D4)
+        }
+        catch validEmail.invalidEmail(let error){
+            print("invalid email : \(error)")
+        }
+        catch mobileCount.invalidMobile(let error){
+            print("invalid mobile : \(error)")
+        }catch{
+            print("some error")
+        }
+        
+        
+    }
+    
+    
     
     
     
