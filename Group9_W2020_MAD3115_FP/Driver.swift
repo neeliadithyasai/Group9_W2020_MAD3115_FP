@@ -56,19 +56,7 @@ class Driver: Person{
     }
     
     
-    func encryption(encrypt: String) -> String {
-            let d = encrypt.data(using: .ascii)
-          
-            let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-            return str
-}
-    func decryption(decrypt: String) ->String{
-       
-        let d = decrypt.data(using: .ascii)
-        //  let a = d?.sha256()
-          let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-          return str
-    }
+   
     
     func display() {
         
@@ -82,10 +70,8 @@ class Driver: Person{
                print("\t\t\tMobile number : \(self.mobileNumber)")
                print("\t\t\tEmail Id : \(self.emailId)")
                print("\t\t\tUsername : \(self.userName)")
-               print("\t\t\tPassword : \(encryption(encrypt: password))")
-        //           if encryption(encrypt: password) == decryption(decrypt: password){
-        //           print("Original Password : \(password)")
-        //        }
+               print("\t\t\tPassword : \( password)")
+       
                print("\t\t\tDriving License number is : \(driverLicenceNumber)")
                if driverHistoryClear {
                    print("\t\t\tDriving history is clear ")

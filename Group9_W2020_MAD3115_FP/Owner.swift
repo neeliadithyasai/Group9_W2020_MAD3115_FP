@@ -60,17 +60,7 @@ class Owner : Person
         return a
     }
     
-    func encryption(encrypt: String) -> String {
-            let d = encrypt.data(using: .ascii)
-            let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-            return str
-}
-    func decryption(decrypt: String) ->String{
-       
-        let d = decrypt.data(using: .ascii)
-          let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-          return str
-    }
+   
     
     
       func display() {
@@ -83,11 +73,7 @@ class Owner : Person
                 print("\t\tMobile number : \(self.mobileNumber)")
                 print("\t\tEmail Id : \(self.emailId)")
                 print("\t\tUsername : \(self.userName)")
-                print("\t\tPassword : \(encryption(encrypt: password))")
-        //           print("Password : \(encryption(encrypt: password))")
-        //           if encryption(encrypt: password) == decryption(decrypt: password){
-        //           print("Original Password : \(password)")
-        //        }
+                print("\t\tPassword : \( password)")
                 print("\t\tCompany title : \(self.companyTitle)")
                 print("\t\tBusiness Landline number : \(self.businessLandLineNumber)")
                 print("\t\tWebsite : \(self.website)")

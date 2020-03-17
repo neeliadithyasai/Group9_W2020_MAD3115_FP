@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum validEmail: Error{
+    case invalidEmail(error : String)
+}
+enum mobileCount: Error{
+    case invalidMobile(error: String)
+}
+
 class Customer : Person
 {
    
@@ -36,13 +43,10 @@ init(Id:String,firstName:String,lastName:String,gender: Gender,birthDate:Date,mo
        self.lastName=lastName
        self.gender=gender
        self.birthDate=birthDate
-      // self.age =
-        guard   mobileNumber.count == 10 else {
-                throw mobileCount.invalidMobile(error: "\(mobileNumber)")
-        }
+
         self.mobileNumber=mobileNumber
         guard emailId.isValidEmail(email: emailId) else {
-            throw validEmail.invalidEmail(error: "\(emailId)")
+            throw validEmail.invalidEmail(error: "email")
         }
         self.emailId=emailId
        self.userName=userName
@@ -58,20 +62,7 @@ init(Id:String,firstName:String,lastName:String,gender: Gender,birthDate:Date,mo
         return a
     }
        
-    func encryption(encrypt: String) -> String {
-                    let d = encrypt.data(using: .utf8)
-                  //  let a = d?.sha256()
-                    let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-                    return str
-        }
-        
-    func decryption(decrypt: String) ->String{
-       
-        let d = decrypt.data(using: .utf8)
-        //  let a = d?.sha256()
-          let str = String(decoding: (d?.sha256())!, as: UTF8.self)
-          return str
-    }
+  
     
      func display()
       {
@@ -84,10 +75,7 @@ init(Id:String,firstName:String,lastName:String,gender: Gender,birthDate:Date,mo
            print("Mobile number :   \(self.mobileNumber)")
            print("Email Id      :   \(self.emailId)")
            print("Username      :   \(self.userName)")
-           print("Password      :   \(encryption(encrypt: password))")
-//           if encryption(encrypt: password) == decryption(decrypt: password){
-//           print("Original Password : \(password)")
-//        }
+           print("Password      :   \(password)")
            print("Address       :   \(self.address)")
            print("City          :   \(self.city)")
             for (_,v) in vehicleRent{

@@ -8,99 +8,65 @@
 
 import Foundation
 class DataRepo{
-   static private var repo = DataRepo()
-   
-    private lazy var vehicleDictionary = Dictionary<String, Vehicle>()
-    private lazy var ownerVehicle = Dictionary<String, Array<Vehicle>>()
-    private var customerList = Dictionary<String,Customer>()
-    private lazy var driverList = Dictionary<String, Driver>()
-    private lazy var customerVehicleRent = Dictionary<String, Array<VehicleRent>>()
+    static private var repo = DataRepo()
+    let calendar = Calendar.current
     
-    
-    private init() {
+    private lazy var customers : [Customer] = []
+    private init(){
         
     }
-   static func getInstance() -> DataRepo{
+    
+    
+    static func getInstance()->DataRepo{
         return repo
     }
-    func addVehicleToCustomer(customer: Customer, vehicle: Array<VehicleRent>){
-        self.customerVehicleRent.updateValue(vehicle, forKey: customer.Id)
-    }
-    func addVehicle(vehicle: Vehicle){
-        self.vehicleDictionary.updateValue(vehicle, forKey: vehicle.manufacturer_name.lowercased())
-    }
-    func getVehicle(carName: String) -> Vehicle?{
-        self.vehicleDictionary[carName]
-    }
-    func addCustomer(customer:Customer)
-    {
-        self.customerList.updateValue(customer, forKey: customer.Id)
-    }
-    func addOwnerVehicle(owner:Owner,vehicle:Array<Vehicle>)
-    {
-        self.ownerVehicle.updateValue(vehicle,forKey: owner.Id)
-    }
-    func addDriver(driver:Driver, vehicle: Vehicle){
-        self.driverList.updateValue(driver, forKey: vehicle.manufacturer_name)
-    }
-//    funcdisplayAllVehicleRent(){
-//
-//    }
     
-    
-    func displayAllVehicles()
+    func addCustomer(customer: Customer){
+        self.customers.append(customer)
+    }
+    func getAllCustomers()->[Customer]{
+        return self.customers
+    }
+    func loadCustomers()
     {
-        for (_,v) in vehicleDictionary
-        {
-          
-            v.display()
-        }
-    }
-    func displayAllRentedVehicles(){
-        for (_,v) in customerVehicleRent{
-         
-            for a in v{
-                a.display()
-            }
-        }
-    }
-    func displayAllOwners(){
-        for (_,v) in ownerVehicle
-        {
-           
-            for a in v{
-                a.display()
-         }
-    }
-}
-        
-    func displayAllCustomer(){
-        for (_,v) in customerList{
-                
-                v.display()
-            }
-        }
-   
-    func displayAllDriver(){
-        for(_,v) in driverList{
+        do{
+            let date1 = DateComponents( year: 1995, month: 07, day: 28)
+            let id1 = calendar.date(from: date1)
+            let C1 = try Customer(Id: "C001", firstName: "Adithya", lastName: "Neeli", gender: Gender.Male, birthDate: id1!, mobileNumber: "8695246488", emailId: "neeliadithyasai@gmail.com", userName: "adithya28 ", password: "Adi@123", address: "10 Grenoble Drive", city: "Toronto")
+            customers.append(C1)
             
-            v.display()
+            let date2 = DateComponents( year: 1993, month: 04, day: 21)
+            let id2 = calendar.date(from: date2)
+            let C2 = try Customer(Id: "C002", firstName: "Zach", lastName: "Knight", gender: Gender.Male, birthDate: id2!, mobileNumber: "8022345678", emailId: "zachknhigt@gmail.com", userName: "imknight ", password: "zach678", address: "10 Wynford Drive", city: "Scarborough")
+            
+            customers.append(C2)
+            
+            
+            
+            let date3 = DateComponents( year: 1998, month: 01, day: 20)
+            let id3 = calendar.date(from: date3)
+            let C3 = try Customer(Id: "C003", firstName: "Steven", lastName: "joy", gender: Gender.Male, birthDate: id3!, mobileNumber: "6543367239", emailId: "stevenjoy@gmail.com", userName: "sjoy39 ", password: "h67y3d", address: "25 Idlewilde hall", city: "Toronto")
+            customers.append(C3)
+            
+            let date4 = DateComponents( year: 1996, month: 12, day: 06)
+            let id4 = calendar.date(from: date4)
+            let C4 = try Customer(Id: "C004", firstName: "Anusuya", lastName: "pandey", gender: Gender.Female, birthDate: id4!, mobileNumber: "8695746523", emailId: "pandeyanusuya@yahoo.com", userName: "anusuya345 ", password: "anusuya12345", address: "23 Kennedy Road", city: "Richmond")
+            customers.append(C4)
+            
+            let date5 = DateComponents( year: 1998, month: 11, day: 25)
+            let id5 = calendar.date(from: date5)
+            
+            let C5 = try Customer(Id: "C005", firstName: "Ananya", lastName: "kumari", gender: Gender.Female, birthDate: id5!, mobileNumber: "7856488835", emailId: "ananyakumari@yahoo.com", userName: "ananya ", password: "anusuya12345", address: "23 Birchmount Road", city: "Kitchner")
+            customers.append(C5)
+            
         }
+        catch validEmail.invalidEmail(error: "email"){
+            print("invalid email ")
+        }
+        catch{
+            print("some error")
+        }
+        
     }
     
-    func getDriverById(Id: String){
-        for (_,v) in driverList{
-            if Id == v.Id{
-                v.display()
-            }
-        }
-    }
-    
-    func getCustomerById(Id: String){
-        for (_,v) in customerList{
-            if Id == v.Id{
-                v.display()
-            }
-        }
-    }
 }
