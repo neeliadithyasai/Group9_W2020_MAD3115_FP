@@ -14,13 +14,56 @@
                     <view key="view" contentMode="scaleToFill" id="eLR-nR-CML">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raI-GM-Vvh">
+                                <rect key="frame" x="108" y="150" width="169" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1. Display All Customers."/>
+                                <connections>
+                                    <action selector="btnDisplayAllCustomers:" destination="k3Q-Zu-vf9" eventType="touchUpInside" id="8fP-gc-Nmc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-bu-voI">
+                                <rect key="frame" x="116" y="209" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2. Display All Owners."/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-Wb-qiZ">
+                                <rect key="frame" x="116" y="275" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3. Display all Vehicles."/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-Sw-lKq">
+                                <rect key="frame" x="123" y="354" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4. Display all Drivers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2A-EJ-VRz">
+                                <rect key="frame" x="131" y="492" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="6. Calculate Fare."/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHJ-Ho-toB">
+                                <rect key="frame" x="53" y="423" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="5. Display Vehicles Rented by customers"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ey6-y3-aDk"/>
                     </view>
+                    <connections>
+                        <outlet property="btnCalculateFare" destination="u2A-EJ-VRz" id="CZ8-jf-UDX"/>
+                        <outlet property="btnDisplayAllCustomers" destination="raI-GM-Vvh" id="VHC-bN-EBa"/>
+                        <outlet property="btnDisplayAllDrivers" destination="0EO-Sw-lKq" id="FtG-fi-IeA"/>
+                        <outlet property="btnDisplayAllOwners" destination="fbX-bu-voI" id="E6k-Cn-jKo"/>
+                        <outlet property="btnDisplayAllRentedVehicles" destination="IHJ-Ho-toB" id="jUe-qA-oH3"/>
+                        <outlet property="btnDisplayAllVehicles" destination="t2B-Wb-qiZ" id="KRG-Qi-lA8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRH-fK-r43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-584"/>
+            <point key="canvasLocation" x="1165.217391304348" y="-584.59821428571422"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -81,7 +124,7 @@
         <!--Customer View Controller-->
         <scene sceneID="hr7-kP-D8A">
             <objects>
-                <viewController id="mgX-pF-Crz" customClass="customerViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerViewController" id="mgX-pF-Crz" customClass="customerViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRc-kb-wfd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
