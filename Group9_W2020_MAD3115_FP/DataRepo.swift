@@ -45,7 +45,7 @@ class DataRepo{
     func addcar(car: Vehicle){
         self.cars.append(car)
     }
-    func getAlldrivers()->[Vehicle]{
+    func getAllCars()->[Vehicle]{
         return self.cars
     }
     

@@ -33,6 +33,7 @@ class driversViewController: UIViewController {
             func numberOfSections(in tableView: UITableView) -> Int {
                 return 1
             }
+
             
             func tableView(_ tableView: UITableView, numberOfRowsInSection section:  Int) -> Int {
                 return driverNames.count
@@ -49,3 +50,4 @@ class driversViewController: UIViewController {
             
 
     }
+

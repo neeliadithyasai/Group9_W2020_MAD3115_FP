@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataRepo.getInstance().loadCustomers()
         DataRepo.getInstance().loadOwners()
          DataRepo.getInstance().loadDrivers()
+        DataRepo.getInstance().loadcars()
         return true
     }
 
