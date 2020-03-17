@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          Thread.sleep(forTimeInterval: 2.0)
         DataRepo.getInstance().loadCustomers()
         DataRepo.getInstance().loadOwners()
+         DataRepo.getInstance().loadDrivers()
         return true
     }
 

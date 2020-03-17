@@ -14,6 +14,7 @@ class DataRepo{
     private lazy var customers : [Customer] = []
     private lazy var owners : [Owner] = []
     private lazy var drivers : [Driver] = []
+    private lazy var cars : [Vehicle] = []
     private init(){
         
     }
@@ -41,6 +42,37 @@ class DataRepo{
       func getAlldrivers()->[Driver]{
           return self.drivers
       }
+    func addcar(car: Vehicle){
+        self.cars.append(car)
+    }
+    func getAlldrivers()->[Vehicle]{
+        return self.cars
+    }
+    
+    func loadcars()
+          {
+            var Car1 : Vehicle
+            Car1 = Car(vin: "WBA3A5C55CF202202", vehicle_description: "Sports Car", manufacturer_name: "Audi", is_self_drive: true, driver: "Donald", is_insured: true, insurance_provider: "Scotia Bank", seats: "5", fuel_type: Fuel.Diesel,  carType: "Sedan", carColor: "black")
+            cars.append(Car1)
+
+            var Car2 : Vehicle
+            Car2 = Car(vin: "5N1CR2MNXEC181212", vehicle_description: "perfect", manufacturer_name: "Mercedes", is_self_drive: false, driver: "Niang", is_insured: true, insurance_provider: "Allstate", seats: "7", fuel_type: Fuel.Petrol,  carType: "SUV", carColor: "white")
+           cars.append(Car2)
+
+            var Car3 : Vehicle
+            Car3 = Car(vin: "WAUUL98EX8A747315", vehicle_description: "Old", manufacturer_name: "Hyundai", is_self_drive: true, driver: "Shaun", is_insured: true, insurance_provider: "TD", seats: "5", fuel_type: Fuel.Diesel,  carType: "Hatchback", carColor: "red")
+           cars.append(Car3)
+
+            var Car4 : Vehicle
+            Car4 = Car(vin: "ZHWGU5BZ0CL457896", vehicle_description: "Comfortable", manufacturer_name: "Toyota", is_self_drive: true, driver: "Nadal", is_insured: true, insurance_provider: "Scotia", seats: "9", fuel_type: Fuel.Petrol,  carType: "MPV", carColor: "black")
+              cars.append(Car4)
+
+            var Car5 : Vehicle
+            Car5 = Car(vin: "WAU4FAFL0AA424617", vehicle_description: "Royal", manufacturer_name: "BMW", is_self_drive: false, driver: "Djokovic", is_insured: false, insurance_provider: "BMO", seats: "2", fuel_type: Fuel.Electric,  carType: "Sedan", carColor: "grey")
+            cars.append(Car5)
+
+            
+    }
     
     
     func loadDrivers()
