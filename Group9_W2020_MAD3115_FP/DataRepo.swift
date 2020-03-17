@@ -15,11 +15,11 @@ class DataRepo{
     private lazy var owners : [Owner] = []
     private lazy var drivers : [Driver] = []
     private lazy var cars : [Vehicle] = []
+    private lazy var buses : [Vehicle] = []
+     private lazy var motorcycles : [Vehicle] = []
     private init(){
         
     }
-    
-    
     static func getInstance()->DataRepo{
         return repo
     }
@@ -47,6 +47,72 @@ class DataRepo{
     }
     func getAllCars()->[Vehicle]{
         return self.cars
+    }
+    func addbus(bus: Vehicle){
+           self.buses.append(bus)
+       }
+       func getAllbuses()->[Vehicle]{
+           return self.buses
+       }
+    func addmotorcycle(motorcycle: Vehicle){
+        self.motorcycles.append(motorcycle)
+    }
+    func getAllmotorcycles()->[Vehicle]{
+        return self.motorcycles
+    }
+    
+    func loadmotorcycles()
+       {
+        var M1 : Vehicle
+        M1 = Motorcycle(vin: "ASD3245RETHFBFT6", vehicle_description: "BLACK", manufacturer_name: "Harley", is_self_drive: false, driver: "Rafael", is_insured: true, insurance_provider: "BMO", seats: "2", fuel_type: Fuel.Diesel, maxSpeed: 150, mileage: 15)
+ motorcycles.append(M1)
+  
+
+        var M2 : Vehicle
+        M2 = Motorcycle(vin: "GD57GHAHYEJHJF8J",vehicle_description:"Red", manufacturer_name: "Honda", is_self_drive: false, driver: "Heath", is_insured: true, insurance_provider: "Andrea company", seats: "2",fuel_type: Fuel.Diesel, maxSpeed: 134, mileage: 34)
+  motorcycles.append(M2)
+   
+
+        var M3 : Vehicle
+        M3 = Motorcycle(vin: "JWU63GF37HGD74H",vehicle_description:"Yellow", manufacturer_name: "KTM",is_self_drive:false, driver: "Loki", is_insured:false, insurance_provider: "Toronto Insurance", seats: "2",fuel_type: Fuel.Petrol,maxSpeed: 103, mileage : 25)
+     motorcycles.append(M3)
+      
+
+        var M4 : Vehicle
+        M4 = Motorcycle(vin:"HJEH7833HJHD7HD",vehicle_description:"Green", manufacturer_name: "Suzuki",is_self_drive:false, driver:"Rahul", is_insured: true,insurance_provider: "Mukul Inc.",seats:"2",fuel_type: .Electric,maxSpeed:120, mileage:35)
+   motorcycles.append(M4)
+    
+
+        var M5 : Vehicle
+        M5 = Motorcycle(vin:"73YEH73E3YUUIEE",vehicle_description:"Black", manufacturer_name: "Yamaha",is_self_drive:true, driver:"Steeve", is_insured:true,insurance_provider:"Canada Trust",seats:"2",fuel_type: .Diesel,maxSpeed:182,mileage:67)
+        motorcycles.append(M5)
+  
+
+        
+        
+        
+    }
+    func loadbuses()
+    {
+        var B1 : Vehicle
+        B1 = Bus(vin: "WAUCFAFH4CN679337", vehicle_description: "Spacious", manufacturer_name: "Goshen", is_self_drive: false, driver: "John", is_insured: true, insurance_provider: "TD Bank", seats: "50", fuel_type: Fuel.Diesel, busType: "Mini", accessibility_service_available: true, wifi_available: true)
+        buses.append(B1)
+
+        var B2 : Vehicle
+        B2 = Bus(vin: "WBA4B1C54FG794331", vehicle_description: "Small", manufacturer_name: "Federal", is_self_drive: false, driver: "Max", is_insured: true, insurance_provider: "Alpha insurance", seats: "77", fuel_type: Fuel.Electric, busType: "Volvo", accessibility_service_available: true, wifi_available: true)
+        buses.append(B2)
+      
+        var B3 : Vehicle
+        B3 = Bus(vin: "WBASP0C59DC982947", vehicle_description: "Large", manufacturer_name: "Champion", is_self_drive: false, driver: "Kiara", is_insured: false, insurance_provider: "ICICI", seats: "80", fuel_type: Fuel.Petrol, busType: "MiniCoach", accessibility_service_available: true, wifi_available: false)
+       buses.append(B3)
+
+        var B4 : Vehicle
+        B4 = Bus(vin: "BHA562H176716H176", vehicle_description: "Spacious", manufacturer_name: "Eldorado", is_self_drive: false, driver: "Chris", is_insured: false, insurance_provider: "Toronto group", seats: "25", fuel_type: .Electric, busType: "Volvo", accessibility_service_available: true, wifi_available: true)
+     buses.append(B4)
+
+        var B5 : Vehicle
+        B5 = Bus(vin: "NBHQWG677637HGH67", vehicle_description: "Roomy", manufacturer_name: "Krystal", is_self_drive: false, driver: "Rakesh", is_insured: false, insurance_provider: "Canada Trust", seats: "44", fuel_type: .Diesel, busType: "Mini", accessibility_service_available: false, wifi_available: true)
+     buses.append(B5)
     }
     
     func loadcars()
