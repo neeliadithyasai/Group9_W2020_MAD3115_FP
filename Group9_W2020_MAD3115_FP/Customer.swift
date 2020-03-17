@@ -8,12 +8,7 @@
 
 import Foundation
 
-enum validEmail: Error{
-    case invalidEmail(error : String)
-}
-enum mobileCount: Error{
-    case invalidMobile(error: String)
-}
+
 
 class Customer : Person
 {
@@ -43,7 +38,10 @@ init(Id:String,firstName:String,lastName:String,gender: Gender,birthDate:Date,mo
        self.lastName=lastName
        self.gender=gender
        self.birthDate=birthDate
-
+      // self.age =
+        guard   mobileNumber.count == 10 else {
+                throw mobileCount.invalidMobile(error: "\(mobileNumber)")
+        }
         self.mobileNumber=mobileNumber
         guard emailId.isValidEmail(email: emailId) else {
             throw validEmail.invalidEmail(error: "email")

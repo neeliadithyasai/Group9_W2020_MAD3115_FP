@@ -12,6 +12,7 @@ class DataRepo{
     let calendar = Calendar.current
     
     private lazy var customers : [Customer] = []
+    private lazy var owners : [Owner] = []
     private init(){
         
     }
@@ -27,6 +28,61 @@ class DataRepo{
     func getAllCustomers()->[Customer]{
         return self.customers
     }
+    func addowner(owner: Owner){
+           self.owners.append(owner)
+       }
+       func getAllCustomers()->[Owner]{
+           return self.owners
+       }
+    
+    
+    
+    func loadOwners()
+    {
+        do{
+        let O1date = DateComponents( year: 1995, month: 11, day: 20)
+        let O1date1 = calendar.date(from: O1date)
+        let O1 = try Owner(Id: "OW111", firstName: "Steve", lastName: "King", gender: Gender.Male, birthDate: O1date1!, mobileNumber: "9878678412", emailId: "kingsteve@gmail.com", userName: "iamking", password: "kings7890", companyTitle: "King Cars", businessLandLineNumber: "2227848", website: "kingcars.com")
+            
+            owners.append(O1)
+        
+
+        let O2date = DateComponents( year: 1988, month: 04, day: 12)
+        let O2date1 = calendar.date(from: O2date)
+            let O2 = try Owner(Id: "OW112", firstName: "Kelly", lastName: "Harper", gender: Gender.Female, birthDate: O2date1!, mobileNumber: "9085637265", emailId: "kellyhere@hotmail.com", userName: "kelper", password: "harpe8r33", companyTitle: "Kelly's World", businessLandLineNumber: "2834520", website: "worldofkelly.com")
+          
+            owners.append(O2)
+        let O3date = DateComponents( year: 1990, month: 08, day: 20)
+        let O3date1 = calendar.date(from: O3date)
+        let O3 = try Owner(Id: "OW113", firstName: "Roger", lastName: "Federer", gender: Gender.Male, birthDate: O3date1!, mobileNumber: "7875623402", emailId: "rf21@gmail.com", userName: "federerr", password: "swinggg", companyTitle: "Hotshot Cars", businessLandLineNumber: "597350", website: "World of cars")
+
+            owners.append(O3)
+            
+        let O4date = DateComponents( year: 1991, month: 11, day: 02)
+        let O4date1 = calendar.date(from: O4date)
+        let O4 = try Owner(Id: "OW114", firstName: "Tommy", lastName: "Shelby", gender: Gender.Male, birthDate: O4date1!, mobileNumber: "6475406638", emailId: "shelbytom@gmail.com", userName: "shelby4u", password: "cross987", companyTitle: "Shelby Enterprises", businessLandLineNumber: "984538", website: "shelbyenterprises.com")
+            owners.append(O4)
+
+        let O5date = DateComponents( year: 1992, month: 07, day: 08)
+        let O5date1 = calendar.date(from: O5date)
+        let O5 = try Owner(Id: "OW115", firstName: "Sienna", lastName: "Watson", gender: Gender.Female, birthDate: O5date1!, mobileNumber: "6475109839", emailId: "sienna78watson@gmail.com", userName: "watson90", password: "siena123", companyTitle: "Sienna Wheels", businessLandLineNumber: "983785", website: "siennaonwheels")
+            owners.append(O5)
+            
+            }catch validEmail.invalidEmail(let error){
+                print("invalid email : \(error)")
+            }
+            catch mobileCount.invalidMobile(let error){
+                print("invalid mobile : \(error)")
+            }
+        catch{
+            print("some error")
+        }
+        
+        
+        
+        
+    }
+    
     func loadCustomers()
     {
         do{
@@ -63,6 +119,9 @@ class DataRepo{
         catch validEmail.invalidEmail(error: "email"){
             print("invalid email ")
         }
+        catch mobileCount.invalidMobile(let error){
+                print("invalid mobile : \(error)")
+            }
         catch{
             print("some error")
         }
