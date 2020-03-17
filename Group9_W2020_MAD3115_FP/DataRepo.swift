@@ -31,7 +31,7 @@ class DataRepo{
     func addowner(owner: Owner){
            self.owners.append(owner)
        }
-       func getAllCustomers()->[Owner]{
+       func getAllOwners()->[Owner]{
            return self.owners
        }
     

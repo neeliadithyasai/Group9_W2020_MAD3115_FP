@@ -44,4 +44,19 @@ class mainMenuViewController: UIViewController {
     }
     
     
+    @IBAction func btnDisplayAllOwners(_ sender: Any)
+    {
+       
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+         
+         if let viewController = sb.instantiateViewController(identifier: "ownersViewController") as? ownersViewController {
+             navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+        
+    }
+    
+    
+    
+    
 }

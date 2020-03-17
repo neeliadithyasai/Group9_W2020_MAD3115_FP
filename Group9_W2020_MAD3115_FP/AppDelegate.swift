@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          Thread.sleep(forTimeInterval: 2.0)
         DataRepo.getInstance().loadCustomers()
+        DataRepo.getInstance().loadOwners()
         return true
     }
 
