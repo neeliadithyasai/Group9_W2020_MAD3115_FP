@@ -105,6 +105,13 @@ class loginViewController: UIViewController {
             
         }
         
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let viewController = sb.instantiateViewController(identifier: "mainMenuViewController") as? mainMenuViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+       
+        }
+        
         
     }
     
