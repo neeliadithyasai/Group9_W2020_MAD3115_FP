@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          Thread.sleep(forTimeInterval: 2.0)
         DataRepo.getInstance().loadCustomers()
-        DataRepo.getInstance().loadOwners()
-         DataRepo.getInstance().loadDrivers()
-        DataRepo.getInstance().loadcars()
-        DataRepo.getInstance().loadbuses()
-         DataRepo.getInstance().loadmotorcycles()
+//        DataRepo.getInstance().loadOwners()
+//         DataRepo.getInstance().loadDrivers()
+//        DataRepo.getInstance().loadcars()
+//        DataRepo.getInstance().loadbuses()
+      
         return true
     }
 
