@@ -17,6 +17,7 @@ class DataRepo{
     private lazy var buses : [Vehicle] = []
     private lazy var motorcycles : [Vehicle] = []
    private lazy var ownerVehicle = Dictionary<String, Array<Vehicle>>()
+      private lazy var driverList = Dictionary<String, Driver>()
     private init(){
         
     }
@@ -64,6 +65,9 @@ class DataRepo{
      {
          self.ownerVehicle.updateValue(vehicle,forKey: owner.Id)
      }
+    func addDriver(driver:Driver, vehicle: Vehicle){
+           self.driverList.updateValue(driver, forKey: vehicle.manufacturer_name)
+       }
  
     
     
@@ -199,7 +203,8 @@ class DataRepo{
             let O1 = try Owner(Id: "OW111", firstName: "Steve", lastName: "King", gender: Gender.Male, birthDate: O1date1!, mobileNumber: "9878678412", emailId: "kingsteve@gmail.com", userName: "iamking", password: "kings7890", companyTitle: "King Cars", businessLandLineNumber: "2227848", website: "kingcars.com")
             
             owners.append(O1)
-          addOwnerVehicle(owner: O1, vehicle: [Car1,M1,B1])
+            
+            addOwnerVehicle(owner: O1, vehicle: [Car1,M1,B1])
             O1.vehicleList = ["O1" : Car1, "02" : M1,"03" : B1]
            
             
@@ -207,23 +212,32 @@ class DataRepo{
             let O2date = DateComponents( year: 1988, month: 04, day: 12)
             let O2date1 = calendar.date(from: O2date)
             let O2 = try Owner(Id: "OW112", firstName: "Kelly", lastName: "Harper", gender: Gender.Female, birthDate: O2date1!, mobileNumber: "9085637265", emailId: "kellyhere@hotmail.com", userName: "kelper", password: "harpe8r33", companyTitle: "Kelly's World", businessLandLineNumber: "2834520", website: "worldofkelly.com")
+                 owners.append(O2)
+            addOwnerVehicle(owner: O2, vehicle: [Car2, M2, B2] )
+            O2.vehicleList = ["O1" : Car2, "02" : M2, "03" : B2]
             
-            owners.append(O2)
+       
             let O3date = DateComponents( year: 1990, month: 08, day: 20)
             let O3date1 = calendar.date(from: O3date)
             let O3 = try Owner(Id: "OW113", firstName: "Roger", lastName: "Federer", gender: Gender.Male, birthDate: O3date1!, mobileNumber: "7875623402", emailId: "rf21@gmail.com", userName: "federerr", password: "swinggg", companyTitle: "Hotshot Cars", businessLandLineNumber: "597350", website: "World of cars")
             
             owners.append(O3)
+          addOwnerVehicle(owner: O3, vehicle: [M3,Car3,B3] )
+               O3.vehicleList = ["01" : M3,"02" : Car3,"03" : B3]
             
             let O4date = DateComponents( year: 1991, month: 11, day: 02)
             let O4date1 = calendar.date(from: O4date)
             let O4 = try Owner(Id: "OW114", firstName: "Tommy", lastName: "Shelby", gender: Gender.Male, birthDate: O4date1!, mobileNumber: "6475406638", emailId: "shelbytom@gmail.com", userName: "shelby4u", password: "cross987", companyTitle: "Shelby Enterprises", businessLandLineNumber: "984538", website: "shelbyenterprises.com")
             owners.append(O4)
+            addOwnerVehicle(owner: O4, vehicle: [Car4, Car5, B4] )
+            O4.vehicleList = ["01" : Car4,"02" : Car5,"03" : B4]
             
             let O5date = DateComponents( year: 1992, month: 07, day: 08)
             let O5date1 = calendar.date(from: O5date)
             let O5 = try Owner(Id: "OW115", firstName: "Sienna", lastName: "Watson", gender: Gender.Female, birthDate: O5date1!, mobileNumber: "6475109839", emailId: "sienna78watson@gmail.com", userName: "watson90", password: "siena123", companyTitle: "Sienna Wheels", businessLandLineNumber: "983785", website: "siennaonwheels")
             owners.append(O5)
+            addOwnerVehicle(owner: O5, vehicle: [B4,M4,M5] )
+            O5.vehicleList = ["01" : M5,"02" : M5,"03" : B4]
             
             
         }
