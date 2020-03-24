@@ -47,17 +47,17 @@ extension customerViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedTrail = customerNames[indexPath.row]
-//        
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        if let viewController = sb.instantiateViewController(identifier: "billDetails") as? billDetailsViewController {
-//            navigationController?.pushViewController(viewController, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // let selectedTrail = customerNames[indexPath.row]
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let viewController = sb.instantiateViewController(identifier: "vehicleRentViewController") as? vehicleRentViewController {
+    navigationController?.pushViewController(viewController, animated: true)
 //            viewController.customerBill = selectedTrail
-//        }
-//        
-//    }
+      }
+        
+   }
     
 }
 
