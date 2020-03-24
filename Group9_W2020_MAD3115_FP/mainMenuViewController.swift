@@ -12,12 +12,7 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnDisplayAllCustomers: UIButton!
     
-    @IBOutlet weak var btnDisplayAllOwners: UIButton!
     
-    @IBOutlet weak var btnDisplayAllVehicles: UIButton!
-    
-    @IBOutlet weak var btnDisplayAllDrivers: UIButton!
-   
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     
@@ -43,43 +38,11 @@ class mainMenuViewController: UIViewController {
     }
     }
     
-    
-    @IBAction func btnDisplayAllOwners(_ sender: Any)
-    {
-       
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-         
-         if let viewController = sb.instantiateViewController(identifier: "ownersViewController") as? ownersViewController {
-             navigationController?.pushViewController(viewController, animated: true)
-        
-    }
-        
-    }
-    
-    
-    @IBAction func btnDisplayAllDrivers(_ sender: Any)
-    {
 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-             
-             if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
-                 navigationController?.pushViewController(viewController, animated: true)
-            
-        }
         
+    
        
     }
     
     
-    @IBAction func btnDisplayAllVehicles(_ sender: Any) {
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-                
-                if let viewController = sb.instantiateViewController(identifier: "VehiclesViewController") as? VehiclesViewController
-                {
-                    navigationController?.pushViewController(viewController, animated: true)
-               }
-    }
-    
-    
-}
+   
