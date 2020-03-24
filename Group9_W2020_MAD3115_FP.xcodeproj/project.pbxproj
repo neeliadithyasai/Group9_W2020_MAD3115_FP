@@ -99,6 +99,7 @@
 				7A24C7F7241F05A6005707E2 /* loginViewController.swift */,
 				7A24C8292420709C005707E2 /* mainMenuViewController.swift */,
 				7A24C82724206C38005707E2 /* customerViewController.swift */,
+				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
 				7A24C7F9241F05A6005707E2 /* Main.storyboard */,
 				7A24C7FC241F05AA005707E2 /* Assets.xcassets */,
 				7A24C7FE241F05AA005707E2 /* LaunchScreen.storyboard */,
@@ -119,7 +120,6 @@
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
-				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";

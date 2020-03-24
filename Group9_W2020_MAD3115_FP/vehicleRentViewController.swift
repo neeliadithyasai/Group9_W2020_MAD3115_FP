@@ -10,21 +10,38 @@ import UIKit
 
 class vehicleRentViewController: UIViewController {
 
+    @IBOutlet weak var tblVehicleRent: UITableView!
+    
+    @IBOutlet weak var lblVehicleRent: UILabel!
+    lazy var rentedVehicles : [VehicleRent] = []
+      var customerRents : Customer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
 
-        // Do any additional setup after loading the view.
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let id = customerRents?.Id, let fn = customerRents?.fullName, let gn = customerRents?.gender, let ag = customerRents?.age, let mn = customerRents?.mobileNumber,
+            let em = customerRents?.emailId,
+        let ad = customerRents?.address,
+            let ct = customerRents?.city
+    {
+         
+            lblVehicleRent.text = "  Customer ID          :    \(id)\n\n  Customer Name  :    \(fn)\n\n  Customer Gender   :    \(gn)\n\n  Customer Age  :    \(ag)\n\n  Customer MobileNumber  :    \(mn)\n\n  Customer EmailID  :    \(em)\n\n  Customer Address  :    \(ad)\n\n  Customer City  :    \(ct)"
+            lblVehicleRent.numberOfLines = 0
+            lblVehicleRent.font = UIFont.boldSystemFont(ofSize: 12)
+            lblVehicleRent.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            lblVehicleRent.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
