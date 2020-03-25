@@ -58,11 +58,14 @@ class mainMenuViewController: UIViewController {
     }
 extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return arrData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell : SideMenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "sideCell") as! SideMenuTableViewCell
+        cell.img.image = arrImg[indexPath.row]
+        cell.lbl.text = arrData[indexPath.row]
+        return cell
     }
     
     
