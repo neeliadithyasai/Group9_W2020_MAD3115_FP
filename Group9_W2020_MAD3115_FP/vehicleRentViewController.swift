@@ -72,15 +72,16 @@ extension vehicleRentViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "rentedCell", for: indexPath)
         //let v = rentedVehicles[indexPath.row]
-
+        
        
             for i in customerRents!.vehicleRent
-        {
-
-
-            cell.textLabel?.text = "Vehicle name        : \(i.value.vehicle)\n rent start  Date    : \(i.value.rent_start)\n rent end Date       : \(i.value.rent_end)\n distance in Km     : \(i.value.distance_km)\n total days               : \(i.value.totalDays())\n total Bill               :  \(i.value.totalBill())\n"
+            {
+                for a in i.value.vRented{
+                    
+                
+                    cell.textLabel?.text = "Vehicle name        : \(i.value.vehicle)\n rent start  Date    : \(i.value.rent_start)\n rent end Date       : \(i.value.rent_end)\n distance in Km     : \(i.value.distance_km)\n total days               : \(i.value.totalDays())\n total Bill               :  \(i.value.totalBill())\n*******Car Details******\nVehicle Vin : \(a.value.vin)\n Vehcile base rate \(a.value.base_rate)"
                       cell.textLabel?.numberOfLines = 0
-
+        }
 
         }
     
