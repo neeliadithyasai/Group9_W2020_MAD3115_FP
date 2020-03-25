@@ -59,9 +59,8 @@ init(Id:String,firstName:String,lastName:String,gender: Gender,birthDate:Date,mo
         a = a.calculateAge(birthDate: birthDate)
         return a
     }
-       
-  
     
+ 
      func display()
       {
            print("***********  CUSTOMER'S INFORMATION  ***********")
