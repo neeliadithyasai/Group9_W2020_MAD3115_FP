@@ -27,7 +27,8 @@ class addNewCustomerViewController: UIViewController {
     
     
     @IBOutlet weak var txtCustomerCity: UITextField!
-    
+    let types = ["Male","Female"]
+    var selectedType : String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,9 +45,22 @@ class addNewCustomerViewController: UIViewController {
             
             self.present(alertController, animated: true, completion: nil)
         }
+            
         
     }
     
 }
 
+}
+
+extension addNewCustomerViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
+    
+    
 }
