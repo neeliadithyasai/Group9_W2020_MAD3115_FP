@@ -35,6 +35,7 @@ class addNewCustomerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createBillPicker()
+        createDatePicker()
         createToolBar()
         
     }
@@ -58,6 +59,18 @@ class addNewCustomerViewController: UIViewController {
         
     
 }
+    func createDatePicker(){
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(addNewCustomerViewController.dateChanged(datePicker:)), for: .valueChanged)
+        txtCustomerAge.inputView = datePicker
+        
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker){
+        
+        txtCustomerAge.text = datePicker.date.formatDate()
+    }
     
     func createBillPicker(){
         let billPicker = UIPickerView()
