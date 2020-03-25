@@ -18,6 +18,7 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     
+    var arrData = ["Add New Customer", "Add new Vehicle", "Add new Driver"]
     
     @IBOutlet weak var btnDisplayAllRentedVehicles: UIButton!
     
@@ -53,6 +54,17 @@ class mainMenuViewController: UIViewController {
     
        
     }
+extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+}
     
     
    
