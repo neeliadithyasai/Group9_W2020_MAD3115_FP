@@ -96,7 +96,7 @@ class addNewCustomerViewController: UIViewController {
         toolBar.setItems([cancelButton,spaceButton,doneButton], animated: true)
         toolBar.isUserInteractionEnabled = true
         txtCustomerGender.inputAccessoryView = toolBar
-        //dateField.inputAccessoryView = toolBar
+        txtCustomerAge.inputAccessoryView = toolBar
         
     }
     @objc func dismissKeyboard(){
