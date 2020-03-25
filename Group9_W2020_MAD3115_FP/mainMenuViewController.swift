@@ -61,6 +61,19 @@ class mainMenuViewController: UIViewController {
             sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
             UIView.commitAnimations()
         }
+        else {
+            sideTblView.isHidden = true
+            sideView.isHidden = true
+            isSideViewOpen = false
+            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 414)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
+            UIView.setAnimationDuration(0.3)
+            UIView.setAnimationDelegate(self)
+            UIView.beginAnimations("TableAnimation", context: nil)
+            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 414)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
+            UIView.commitAnimations()
+        }
     }
     
 
@@ -86,6 +99,17 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         cell.img.image = arrImg[indexPath.row]
         cell.lbl.text = arrData[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+             
+             if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
+                 navigationController?.pushViewController(viewController, animated: true)
+            
+            }
+        }
     }
     
     
