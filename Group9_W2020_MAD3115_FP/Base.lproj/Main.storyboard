@@ -31,10 +31,17 @@
                                     <action selector="btnAddNewCustomer:" destination="k3Q-Zu-vf9" eventType="touchUpInside" id="1vz-e5-f4r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-BZ-fUt">
+                                <rect key="frame" x="24" y="44" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Menu"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ey6-y3-aDk"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnDisplayAllCustomers" destination="raI-GM-Vvh" id="VHC-bN-EBa"/>
                     </connections>
