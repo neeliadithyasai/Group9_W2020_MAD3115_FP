@@ -28,9 +28,9 @@ class mainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
+        sideView.isHidden = true
+        sideTblView.backgroundColor = UIColor.groupTableViewBackground
+        isSideViewOpen = false
     }
     
 
@@ -47,8 +47,20 @@ class mainMenuViewController: UIViewController {
     
     
     @IBAction func menuBtn(_ sender: UIButton) {
-        
-        
+        sideTblView.isHidden = false
+        sideView.isHidden = false
+        self.view.bringSubviewToFront(sideView)
+        if !isSideViewOpen {
+            isSideViewOpen = true
+            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 414)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
+            UIView.setAnimationDuration(0.3)
+            UIView.setAnimationDelegate(self)
+            UIView.beginAnimations("TableAnimation", context: nil)
+            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 414)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
+            UIView.commitAnimations()
+        }
     }
     
 
