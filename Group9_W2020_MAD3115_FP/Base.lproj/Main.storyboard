@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raI-GM-Vvh">
-                                <rect key="frame" x="245" y="145" width="169" height="30"/>
+                                <rect key="frame" x="264" y="145" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1. Display All Customers."/>
                                 <connections>
@@ -37,7 +37,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sideCell" rowHeight="65" id="myH-UX-ZE4">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sideCell" rowHeight="65" id="myH-UX-ZE4" customClass="SideMenuTableViewCell" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="240" height="65"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="myH-UX-ZE4" id="DKL-Je-Xsj">
@@ -57,8 +57,16 @@
                                                         </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="img" destination="8tg-mQ-Xlc" id="Nva-jj-qAv"/>
+                                                    <outlet property="lbl" destination="PIh-aa-Y37" id="A7o-Zr-D60"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="k3Q-Zu-vf9" id="pua-IQ-lee"/>
+                                            <outlet property="delegate" destination="k3Q-Zu-vf9" id="Mke-jH-R5W"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,6 +87,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnDisplayAllCustomers" destination="raI-GM-Vvh" id="VHC-bN-EBa"/>
+                        <outlet property="sideTblView" destination="wnf-NX-qNf" id="phO-7D-VxW"/>
+                        <outlet property="sideView" destination="TGL-DK-6of" id="Xwq-eF-UDM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRH-fK-r43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

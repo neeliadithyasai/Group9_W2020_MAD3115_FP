@@ -12,7 +12,9 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnDisplayAllCustomers: UIButton!
     
+    @IBOutlet weak var sideView: UIView!
     
+    @IBOutlet weak var sideTblView: UITableView!
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     

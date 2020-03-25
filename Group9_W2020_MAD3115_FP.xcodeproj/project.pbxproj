@@ -33,6 +33,7 @@
 		7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8292420709C005707E2 /* mainMenuViewController.swift */; };
 		7A24C89A2429C033005707E2 /* vehicleRentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8992429C033005707E2 /* vehicleRentViewController.swift */; };
 		7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */; };
+		E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		7A24C8292420709C005707E2 /* mainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenuViewController.swift; sourceTree = "<group>"; };
 		7A24C8992429C033005707E2 /* vehicleRentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicleRentViewController.swift; sourceTree = "<group>"; };
 		7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCustomerViewController.swift; sourceTree = "<group>"; };
+		E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				7A24C7F5241F05A6005707E2 /* SceneDelegate.swift */,
 				7A24C7F7241F05A6005707E2 /* loginViewController.swift */,
 				7A24C8292420709C005707E2 /* mainMenuViewController.swift */,
+				E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */,
 				7A24C82724206C38005707E2 /* customerViewController.swift */,
 				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
 				7A24C7F9241F05A6005707E2 /* Main.storyboard */,
@@ -206,6 +209,7 @@
 				7A24C816241F20E7005707E2 /* Car.swift in Sources */,
 				7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
+				E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */,
 				7A24C82824206C38005707E2 /* customerViewController.swift in Sources */,
 				7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */,
 				7A24C824241F227D005707E2 /* DataRepo.swift in Sources */,
