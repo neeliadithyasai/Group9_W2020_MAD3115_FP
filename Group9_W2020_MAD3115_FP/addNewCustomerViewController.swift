@@ -31,7 +31,8 @@ class addNewCustomerViewController: UIViewController {
     var selectedType : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createBillPicker()
+        createToolBar()
         
     }
     
@@ -48,8 +49,36 @@ class addNewCustomerViewController: UIViewController {
             
         
     }
+        
     
 }
+    
+    func createBillPicker(){
+        let billPicker = UIPickerView()
+        billPicker.delegate = self
+        txtCustomerGender.inputView = billPicker
+        billPicker.backgroundColor = .white
+    }
+    func createToolBar(){
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(addNewCustomerViewController.dismissKeyboard))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(addNewCustomerViewController.cancelClick))
+        toolBar.setItems([cancelButton,spaceButton,doneButton], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        txtCustomerGender.inputAccessoryView = toolBar
+        //dateField.inputAccessoryView = toolBar
+        
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    @objc func cancelClick(){
+        txtCustomerGender.resignFirstResponder()
+        //dateField.resignFirstResponder()
+    }
 
 }
 
