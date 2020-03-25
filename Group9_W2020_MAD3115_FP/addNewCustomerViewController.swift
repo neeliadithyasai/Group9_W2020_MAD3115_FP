@@ -51,10 +51,18 @@ class addNewCustomerViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else{
-            DataRepo.getInstance().addCustomer(customer: Customer(Id: id, firstName: fn, lastName: ln, gender: gen, birthDate: <#T##Date#>, mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+            do{
+            if gen == "Male"{
+                DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+            }
+            else{
+                DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+            }
+            }catch {
+                print("Unrecognised Error")
             }
             
-        
+            }
     }
         
     
@@ -69,7 +77,7 @@ class addNewCustomerViewController: UIViewController {
     
     @objc func dateChanged(datePicker: UIDatePicker){
         
-        txtCustomerAge.text = datePicker.date.formatDate()
+        txtCustomerAge.text = datePicker.date.formatToDate()
     }
     
     func createBillPicker(){
@@ -96,7 +104,7 @@ class addNewCustomerViewController: UIViewController {
     }
     @objc func cancelClick(){
         txtCustomerGender.resignFirstResponder()
-        //dateField.resignFirstResponder()
+        txtCustomerAge.resignFirstResponder()
     }
 
 }

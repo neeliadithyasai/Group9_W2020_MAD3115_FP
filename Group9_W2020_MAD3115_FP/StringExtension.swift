@@ -17,5 +17,13 @@ extension String
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
+    func toDate(withFormat format: String = "EEEE, dd MMMM, yyyy") -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        guard let date = dateFormatter.date(from: self) else {
+            preconditionFailure("Wrong format")
+        }
+        return date
+    }
 
 }
