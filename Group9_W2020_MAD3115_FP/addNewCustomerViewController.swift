@@ -57,6 +57,7 @@ class addNewCustomerViewController: UIViewController {
             }
             else{
                 DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+                self.navigationController?.popViewController(animated: true)
             }
             }catch {
                 print("Unrecognised Error")
