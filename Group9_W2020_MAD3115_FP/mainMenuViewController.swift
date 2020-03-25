@@ -16,6 +16,8 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var sideTblView: UITableView!
     
+    var isSideViewOpen : Bool = false
+    
     @IBOutlet weak var btnCalculateFare: UIButton!
     
     var arrData = ["Add New Customer", "Add new Vehicle", "Add new Driver"]
@@ -41,6 +43,12 @@ class mainMenuViewController: UIViewController {
              navigationController?.pushViewController(viewController, animated: true)
         
     }
+    }
+    
+    
+    @IBAction func menuBtn(_ sender: UIButton) {
+        
+        
     }
     
 
