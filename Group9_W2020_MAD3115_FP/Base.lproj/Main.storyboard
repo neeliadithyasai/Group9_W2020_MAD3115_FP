@@ -112,7 +112,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-V3-bFQ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-V3-bFQ">
                                 <rect key="frame" x="20" y="148" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,7 +157,7 @@
                                     <action selector="saveCustomer:" destination="fKO-Kx-mhe" eventType="touchUpInside" id="yyR-I4-b1H"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MR-0z-E1O">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MR-0z-E1O">
                                 <rect key="frame" x="20" y="212" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -180,6 +180,7 @@
                         <outlet property="txtCustomerEmailId" destination="e9g-oS-Avv" id="tfk-ot-B4E"/>
                         <outlet property="txtCustomerGender" destination="Aea-R8-6f1" id="0Xu-PK-3Zj"/>
                         <outlet property="txtCustomerId" destination="QYL-YN-vjA" id="Z8l-t8-iRR"/>
+                        <outlet property="txtCustomerLastName" destination="8MR-0z-E1O" id="Wpe-9M-ttl"/>
                         <outlet property="txtCustomerMobileNumber" destination="CSJ-Uy-m44" id="YmR-30-5OM"/>
                         <outlet property="txtCustomerName" destination="Gad-V3-bFQ" id="Ze4-Dw-29Z"/>
                     </connections>

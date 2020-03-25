@@ -14,6 +14,9 @@ class addNewCustomerViewController: UIViewController {
     
     @IBOutlet weak var txtCustomerName: UITextField!
     
+    
+    @IBOutlet weak var txtCustomerLastName: UITextField!
+    
     @IBOutlet weak var txtCustomerGender: UITextField!
     
     @IBOutlet weak var txtCustomerAge: UITextField!
@@ -37,9 +40,9 @@ class addNewCustomerViewController: UIViewController {
     }
     
     @IBAction func saveCustomer(_ sender: UIButton) {
-        if let id = txtCustomerId.text, let fn = txtCustomerName.text , let gen = txtCustomerGender.text, let age = txtCustomerAge.text, let mob = txtCustomerMobileNumber.text, let em = txtCustomerEmailId.text , let address = txtCustomerAddress.text, let city = txtCustomerCity.text
+        if let id = txtCustomerId.text, let fn = txtCustomerName.text,let ln = txtCustomerLastName.text , let gen = txtCustomerGender.text, let age = txtCustomerAge.text, let mob = txtCustomerMobileNumber.text, let em = txtCustomerEmailId.text , let address = txtCustomerAddress.text, let city = txtCustomerCity.text
             
-        { if id == "" || fn == "" || gen == "" || age == "" || mob == "" || em == "" || address == "" || city == "" {
+        { if id == "" || fn == "" || ln == "" || gen == "" || age == "" || mob == "" || em == "" || address == "" || city == "" {
             let alertController = UIAlertController(title: "ERROR", message:
                 "Incomplete Form", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
@@ -47,7 +50,7 @@ class addNewCustomerViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else{
-            DataRepo.getInstance().addCustomer(customer: Customer(Id: id, firstName: <#T##String#>, lastName: <#T##String#>, gender: <#T##Gender#>, birthDate: <#T##Date#>, mobileNumber: <#T##String#>, emailId: <#T##String#>, userName: <#T##String#>, password: <#T##String#>, address: <#T##String#>, city: <#T##String#>))
+            DataRepo.getInstance().addCustomer(customer: Customer(Id: id, firstName: fn, lastName: ln, gender: gen, birthDate: <#T##Date#>, mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
             }
             
         
