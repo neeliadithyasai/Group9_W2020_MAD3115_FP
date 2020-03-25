@@ -10,6 +10,24 @@ import UIKit
 
 class addNewCustomerViewController: UIViewController {
 
+    @IBOutlet weak var txtCustomerId: UITextField!
+    
+    @IBOutlet weak var txtCustomerName: UITextField!
+    
+    @IBOutlet weak var txtCustomerGender: UITextField!
+    
+    @IBOutlet weak var txtCustomerAge: UITextField!
+    
+    
+    @IBOutlet weak var txtCustomerMobileNumber: UITextField!
+    
+    @IBOutlet weak var txtCustomerEmailId: UITextField!
+    
+    @IBOutlet weak var txtCustomerAddress: UITextField!
+    
+    
+    @IBOutlet weak var txtCustomerCity: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
