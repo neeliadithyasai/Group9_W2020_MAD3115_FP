@@ -31,6 +31,22 @@ class addNewCustomerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    @IBAction func saveCustomer(_ sender: UIButton) {
+        if let id = txtCustomerId.text, let fn = txtCustomerName.text , let gen = txtCustomerGender.text, let age = txtCustomerAge.text, let mob = txtCustomerMobileNumber.text, let em = txtCustomerEmailId.text , let address = txtCustomerAddress.text, let city = txtCustomerCity.text
+            
+        { if id == "" || fn == "" || gen == "" || age == "" || mob == "" || em == "" || address == "" || city == "" {
+            let alertController = UIAlertController(title: "ERROR", message:
+                "Incomplete Form", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+    
+}
+
 }
