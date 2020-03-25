@@ -46,6 +46,9 @@ class addNewCustomerViewController: UIViewController {
             
             self.present(alertController, animated: true, completion: nil)
         }
+        else{
+            DataRepo.getInstance().addCustomer(customer: Customer(Id: id, firstName: <#T##String#>, lastName: <#T##String#>, gender: <#T##Gender#>, birthDate: <#T##Date#>, mobileNumber: <#T##String#>, emailId: <#T##String#>, userName: <#T##String#>, password: <#T##String#>, address: <#T##String#>, city: <#T##String#>))
+            }
             
         
     }
