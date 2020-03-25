@@ -32,6 +32,7 @@
 		7A24C82824206C38005707E2 /* customerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C82724206C38005707E2 /* customerViewController.swift */; };
 		7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8292420709C005707E2 /* mainMenuViewController.swift */; };
 		7A24C89A2429C033005707E2 /* vehicleRentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8992429C033005707E2 /* vehicleRentViewController.swift */; };
+		7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		7A24C82724206C38005707E2 /* customerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customerViewController.swift; sourceTree = "<group>"; };
 		7A24C8292420709C005707E2 /* mainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenuViewController.swift; sourceTree = "<group>"; };
 		7A24C8992429C033005707E2 /* vehicleRentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicleRentViewController.swift; sourceTree = "<group>"; };
+		7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCustomerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
+				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */,
 				7A24C824241F227D005707E2 /* DataRepo.swift in Sources */,
 				7A24C826241F2290005707E2 /* dateExtensions.swift in Sources */,
+				7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */,
 				7A24C810241F1FA6005707E2 /* Customer.swift in Sources */,
 				7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */,
 				7A24C820241F2215005707E2 /* StringExtension.swift in Sources */,

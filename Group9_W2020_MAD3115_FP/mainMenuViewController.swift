@@ -39,7 +39,15 @@ class mainMenuViewController: UIViewController {
     }
     
 
+    @IBAction func btnAddNewCustomer(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+         
+         if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
+             navigationController?.pushViewController(viewController, animated: true)
         
+        }
+    }
+    
     
        
     }
