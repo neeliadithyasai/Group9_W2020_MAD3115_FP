@@ -10,6 +10,26 @@ import UIKit
 
 class AddOwnerViewController: UIViewController {
 
+    @IBOutlet weak var ownerId: UITextField!
+    
+    @IBOutlet weak var ownerFirstName: UITextField!
+    
+    @IBOutlet weak var ownerLastName: UITextField!
+    
+    @IBOutlet weak var ownerGender: UITextField!
+    
+    @IBOutlet weak var ownerMobile: UITextField!
+    
+    @IBOutlet weak var ownerBirthdate: UITextField!
+    
+    @IBOutlet weak var ownerEmail: UITextField!
+    
+    @IBOutlet weak var ownerCompany: UITextField!
+    
+    @IBOutlet weak var ownerLandline: UITextField!
+    
+    @IBOutlet weak var ownerWebsite: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

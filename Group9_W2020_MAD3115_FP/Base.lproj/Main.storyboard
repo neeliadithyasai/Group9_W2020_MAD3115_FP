@@ -582,10 +582,10 @@
             </objects>
             <point key="canvasLocation" x="4324.6376811594209" y="-600"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Owner View Controller-->
         <scene sceneID="6tq-EM-bon">
             <objects>
-                <viewController id="u3N-x6-cGk" sceneMemberID="viewController">
+                <viewController id="u3N-x6-cGk" customClass="AddOwnerViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0BO-ln-krW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,6 +602,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnM-u2-DMw">
+                                <rect key="frame" x="224" y="171" width="170" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Gneder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kZ-kM-bKe">
                                 <rect key="frame" x="20" y="322" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -610,12 +616,6 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMJ-hz-MHF">
                                 <rect key="frame" x="224" y="322" width="170" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnM-u2-DMw">
-                                <rect key="frame" x="224" y="171" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -650,10 +650,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-kN-foY">
+                                <rect key="frame" x="142" y="716" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="uRS-WL-NzC"/>
                     </view>
+                    <connections>
+                        <outlet property="ownerBirthdate" destination="M3e-5r-UF8" id="rju-Ud-SyK"/>
+                        <outlet property="ownerCompany" destination="smy-kv-ILz" id="Yhi-4F-GBj"/>
+                        <outlet property="ownerEmail" destination="f5w-CC-YuB" id="ksi-hU-B8m"/>
+                        <outlet property="ownerFirstName" destination="tHx-AW-SRK" id="p26-g4-iem"/>
+                        <outlet property="ownerGender" destination="2kZ-kM-bKe" id="Bn7-gC-yuy"/>
+                        <outlet property="ownerId" destination="Ora-Fg-TEF" id="Yyu-RE-TX7"/>
+                        <outlet property="ownerLandline" destination="ezj-iY-n0v" id="U2h-Ur-GUX"/>
+                        <outlet property="ownerLastName" destination="WnM-u2-DMw" id="0qS-M9-ZZW"/>
+                        <outlet property="ownerMobile" destination="gMJ-hz-MHF" id="CeL-9L-blI"/>
+                        <outlet property="ownerWebsite" destination="MNk-82-vUH" id="rRW-M2-cnh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flo-t9-0hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
