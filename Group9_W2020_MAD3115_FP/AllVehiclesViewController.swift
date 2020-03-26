@@ -17,8 +17,22 @@ class AllVehiclesViewController: UIViewController {
     let segmentedControl : UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Cars","Motorcycles","Buses"])
         sc.selectedSegmentIndex = 0
+        sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
         return sc
     }()
+    
+    @objc func handleSegmentChange(){
+        switch segmentedControl.selectedSegmentIndex{
+        case 0 :
+            rowsToDisplay = cars
+        case 1 :
+            rowsToDisplay = motorcycles
+        case 2 :
+            rowsToDisplay = buses
+            
+            
+        }
+    }
     
     let tableView = UITableView(frame: .zero, style: .plain)
     
