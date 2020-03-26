@@ -102,6 +102,14 @@ class mainMenuViewController: UIViewController {
         
     }
     
+    @IBAction func btnDisplayAllVehicles(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = sb.instantiateViewController(identifier: "allVehiclesVC") as? AllVehiclesViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    
     
     
 }

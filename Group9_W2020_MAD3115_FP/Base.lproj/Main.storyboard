@@ -86,6 +86,9 @@
                                 <rect key="frame" x="163" y="736" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Vehicles"/>
+                                <connections>
+                                    <action selector="btnDisplayAllVehicles:" destination="k3Q-Zu-vf9" eventType="touchUpInside" id="EQx-XT-0xM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
