@@ -28,7 +28,7 @@ class mainMenuViewController: UIViewController {
     lazy var owners : [Person] = []
     
     let segmentedControl : UISegmentedControl = {
-           let sc = UISegmentedControl(items: ["customers","drivers","owners"])
+           let sc = UISegmentedControl(items: ["Customers","Drivers","Owners"])
            sc.selectedSegmentIndex = 0
            sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
            return sc
