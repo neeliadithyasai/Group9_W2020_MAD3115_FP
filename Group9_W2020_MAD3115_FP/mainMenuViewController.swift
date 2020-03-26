@@ -68,10 +68,16 @@ class mainMenuViewController: UIViewController {
         
         view.addSubview(stackView)
         stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        sideView.isHidden = true
         customers = DataRepo.getInstance().getAllCustomers()
         drivers = DataRepo.getInstance().getAlldrivers()
         owners = DataRepo.getInstance().getAllOwners()
+        tableView.reloadData()
     }
+    
     
     
     @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
