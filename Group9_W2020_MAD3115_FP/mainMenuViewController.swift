@@ -20,7 +20,7 @@ class mainMenuViewController: UIViewController {
     
     
     
-    var arrData = ["Display All Customers","Add New Customer", "Add new Driver", "Add new Owner","Contact Us","About Us", "Logout"]
+    var arrData = ["Display All Vehicles","Add New Customer", "Add new Driver", "Add new Owner","Contact Us","About Us", "Logout"]
     var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
     
     lazy var customers : [Person] = []
@@ -204,7 +204,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         else if indexPath.row == 0{
             let sb = UIStoryboard(name: "Main", bundle: nil)
 
-            if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+            if let viewController = sb.instantiateViewController(identifier: "allVehiclesVC") as? AllVehiclesViewController {
                 navigationController?.pushViewController(viewController, animated: true)
             }
         }

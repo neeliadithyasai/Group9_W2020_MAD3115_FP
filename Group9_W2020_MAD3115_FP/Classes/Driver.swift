@@ -34,7 +34,7 @@ class Driver: Person{
         self.lastName = lastName
         self.gender = gender
         self.birthDate = birthDate
-        guard   mobileNumber.count == 10 else {
+        guard mobileNumber.count == 10 else {
                 throw mobileCount.invalidMobile(error: "\(mobileNumber)")
         }
         self.mobileNumber = mobileNumber

@@ -65,3 +65,43 @@ class SharedViewController: UIViewController {
     }
 
 }
+
+extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (customer?.Id) != nil {
+        return (customer?.vehicleRent.count)!
+     }
+//        else  (owner?.Id) != nil{
+        else{
+            return (owner?.vehicleList.count)!
+        }
+//        else {
+//            return (driver?.)
+//        }
+}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sharedCell", for: indexPath)
+        cell.textLabel?.text = "abc"
+        if (customer?.Id) != nil{
+            
+                //let v = rentedVehicles[indexPath.row]
+                
+               
+                    for i in customer!.vehicleRent
+                    {
+                        for a in i.value.vRented{
+                            
+                        
+                            cell.textLabel?.text = "Vehicle name        : \(i.value.vehicle)\n rent start  Date    : \(i.value.rent_start)\n rent end Date       : \(i.value.rent_end)\n distance in Km     : \(i.value.distance_km)\n total days               : \(i.value.totalDays())\n total Bill               :  \(i.value.totalBill())\n*******Car Details******\nVehicle Insurance Number : \(a.value.vin)\nDescription : \(a.value.vehicle_description)\nManufacturer : \(a.value.manufacturer_name)\nDriver : \(a.value.driver)\nInsurance Provider : \(a.value.insurance_provider)\nNumber of seats : \(a.value.seats)\nCar Seats : \(a.value.seats)\nFuel Type : \(a.value.fuel_type)\nBase Rate : \(a.value.base_rate)\nRate per Km : \(a.value.rate_per_km)"
+                              cell.textLabel?.numberOfLines = 0
+                }
+            }
+            
+                return cell
+        }
+        else {
+            return cell
+        }
+    }
+    
+}
