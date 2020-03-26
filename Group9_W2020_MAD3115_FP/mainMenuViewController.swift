@@ -161,7 +161,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         if tableView == sideTblView{
         let cell : SideMenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "sideCell") as! SideMenuTableViewCell
         cell.img.image = arrImg[indexPath.row]
@@ -176,56 +176,62 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 2{
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//            if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
-//                navigationController?.pushViewController(viewController, animated: true)
-//
-//            }
-//        }
-//        if indexPath.row == 1{
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//            if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
-//                navigationController?.pushViewController(viewController, animated: true)
-//
-//            }
-//        }
-//        else if indexPath.row == 0{
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//            if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
-//                navigationController?.pushViewController(viewController, animated: true)
-//            }
-//        }
-//        else if indexPath.row == 3{
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//            if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
-//                navigationController?.pushViewController(viewController, animated: true)
-//            }
-//        }
-//        else if indexPath.row == 4{
-//                let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//                if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
-//                    navigationController?.pushViewController(viewController, animated: true)
-//                }
-//            }
-//        else if indexPath.row == 6{
-//            let alert = UIAlertController(title: "Logged Out", message: "Session Over", preferredStyle: .alert)
-//            let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
-//                (_)in
-//                self.navigationController?.popViewController(animated: true)
-//            })
-//
-//            alert.addAction(OKAction)
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//    }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == sideTblView{
+        
+        if indexPath.row == 2{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+
+            if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+
+            }
+        }
+        if indexPath.row == 1{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+
+            if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+
+            }
+        }
+        else if indexPath.row == 0{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+
+            if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+        else if indexPath.row == 3{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+
+            if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+        else if indexPath.row == 4{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+
+                if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+        else if indexPath.row == 6{
+            let alert = UIAlertController(title: "Logged Out", message: "Session Over", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+                (_)in
+                self.navigationController?.popViewController(animated: true)
+            })
+
+            alert.addAction(OKAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    else {
+        
+            
+    }
+    }
     
 }
 
