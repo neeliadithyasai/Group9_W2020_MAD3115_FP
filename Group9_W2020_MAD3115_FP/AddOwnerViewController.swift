@@ -52,9 +52,11 @@ class AddOwnerViewController: UIViewController {
                     do{
                         if gen == "Male"{
                             DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                            self.navigationController?.popViewController(animated: true)
                     }
                         else {
                             DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                            self.navigationController?.popViewController(animated: true)
                         }
                         
                     }catch {

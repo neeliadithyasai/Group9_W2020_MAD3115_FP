@@ -52,9 +52,11 @@ class AddDriverViewController: UIViewController {
             do{
                 if gen == "Male"{
                     DataRepo.getInstance().addriver(driver: try Driver(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", driverLicenceNumber: license, driverHistoryClear: true, salary: Double(salary)!))
+                    self.navigationController?.popViewController(animated: true)
             }
                 else {
                     DataRepo.getInstance().addriver(driver: try Driver(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", driverLicenceNumber: license, driverHistoryClear: true, salary: Double(salary)!))
+                    self.navigationController?.popViewController(animated: true)
                 }
                 
             }catch {

@@ -54,6 +54,7 @@ class addNewCustomerViewController: UIViewController {
             do{
             if gen == "Male"{
                 DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+                self.navigationController?.popViewController(animated: true)
             }
             else{
                 DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
