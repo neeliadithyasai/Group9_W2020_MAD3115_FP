@@ -20,8 +20,8 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     
-    var arrData = ["Add New Customer", "Add new Vehicle", "Add new Driver"]
-    var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
+    var arrData = ["Display All Customers","Add New Customer", "Add new Vehicle", "Add new Driver"]
+    var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
     
     
     @IBOutlet weak var btnDisplayAllRentedVehicles: UIButton!
@@ -102,12 +102,20 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
+        if indexPath.row == 1{
             let sb = UIStoryboard(name: "Main", bundle: nil)
              
              if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
                  navigationController?.pushViewController(viewController, animated: true)
             
+            }
+        }
+        else if indexPath.row == 0{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+                 
+                 if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+                     navigationController?.pushViewController(viewController, animated: true)
+                
             }
         }
     }
