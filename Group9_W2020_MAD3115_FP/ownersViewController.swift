@@ -40,19 +40,23 @@ class ownersViewController: UIViewController {
            
            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                let cell = tableView.dequeueReusableCell(withIdentifier: "ownerCell")
-              // let owner = ownerNames[indexPath.row]
-           
-            for i in ownerNames
-            {
-                cell?.textLabel?.text = "Full name : \(i.fullName)\n Gender : \(i.gender)\n Age: \(i.age)\n Mobile number : \(i.mobileNumber)\n Email Id : \(i.emailId)\n Username : \(i.userName)\n Password : \(i.password)\n Company title : \(i.companyTitle)\n Business Landline number : \(i.businessLandLineNumber)\n Website : \(i.website) "
-                cell?.textLabel?.numberOfLines = 0
-                
-            }
-              
-               
-               return cell!
+               let owner = ownerNames[indexPath.row]
+ 
+              cell?.textLabel?.text = owner.fullName
+              return cell!
                
            }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let selectedTrail = ownerNames[indexPath.row]
+             
+             let sb = UIStoryboard(name: "Main", bundle: nil)
+             
+             if let viewController = sb.instantiateViewController(identifier: "ownerDetailsViewController") as? ownerDetailsViewController {
+         navigationController?.pushViewController(viewController, animated: true)
+                viewController.ownerDetails = selectedTrail
+           }
+             
+        }
            
 
    }
