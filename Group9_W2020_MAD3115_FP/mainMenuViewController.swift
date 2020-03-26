@@ -156,6 +156,13 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                 navigationController?.pushViewController(viewController, animated: true)
             }
         }
+        else if indexPath.row == 4{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
         else if indexPath.row == 6{
             let alert = UIAlertController(title: "Logged Out", message: "Session Over", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
