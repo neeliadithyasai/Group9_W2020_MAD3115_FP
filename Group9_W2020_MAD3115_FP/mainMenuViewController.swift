@@ -10,7 +10,7 @@ import UIKit
 
 class mainMenuViewController: UIViewController {
     
-    @IBOutlet weak var btnDisplayAllCustomers: UIButton!
+    
     
     @IBOutlet weak var sideView: UIView!
     
@@ -18,14 +18,14 @@ class mainMenuViewController: UIViewController {
     
     var isSideViewOpen : Bool = false
     
-    @IBOutlet weak var btnCalculateFare: UIButton!
+    
     
     var arrData = ["Display All Customers","Add New Customer", "Add new Driver", "Add new Vehicle","Contact Us","About Us", "Logout"]
     var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
-
     
     
-    @IBOutlet weak var btnDisplayAllRentedVehicles: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class mainMenuViewController: UIViewController {
         isSideViewOpen = false
     }
     
-
+    
     @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
         sideTblView.isHidden = false
         sideView.isHidden = false
@@ -66,9 +66,44 @@ class mainMenuViewController: UIViewController {
         }
         
     }
-
-       
+    
+    
+    @IBAction func btnDisplayAllOwners(_ sender: Any) {
+        
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let viewController = sb.instantiateViewController(identifier: "ownersViewController") as? ownersViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+            
+        }
+        
     }
+    
+    @IBAction func btnDisplayAllCustomers(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func btnDisplayAllDrivers(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+            
+        }
+        
+        
+    }
+    
+    
+    
+}
 extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrData.count
@@ -83,32 +118,32 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2{
-                  let sb = UIStoryboard(name: "Main", bundle: nil)
-                   
-                   if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
-                       navigationController?.pushViewController(viewController, animated: true)
-                  
-                  }
-              }
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                
+            }
+        }
         if indexPath.row == 1{
             let sb = UIStoryboard(name: "Main", bundle: nil)
-             
-             if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
-                 navigationController?.pushViewController(viewController, animated: true)
             
+            if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                
             }
         }
         else if indexPath.row == 0{
             let sb = UIStoryboard(name: "Main", bundle: nil)
-                 
-                 if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
-                     navigationController?.pushViewController(viewController, animated: true)
+            
+            if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
             }
         }
     }
     
     
 }
-    
-    
-   
+
+
+
