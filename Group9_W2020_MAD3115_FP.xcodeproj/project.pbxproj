@@ -41,6 +41,7 @@
 		E4001DA5242C817300C3DCFE /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */; };
 		E4001DA7242C87C000C3DCFE /* AddOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */; };
 		E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */; };
+		E4C11ADD242D1CC100374351 /* SegmentLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADC242D1CC100374351 /* SegmentLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDriverViewController.swift; sourceTree = "<group>"; };
 		E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOwnerViewController.swift; sourceTree = "<group>"; };
 		E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVehiclesViewController.swift; sourceTree = "<group>"; };
+		E4C11ADC242D1CC100374351 /* SegmentLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
+				E4C11ADC242D1CC100374351 /* SegmentLayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				7A24C961242C744A004B1C7D /* driverDetailsViewController.swift in Sources */,
 				7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
+				E4C11ADD242D1CC100374351 /* SegmentLayout.swift in Sources */,
 				E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */,
 				E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */,
 				E4001DA7242C87C000C3DCFE /* AddOwnerViewController.swift in Sources */,

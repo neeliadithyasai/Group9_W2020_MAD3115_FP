@@ -12,12 +12,23 @@ class AllVehiclesViewController: UIViewController {
 
     let segmentedControl : UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Cars","Motorcycles","Buses"])
-    }
+        return sc
+    }()
+    
+    let tableView = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        navigationItem.title = "All Vehicles"
+        
+        let stackView = UIStackView(arrangedSubviews: [segmentedControl,tableView])
+        stackView.axis = .vertical
+        
+        view.addSubview(stackView)
+        stackView.anchor(top: <#T##NSLayoutYAxisAnchor?#>, leading: <#T##NSLayoutXAxisAnchor?#>, bottom: <#T##NSLayoutYAxisAnchor?#>, trailing: <#T##NSLayoutXAxisAnchor?#>, padding: <#T##UIEdgeInsets#>, size: <#T##CGSize#>)
+        
+        
     }
     
 
