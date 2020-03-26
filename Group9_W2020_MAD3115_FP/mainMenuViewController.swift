@@ -35,15 +35,7 @@ class mainMenuViewController: UIViewController {
     
 
 
-    @IBAction func btnDisplayAllCustomers(_ sender: Any) {
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-         
-         if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
-             navigationController?.pushViewController(viewController, animated: true)
-        
-    }
-    }
+
     
     
     @IBAction func menuBtn(_ sender: UIButton) {
@@ -77,14 +69,6 @@ class mainMenuViewController: UIViewController {
     }
     
 
-    @IBAction func btnAddNewCustomer(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-         
-         if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
-             navigationController?.pushViewController(viewController, animated: true)
-        
-        }
-    }
     
     
        
