@@ -585,7 +585,7 @@
         <!--Add Owner View Controller-->
         <scene sceneID="6tq-EM-bon">
             <objects>
-                <viewController id="u3N-x6-cGk" customClass="AddOwnerViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addOwnerVC" id="u3N-x6-cGk" customClass="AddOwnerViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0BO-ln-krW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

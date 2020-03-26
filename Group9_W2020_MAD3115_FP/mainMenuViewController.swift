@@ -20,7 +20,7 @@ class mainMenuViewController: UIViewController {
     
     
     
-    var arrData = ["Display All Customers","Add New Customer", "Add new Driver", "Add new Vehicle","Contact Us","About Us", "Logout"]
+    var arrData = ["Display All Customers","Add New Customer", "Add new Driver", "Add new Owner","Contact Us","About Us", "Logout"]
     var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
     
     
@@ -138,6 +138,13 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
             if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+        else if indexPath.row == 3{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
                 navigationController?.pushViewController(viewController, animated: true)
             }
         }
