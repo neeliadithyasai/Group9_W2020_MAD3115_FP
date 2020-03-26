@@ -35,6 +35,7 @@
 		7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */; };
 		7A24C95B242C5BEC004B1C7D /* driversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C95A242C5BEC004B1C7D /* driversViewController.swift */; };
 		7A24C95D242C6092004B1C7D /* ownersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C95C242C6092004B1C7D /* ownersViewController.swift */; };
+		7A24C961242C744A004B1C7D /* driverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */; };
 		E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCustomerViewController.swift; sourceTree = "<group>"; };
 		7A24C95A242C5BEC004B1C7D /* driversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driversViewController.swift; sourceTree = "<group>"; };
 		7A24C95C242C6092004B1C7D /* ownersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ownersViewController.swift; sourceTree = "<group>"; };
+		7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverDetailsViewController.swift; sourceTree = "<group>"; };
 		E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				7A24C82724206C38005707E2 /* customerViewController.swift */,
 				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
 				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
+				7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */,
 				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
 				7A24C95C242C6092004B1C7D /* ownersViewController.swift */,
 				7A24C7F9241F05A6005707E2 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 				7A24C89A2429C033005707E2 /* vehicleRentViewController.swift in Sources */,
 				7A24C812241F2067005707E2 /* Owner.swift in Sources */,
 				7A24C816241F20E7005707E2 /* Car.swift in Sources */,
+				7A24C961242C744A004B1C7D /* driverDetailsViewController.swift in Sources */,
 				7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
 				E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */,
