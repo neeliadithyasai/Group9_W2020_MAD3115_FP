@@ -130,6 +130,7 @@
 				E4C11AD5242D0C4B00374351 /* Classes */,
 				E4C11AD6242D0CCB00374351 /* Extensions */,
 				E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */,
+				7A24C823241F227D005707E2 /* DataRepo.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -157,7 +158,6 @@
 				7A24C81D241F21FB005707E2 /* IntExtension.swift */,
 				7A24C81F241F2215005707E2 /* StringExtension.swift */,
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
-				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
 				E4C11ADC242D1CC100374351 /* SegmentLayout.swift */,
 			);

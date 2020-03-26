@@ -10,12 +10,18 @@ import UIKit
 
 class AllVehiclesViewController: UIViewController {
 
+    lazy var cars : [Vehicle] = []
+    lazy var motorcycles : [Vehicle] = []
+    lazy var buses : [Vehicle] = []
+    
     let segmentedControl : UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Cars","Motorcycles","Buses"])
+        sc.selectedSegmentIndex = 0
         return sc
     }()
     
     let tableView = UITableView(frame: .zero, style: .plain)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,9 @@ class AllVehiclesViewController: UIViewController {
         
         view.addSubview(stackView)
         stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
+        cars = DataRepo.getInstance().getAllCars()
+        motorcycles = DataRepo.getInstance().getAllmotorcycles()
+        buses = DataRepo.getInstance().getAllbuses()
     }
     
 
