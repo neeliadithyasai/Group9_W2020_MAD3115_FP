@@ -82,6 +82,11 @@
                                     <action selector="btnDisplayAllDrivers:" destination="k3Q-Zu-vf9" eventType="touchUpInside" id="fEI-ek-OrP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AU-sT-ym3">
+                                <rect key="frame" x="163" y="736" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vehicles"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ey6-y3-aDk"/>
@@ -492,7 +497,7 @@
         <!--All Vehicles View Controller-->
         <scene sceneID="dbh-bH-30y">
             <objects>
-                <viewController id="7NH-Lk-864" customClass="AllVehiclesViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allVehiclesVC" id="7NH-Lk-864" customClass="AllVehiclesViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VfR-Wu-tPl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
