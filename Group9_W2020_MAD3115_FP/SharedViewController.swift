@@ -36,6 +36,19 @@ class SharedViewController: UIViewController {
             lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             lblPerson.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
+        
+        else if let id = driver?.Id, let fn = driver?.fullName, let gn = driver?.gender, let ag = driver?.age, let hc = driver?.driverHistoryClear, let ln = driver?.driverLicenceNumber,
+        let em = driver?.emailId, let mn = driver?.mobileNumber,  let sl = driver?.salary, let un = driver?.userName, let pw = driver?.password {
+           
+              lblPerson.text =  "Driver Id: \(id)\n Driver FullName: \(fn)\n Driver Gender: \(gn)\n Driver Age: \(ag)\n Driver History Clear: \(hc)\n   Driver License no:  \(ln)\n Driver EmailId:  \(em)\n Driver Mobilenumber: \(mn)\n  Driver Salary:  \(sl)\n Driver UserName: \(un)\n Driver Password: \(pw)"
+              lblPerson.numberOfLines = 0
+              lblPerson.font = UIFont.boldSystemFont(ofSize: 12)
+              lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+              lblPerson.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+          
+          
+          }
+
 
     }
 
