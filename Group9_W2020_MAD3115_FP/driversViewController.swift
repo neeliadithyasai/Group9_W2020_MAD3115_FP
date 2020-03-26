@@ -40,9 +40,13 @@ class driversViewController: UIViewController {
             
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
-                let driver = driverNames[indexPath.row]
-                cell?.textLabel?.text = driver.fullName
+                //let driver = driverNames[indexPath.row]
                 
+                for i in driverNames
+                {
+                    cell?.textLabel?.text = "Driver Id: \(i.Id)\n Driver FullName: \(i.fullName)\n Driver Gender: \(i.gender)\n Driver Age: \(i.age)\n Driver History Clear: \(i.driverHistoryClear)\n   Driver License no:  \(i.driverLicenceNumber)\n Driver EmailId:  \(i.emailId)\n Driver Mobilenumber: \(i.mobileNumber)\n  Driver Salary:  \(i.salary)\n Driver UserName: \(i.userName)\n Driver Password: \(i.password)"
+                    cell?.textLabel?.numberOfLines = 0
+                }
                 return cell!
                 
             }
