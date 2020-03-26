@@ -20,8 +20,12 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     
-    var arrData = ["Display All Customers","Add New Customer","Add new Driver", "Add new Vehicle" ]
-    var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
+
+
+
+    var arrData = ["Display All Customers","Add New Customer", "Add new Driver","Add new Vehicle","Contact Us","About Us", "Logout"]
+    var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
+
     
     
     @IBOutlet weak var btnDisplayAllRentedVehicles: UIButton!
