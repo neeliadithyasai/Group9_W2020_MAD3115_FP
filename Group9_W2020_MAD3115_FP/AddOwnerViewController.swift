@@ -65,4 +65,63 @@ class AddOwnerViewController: UIViewController {
             
         }
     }
+    func createDatePicker(){
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(addNewCustomerViewController.dateChanged(datePicker:)), for: .valueChanged)
+        ownerBirthdate.inputView = datePicker
+        
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker){
+        
+        ownerBirthdate.text = datePicker.date.formatToDate()
+    }
+    
+    func createBillPicker(){
+        let billPicker = UIPickerView()
+        billPicker.delegate = self
+        ownerGender.inputView = billPicker
+        billPicker.backgroundColor = .white
+    }
+    func createToolBar(){
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(addNewCustomerViewController.dismissKeyboard))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(addNewCustomerViewController.cancelClick))
+        toolBar.setItems([cancelButton,spaceButton,doneButton], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        ownerGender.inputAccessoryView = toolBar
+        ownerBirthdate.inputAccessoryView = toolBar
+        
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    @objc func cancelClick(){
+        ownerGender.resignFirstResponder()
+        ownerBirthdate.resignFirstResponder()
+    }
+}
+
+extension AddOwnerViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return types.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return types[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedType = types[row]
+        ownerGender.text = selectedType
+    }
+    
+    
 }
