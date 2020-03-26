@@ -27,23 +27,25 @@ class AllVehiclesViewController: UIViewController {
             rowsToDisplay = cars
         case 1 :
             rowsToDisplay = motorcycles
-        case 2 :
+        default :
             rowsToDisplay = buses
-            
-            
         }
+        tableView.reloadData()
     }
     
     let tableView = UITableView(frame: .zero, style: .plain)
-    
+    lazy var rowsToDisplay = cars
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.title = "All Vehicles"
+        let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
+        paddedStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
+        paddedStackView.isLayoutMarginsRelativeArrangement = true
         tableView.dataSource = self
         tableView.delegate = self
-        let stackView = UIStackView(arrangedSubviews: [segmentedControl,tableView])
+        let stackView = UIStackView(arrangedSubviews: [paddedStackView,tableView])
         stackView.axis = .vertical
         
         view.addSubview(stackView)
@@ -68,12 +70,12 @@ class AllVehiclesViewController: UIViewController {
 
 extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cars.count
+        return rowsToDisplay.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let c = cars[indexPath.row]
+        let c = rowsToDisplay[indexPath.row]
         cell.textLabel?.text = c.manufacturer_name
         return cell
     }
