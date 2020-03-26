@@ -88,7 +88,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Main Page" id="FnD-Dj-6cT">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Sk3-EX-5we">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="icons8-menu-50" id="Sk3-EX-5we">
                             <connections>
                                 <action selector="barMenuBtn:" destination="k3Q-Zu-vf9" id="sMs-bk-hWX"/>
                             </connections>
@@ -683,4 +683,7 @@
             <point key="canvasLocation" x="5150.7246376811599" y="-600"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu-50" width="50" height="50"/>
+    </resources>
 </document>
