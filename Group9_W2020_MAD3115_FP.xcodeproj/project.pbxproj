@@ -40,6 +40,7 @@
 		E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */; };
 		E4001DA5242C817300C3DCFE /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */; };
 		E4001DA7242C87C000C3DCFE /* AddOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */; };
+		E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDriverViewController.swift; sourceTree = "<group>"; };
 		E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOwnerViewController.swift; sourceTree = "<group>"; };
+		E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVehiclesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				7A24C807241F120E005707E2 /* Access.plist */,
 				E4C11AD5242D0C4B00374351 /* Classes */,
 				E4C11AD6242D0CCB00374351 /* Extensions */,
+				E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
 				E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */,
+				E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */,
 				E4001DA7242C87C000C3DCFE /* AddOwnerViewController.swift in Sources */,
 				7A24C82824206C38005707E2 /* customerViewController.swift in Sources */,
 				7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */,

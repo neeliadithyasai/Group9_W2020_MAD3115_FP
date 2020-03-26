@@ -489,6 +489,21 @@
             </objects>
             <point key="canvasLocation" x="3179.7101449275365" y="-1274.3303571428571"/>
         </scene>
+        <!--All Vehicles View Controller-->
+        <scene sceneID="dbh-bH-30y">
+            <objects>
+                <viewController id="7NH-Lk-864" customClass="AllVehiclesViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VfR-Wu-tPl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wOd-Yz-DbN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zo3-Ge-hjz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4310" y="-1242"/>
+        </scene>
         <!--Add Driver View Controller-->
         <scene sceneID="5oE-Xy-FPW">
             <objects>
