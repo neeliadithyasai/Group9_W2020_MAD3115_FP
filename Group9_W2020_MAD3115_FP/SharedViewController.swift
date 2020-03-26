@@ -67,6 +67,22 @@ class SharedViewController: UIViewController {
 }
 
 extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        if (section == 0) {
+            headerView.backgroundColor = UIColor.systemRed
+        } else {
+            headerView.backgroundColor = UIColor.clear
+        }
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (customer?.Id) != nil {
         return (customer?.vehicleRent.count)!
