@@ -118,6 +118,7 @@
 				7A24C82724206C38005707E2 /* customerViewController.swift */,
 				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
 				E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */,
+				E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */,
 				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
 				7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */,
 				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
@@ -143,7 +144,6 @@
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
-				E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";

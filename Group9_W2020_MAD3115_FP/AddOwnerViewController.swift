@@ -29,22 +29,40 @@ class AddOwnerViewController: UIViewController {
     @IBOutlet weak var ownerLandline: UITextField!
     
     @IBOutlet weak var ownerWebsite: UITextField!
+    let types = ["Male","Female"]
+    var selectedType : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createBillPicker()
+        createDatePicker()
+        createToolBar()
     }
-    
+ 
+    @IBAction func saveOwner(_ sender: UIButton) {
+        if let id = ownerId.text, let fn = ownerFirstName.text,let ln = ownerLastName.text , let gen = ownerGender.text, let bd = ownerBirthdate.text, let mob = ownerMobile.text, let em = ownerEmail.text , let company = ownerCompany.text, let landline = ownerLandline.text, let website = ownerWebsite.text
+                { if id == "" || fn == "" || ln == "" || gen == "" || bd == "" || mob == "" || em == "" || company == "" || landline == "" ||  website == "" {
+                    let alertController = UIAlertController(title: "ERROR", message:
+                        "Incomplete Form", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                else{
+                    do{
+                        if gen == "Male"{
+                            DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                    }
+                        else {
+                            DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                        }
+                        
+                    }catch {
+                        print("Unrecognised Error")
+                    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                }
+            
+        }
     }
-    */
-
 }
