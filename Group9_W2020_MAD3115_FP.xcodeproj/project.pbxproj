@@ -38,6 +38,7 @@
 		7A24C961242C744A004B1C7D /* driverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */; };
 		7AF5E5BA242C79E80042019C /* ownerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF5E5B9242C79E80042019C /* ownerDetailsViewController.swift */; };
 		E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */; };
+		E4001DA5242C817300C3DCFE /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driverDetailsViewController.swift; sourceTree = "<group>"; };
 		7AF5E5B9242C79E80042019C /* ownerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ownerDetailsViewController.swift; sourceTree = "<group>"; };
 		E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDriverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */,
 				7A24C82724206C38005707E2 /* customerViewController.swift */,
 				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
+				E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */,
 				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
 				7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */,
 				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
@@ -230,6 +233,7 @@
 				7A24C824241F227D005707E2 /* DataRepo.swift in Sources */,
 				7A24C826241F2290005707E2 /* dateExtensions.swift in Sources */,
 				7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */,
+				E4001DA5242C817300C3DCFE /* AddDriverViewController.swift in Sources */,
 				7A24C810241F1FA6005707E2 /* Customer.swift in Sources */,
 				7A24C80E241F1D6E005707E2 /* DisplayDelegate.swift in Sources */,
 				7A24C820241F2215005707E2 /* StringExtension.swift in Sources */,

@@ -489,10 +489,10 @@
             </objects>
             <point key="canvasLocation" x="3179.7101449275365" y="-1274.3303571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Driver View Controller-->
         <scene sceneID="5oE-Xy-FPW">
             <objects>
-                <viewController id="q1g-bv-DDD" sceneMemberID="viewController">
+                <viewController id="q1g-bv-DDD" customClass="AddDriverViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2d-3l-ctu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,14 +552,31 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFz-vE-cbH">
-                                <rect key="frame" x="184" y="632" width="46" height="30"/>
+                                <rect key="frame" x="172" y="632" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.90980392160000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDriver:" destination="q1g-bv-DDD" eventType="touchUpInside" id="lER-Qp-VL1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="Aa4-V1-wl7"/>
                     </view>
+                    <connections>
+                        <outlet property="driverBirthDate" destination="V41-5y-aEZ" id="wQt-8R-WVU"/>
+                        <outlet property="driverEmail" destination="biA-9r-h3n" id="LyG-4r-AP6"/>
+                        <outlet property="driverFirstName" destination="Nwv-1C-jtd" id="LPH-Hr-5aY"/>
+                        <outlet property="driverGender" destination="Thn-7g-aea" id="gXu-dF-z4B"/>
+                        <outlet property="driverId" destination="yNU-k0-RIl" id="8bv-qu-tts"/>
+                        <outlet property="driverLastName" destination="4gr-Bc-ETT" id="lpR-OH-DbG"/>
+                        <outlet property="driverLicense" destination="mFA-Ai-vL6" id="4dh-Mj-UbL"/>
+                        <outlet property="driverMobile" destination="3f9-mv-OE0" id="NFZ-xm-1nx"/>
+                        <outlet property="driverSalary" destination="FCG-jP-kaj" id="DYS-RR-NqM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bc-B3-r7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
