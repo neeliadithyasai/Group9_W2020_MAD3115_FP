@@ -209,7 +209,7 @@ class DataRepo{
             let O4date = DateComponents( year: 1991, month: 11, day: 02)
             let O4date1 = calendar.date(from: O4date)
             let O4 = try Owner(Id: "OW114", firstName: "Tommy", lastName: "Shelby", gender: Gender.Male, birthDate: O4date1!, mobileNumber: "6475406638", emailId: "shelbytom@gmail.com", userName: "shelby4u", password: "cross987", companyTitle: "Shelby Enterprises", businessLandLineNumber: "984538", website: "shelbyenterprises.com")
-            owners.append(O4)
+            
             addOwnerVehicle(owner: O4, vehicle: [Car4, Car5, B4] )
             O4.vehicleList = ["01" : Car4,"02" : Car5,"03" : B4]
              owners.append(O4)

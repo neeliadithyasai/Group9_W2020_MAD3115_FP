@@ -103,7 +103,6 @@ class mainMenuViewController: UIViewController {
             sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
             UIView.commitAnimations()
         }
-        
     }
     
     
@@ -172,7 +171,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         else {
             let cell = UITableViewCell()
             let c = rowsToDisplay[indexPath.row]
-            cell.textLabel?.text = c.firstName
+            cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
             return cell
         }
     }
@@ -180,37 +179,37 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if indexPath.row == 2{
 //            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            
+//
 //            if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
 //                navigationController?.pushViewController(viewController, animated: true)
-//                
+//
 //            }
 //        }
 //        if indexPath.row == 1{
 //            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            
+//
 //            if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
 //                navigationController?.pushViewController(viewController, animated: true)
-//                
+//
 //            }
 //        }
 //        else if indexPath.row == 0{
 //            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            
+//
 //            if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
 //                navigationController?.pushViewController(viewController, animated: true)
 //            }
 //        }
 //        else if indexPath.row == 3{
 //            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            
+//
 //            if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
 //                navigationController?.pushViewController(viewController, animated: true)
 //            }
 //        }
 //        else if indexPath.row == 4{
 //                let sb = UIStoryboard(name: "Main", bundle: nil)
-//                
+//
 //                if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
 //                    navigationController?.pushViewController(viewController, animated: true)
 //                }
@@ -221,7 +220,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
 //                (_)in
 //                self.navigationController?.popViewController(animated: true)
 //            })
-//            
+//
 //            alert.addAction(OKAction)
 //            self.present(alert, animated: true, completion: nil)
 //        }
