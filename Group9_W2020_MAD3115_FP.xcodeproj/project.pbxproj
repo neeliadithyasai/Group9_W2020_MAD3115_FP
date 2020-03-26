@@ -115,20 +115,23 @@
 				7A24C7F7241F05A6005707E2 /* loginViewController.swift */,
 				7A24C8292420709C005707E2 /* mainMenuViewController.swift */,
 				E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */,
-				7A24C82724206C38005707E2 /* customerViewController.swift */,
-				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
-				E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */,
-				E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */,
-				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
-				7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */,
-				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
-				7A24C95C242C6092004B1C7D /* ownersViewController.swift */,
-				7AF5E5B9242C79E80042019C /* ownerDetailsViewController.swift */,
+				E4C11AD9242D0D4700374351 /* Customer View Controllers */,
+				E4C11AD7242D0D0700374351 /* Driver View Controllers */,
+				E4C11AD8242D0D2100374351 /* Owner View Controllers */,
 				7A24C7F9241F05A6005707E2 /* Main.storyboard */,
 				7A24C7FC241F05AA005707E2 /* Assets.xcassets */,
 				7A24C7FE241F05AA005707E2 /* LaunchScreen.storyboard */,
 				7A24C801241F05AA005707E2 /* Info.plist */,
 				7A24C807241F120E005707E2 /* Access.plist */,
+				E4C11AD5242D0C4B00374351 /* Classes */,
+				E4C11AD6242D0CCB00374351 /* Extensions */,
+			);
+			path = Group9_W2020_MAD3115_FP;
+			sourceTree = "<group>";
+		};
+		E4C11AD5242D0C4B00374351 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 				7A24C80D241F1D6E005707E2 /* DisplayDelegate.swift */,
 				7A24C809241F1AEB005707E2 /* Person.swift */,
 				7A24C80F241F1FA6005707E2 /* Customer.swift */,
@@ -139,13 +142,50 @@
 				7A24C817241F212A005707E2 /* Bus.swift */,
 				7A24C819241F2145005707E2 /* Motorcycle.swift */,
 				7A24C81B241F2167005707E2 /* VehicleRent.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E4C11AD6242D0CCB00374351 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				7A24C81D241F21FB005707E2 /* IntExtension.swift */,
 				7A24C81F241F2215005707E2 /* StringExtension.swift */,
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
 			);
-			path = Group9_W2020_MAD3115_FP;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4C11AD7242D0D0700374351 /* Driver View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
+				7A24C960242C744A004B1C7D /* driverDetailsViewController.swift */,
+				E4001DA4242C817300C3DCFE /* AddDriverViewController.swift */,
+			);
+			path = "Driver View Controllers";
+			sourceTree = "<group>";
+		};
+		E4C11AD8242D0D2100374351 /* Owner View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A24C95C242C6092004B1C7D /* ownersViewController.swift */,
+				7AF5E5B9242C79E80042019C /* ownerDetailsViewController.swift */,
+				E4001DA6242C87C000C3DCFE /* AddOwnerViewController.swift */,
+			);
+			path = "Owner View Controllers";
+			sourceTree = "<group>";
+		};
+		E4C11AD9242D0D4700374351 /* Customer View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A24C82724206C38005707E2 /* customerViewController.swift */,
+				7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */,
+				7A24C8992429C033005707E2 /* vehicleRentViewController.swift */,
+			);
+			path = "Customer View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
