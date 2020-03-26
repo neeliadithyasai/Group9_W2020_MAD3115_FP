@@ -75,7 +75,7 @@ extension contactUsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let c = rowsToDisplay[indexPath.row]
-        cell.textLabel?.text = c.
+        cell.textLabel?.text = c.firstName
         return cell
     }
     
