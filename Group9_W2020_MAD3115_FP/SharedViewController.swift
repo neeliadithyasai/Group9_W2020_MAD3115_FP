@@ -10,6 +10,10 @@ import UIKit
 
 class SharedViewController: UIViewController {
 
+    var customer : Customer?
+    var owner : Owner?
+    var driver : Driver?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -228,7 +228,37 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         }
     }
     else {
-        
+            if segmentedControl.selectedSegmentIndex == 0 {
+        let selectedTrail = customers[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+        navigationController?.pushViewController(viewController, animated: true)
+                viewController.customer = selectedTrail as? Customer
+          }
+        }
+            else if segmentedControl.selectedSegmentIndex == 1{
+                let selectedTrail = drivers[indexPath.row]
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                        viewController.driver = selectedTrail as? Driver
+                  }
+
+            }
+            else{
+                let selectedTrail = owners[indexPath.row]
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                        viewController.owner = selectedTrail as? Owner
+                  }
+            }
             
     }
     }

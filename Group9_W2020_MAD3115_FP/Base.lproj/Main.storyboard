@@ -10,7 +10,7 @@
         <!--Shared View Controller-->
         <scene sceneID="n32-gU-kiW">
             <objects>
-                <viewController id="9Da-PN-qVh" customClass="SharedViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sharedVC" id="9Da-PN-qVh" customClass="SharedViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CgZ-Oj-Z2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
