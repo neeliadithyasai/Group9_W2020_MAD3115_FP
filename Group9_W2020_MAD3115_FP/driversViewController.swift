@@ -2,7 +2,7 @@
 //  driversViewController.swift
 //  Group9_W2020_MAD3115_FP
 //
-//  Created by adithyasai neeli on 2020-03-17.
+//  Created by adithyasai neeli on 2020-03-25.
 //  Copyright © 2020 adithyasai neeli. All rights reserved.
 //
 
@@ -11,8 +11,7 @@ import UIKit
 class driversViewController: UIViewController {
 
     @IBOutlet weak var tblDrivers: UITableView!
-    
-          lazy var driverNames : [Driver] = []
+    lazy var driverNames : [Driver] = []
             override func viewDidLoad() {
                 super.viewDidLoad()
                 self.navigationItem.title = "Drivers"
@@ -50,4 +49,3 @@ class driversViewController: UIViewController {
             
 
     }
-

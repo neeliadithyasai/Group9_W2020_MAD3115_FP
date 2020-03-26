@@ -20,7 +20,7 @@ class mainMenuViewController: UIViewController {
     
     @IBOutlet weak var btnCalculateFare: UIButton!
     
-    var arrData = ["Display All Customers","Add New Customer", "Add new Vehicle", "Add new Driver"]
+    var arrData = ["Display All Customers","Add New Customer","Add new Driver", "Add new Vehicle" ]
     var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
     
     
@@ -81,6 +81,14 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 2{
+                  let sb = UIStoryboard(name: "Main", bundle: nil)
+                   
+                   if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
+                       navigationController?.pushViewController(viewController, animated: true)
+                  
+                  }
+              }
         if indexPath.row == 1{
             let sb = UIStoryboard(name: "Main", bundle: nil)
              

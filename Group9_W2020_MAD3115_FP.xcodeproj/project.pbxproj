@@ -33,6 +33,7 @@
 		7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8292420709C005707E2 /* mainMenuViewController.swift */; };
 		7A24C89A2429C033005707E2 /* vehicleRentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8992429C033005707E2 /* vehicleRentViewController.swift */; };
 		7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */; };
+		7A24C95B242C5BEC004B1C7D /* driversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24C95A242C5BEC004B1C7D /* driversViewController.swift */; };
 		E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		7A24C8292420709C005707E2 /* mainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenuViewController.swift; sourceTree = "<group>"; };
 		7A24C8992429C033005707E2 /* vehicleRentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehicleRentViewController.swift; sourceTree = "<group>"; };
 		7A24C8BD242B29F3005707E2 /* addNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCustomerViewController.swift; sourceTree = "<group>"; };
+		7A24C95A242C5BEC004B1C7D /* driversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driversViewController.swift; sourceTree = "<group>"; };
 		E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				7A24C821241F225B005707E2 /* ErrorHandling.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7A24C825241F2290005707E2 /* dateExtensions.swift */,
+				7A24C95A242C5BEC004B1C7D /* driversViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				7A24C81E241F21FB005707E2 /* IntExtension.swift in Sources */,
 				7A24C80A241F1AEB005707E2 /* Person.swift in Sources */,
 				7A24C814241F20B9005707E2 /* Driver.swift in Sources */,
+				7A24C95B242C5BEC004B1C7D /* driversViewController.swift in Sources */,
 				7A24C822241F225B005707E2 /* ErrorHandling.swift in Sources */,
 				7A24C80C241F1BFE005707E2 /* Vehicle.swift in Sources */,
 				7A24C7F6241F05A6005707E2 /* SceneDelegate.swift in Sources */,
