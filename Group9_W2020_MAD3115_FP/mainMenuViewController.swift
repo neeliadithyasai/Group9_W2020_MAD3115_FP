@@ -51,6 +51,7 @@ class mainMenuViewController: UIViewController {
             sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
             UIView.commitAnimations()
         }
+            
         else {
             sideTblView.isHidden = true
             sideView.isHidden = true
