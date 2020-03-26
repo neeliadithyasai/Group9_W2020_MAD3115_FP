@@ -25,7 +25,9 @@ class loginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-         
+                navigationItem.backBarButtonItem = UIBarButtonItem(
+                    title: "Logout", style: .plain, target: nil, action: nil)
+        
                let ud = UserDefaults.standard
                let e = ud.string(forKey: "email")
                let p = ud.string(forKey: "password")
@@ -80,7 +82,6 @@ class loginViewController: UIViewController {
                     txtUserName.text = email
                     let password = ud.string(forKey: "password")
                     txtPassword.text = password
-                    
                 }else
                 {
                     UserDefaults.standard.removeObject(forKey: "email")
@@ -88,9 +89,7 @@ class loginViewController: UIViewController {
                     txtUserName.text = ""
                     txtPassword.text = ""
                 }
-                
-           
-            
+                performSegue(withIdentifier: "segue", sender: self)
         }
         else
         {
@@ -100,18 +99,15 @@ class loginViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-            
-            
-            
         }
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let viewController = sb.instantiateViewController(identifier: "mainMenuViewController") as? mainMenuViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-            
-          
-        }
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        if let viewController = sb.instantiateViewController(identifier: "mainMenuViewController") as? mainMenuViewController {
+//            navigationController?.pushViewController(viewController, animated: true)
+//            
+//          
+//        }
         
         
     }

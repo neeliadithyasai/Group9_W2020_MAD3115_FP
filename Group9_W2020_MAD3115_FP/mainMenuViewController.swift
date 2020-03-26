@@ -28,17 +28,14 @@ class mainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         sideView.isHidden = true
         sideTblView.backgroundColor = UIColor.groupTableViewBackground
         isSideViewOpen = false
     }
     
 
-
-
-    
-    
-    @IBAction func menuBtn(_ sender: UIButton) {
+    @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
         sideTblView.isHidden = false
         sideView.isHidden = false
         self.view.bringSubviewToFront(sideView)
@@ -66,11 +63,9 @@ class mainMenuViewController: UIViewController {
             sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
             UIView.commitAnimations()
         }
+        
     }
-    
 
-    
-    
        
     }
 extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
@@ -99,7 +94,6 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                  
                  if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
                      navigationController?.pushViewController(viewController, animated: true)
-                
             }
         }
     }
