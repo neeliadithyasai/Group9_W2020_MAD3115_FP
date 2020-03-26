@@ -27,7 +27,8 @@ class AllVehiclesViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.title = "All Vehicles"
-        
+        tableView.dataSource = self
+        tableView.delegate = self
         let stackView = UIStackView(arrangedSubviews: [segmentedControl,tableView])
         stackView.axis = .vertical
         
@@ -49,4 +50,19 @@ class AllVehiclesViewController: UIViewController {
     }
     */
 
+}
+
+extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let c = cars[indexPath.row]
+        cell.textLabel?.text = c.manufacturer_name
+        return cell
+    }
+    
+    
 }
