@@ -121,7 +121,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 2{
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
-            if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
+            if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
                 navigationController?.pushViewController(viewController, animated: true)
                 
             }
