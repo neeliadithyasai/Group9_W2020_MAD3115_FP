@@ -250,6 +250,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
             if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
         navigationController?.pushViewController(viewController, animated: true)
                 viewController.customer = selectedTrail as? Customer
+                viewController.index = indexPath.row
           }
         }
             else if segmentedControl.selectedSegmentIndex == 1{
@@ -272,6 +273,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                     if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
                 navigationController?.pushViewController(viewController, animated: true)
                         viewController.owner = selectedTrail as? Owner
+                        viewController.index = indexPath.row
                   }
             }
             
