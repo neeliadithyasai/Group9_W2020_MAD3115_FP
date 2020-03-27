@@ -39,7 +39,20 @@ class AddNewMotorcycleViewController: UIViewController {
     
     @IBAction func saveMotorcycle(_ sender: UIButton) {
     
-    
+    if let cv = motorcycleVin.text, let cd = motorcycleDescription.text, let cm = motorcycleManufacturer.text, let cs = motorcycleSeats.text, let mms = motorcycleMaxSpeed.text, let mm = motorcycleMileage.text, let ci = motorcycleInsured.text, let cf = motorcycleFuel.text, let csd = motorcycleSelfDrive.text, let cip = motorcycleInsuranceProvider.text{
+        if cv == "" || cd == "" || cm == "" || cs == "" || mm == "" || mms == "" || ci == "" || cf == "" || csd == "" || cip == ""{
+            let alertController = UIAlertController(title: "ERROR", message:
+                "Incomplete Form", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            DataRepo.getInstance().addmotorcycle(motorcycle: Motorcycle(vin: cv, vehicle_description: cd, manufacturer_name: cm, is_self_drive: true, driver: "mkn", is_insured: true, insurance_provider: cip, seats: csd, fuel_type: Fuel.Electric, maxSpeed: Int(mms) ?? 0, mileage: Int(mm) ?? 0))
+            self.navigationController?.popViewController(animated: true)
+            
+        }
+    }
     }
     
 }
