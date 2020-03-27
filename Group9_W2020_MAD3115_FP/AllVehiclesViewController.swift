@@ -53,18 +53,18 @@ class AllVehiclesViewController: UIViewController {
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func addTapped(){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = sb.instantiateViewController(withIdentifier: "addNewCarVC") as? AddNewCarViewController{
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        
     }
-    */
 
 }
 
