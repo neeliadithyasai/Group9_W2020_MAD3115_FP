@@ -87,7 +87,7 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
             
             if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
         navigationController?.pushViewController(viewController, animated: true)
-                viewController.customer = selectedTrail as? Customer
+                viewController.car = selectedTrail as? Car
                 viewController.index = indexPath.row
           }
         }
@@ -96,9 +96,9 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
                     
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     
-                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                    if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
                 navigationController?.pushViewController(viewController, animated: true)
-                        viewController.driver = selectedTrail as? Driver
+                        viewController.motorcycle = selectedTrail as? Motorcycle
                         viewController.index = indexPath.row
                   }
 
@@ -108,9 +108,9 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
                     
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     
-                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                    if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
                 navigationController?.pushViewController(viewController, animated: true)
-                        viewController.owner = selectedTrail as? Owner
+                        viewController.bus = selectedTrail as? Bus
                         viewController.index = indexPath.row
                   }
             }
