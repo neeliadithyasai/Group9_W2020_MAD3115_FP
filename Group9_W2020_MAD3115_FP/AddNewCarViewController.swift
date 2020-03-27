@@ -42,7 +42,15 @@ class AddNewCarViewController: UIViewController {
     
     @IBAction func saveCar(_ sender: UIButton) {
         
-       
+        if let cv = carVin.text, let cd = carDescription.text, let cm = carManufacturer.text, let cs = carSeats.text, let cc = carColor.text, let ct = carType.text, let ci = carInsured.text, let cf = carFuel.text, let csd = carSelfDrive.text, let cip = carInsuranceProvider.text{
+            if cv == "" || cd == "" || cm == "" || cs == "" || cc == "" || ct == "" || ci == "" || cf == "" || csd == "" || cip == ""{
+                let alertController = UIAlertController(title: "ERROR", message:
+                    "Incomplete Form", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
         
     }
     
