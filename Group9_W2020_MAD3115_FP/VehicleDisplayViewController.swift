@@ -10,11 +10,20 @@ import UIKit
 
 class VehicleDisplayViewController: UIViewController {
 
+    var car : Car?
+    var motorcycle : Motorcycle?
+    var bus : Bus?
+    var index : Int?
+    
     @IBOutlet weak var lblVehicle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
     }
+    
+    
     
     
 

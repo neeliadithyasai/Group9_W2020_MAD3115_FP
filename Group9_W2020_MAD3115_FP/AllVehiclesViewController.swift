@@ -83,10 +83,9 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentedControl.selectedSegmentIndex == 0 {
         let selectedTrail = cars[indexPath.row]
-                
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
-            if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+            if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
         navigationController?.pushViewController(viewController, animated: true)
                 viewController.customer = selectedTrail as? Customer
                 viewController.index = indexPath.row
