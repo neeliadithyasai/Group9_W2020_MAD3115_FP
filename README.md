@@ -1,9 +1,9 @@
 # Group5_W2020_MAD3115_FP
 # Vehicle Renting System
 ---------------------------
-## Adithya Sai Neeli : C0771910
-## Mohit Kumar: C0777190
-## Manish pawar: C0771915
+## Adithya Sai Neeli 
+## Mohit Kumar
+## Manish pawar
 -----------------------------
 ### Jira link: https://team-1581375347973.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=FPI&view=reporting&chart=sprintRetrospective&sprint=9
 -----------------------------
