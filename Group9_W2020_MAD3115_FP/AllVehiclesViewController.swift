@@ -25,12 +25,15 @@ class AllVehiclesViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = cars
+            print("5")
         case 1 :
             rowsToDisplay = motorcycles
         default :
             rowsToDisplay = buses
         }
+        print("6")
         tableView.reloadData()
+    print("7")
     }
     
     let tableView = UITableView(frame: .zero, style: .plain)
@@ -43,8 +46,7 @@ class AllVehiclesViewController: UIViewController {
         let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
         paddedStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
         paddedStackView.isLayoutMarginsRelativeArrangement = true
-        tableView.dataSource = self
-        tableView.delegate = self
+        
         let stackView = UIStackView(arrangedSubviews: [paddedStackView,tableView])
         stackView.axis = .vertical
         
@@ -58,12 +60,20 @@ class AllVehiclesViewController: UIViewController {
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: #selector(AllVehiclesViewController.populate), for: .valueChanged)
         tableView.addSubview(refresher)
+        
+        print("3")
+        tableView.dataSource = self
+        tableView.delegate = self
+        print("4")
     }
     override func viewWillAppear(_ animated: Bool) {
+
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
+print("1")
         tableView.reloadData()
+        print("2")
     }
     @objc func populate(){
         refresher.endRefreshing()
@@ -96,6 +106,10 @@ class AllVehiclesViewController: UIViewController {
 }
 }
 extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rowsToDisplay.count
     }
