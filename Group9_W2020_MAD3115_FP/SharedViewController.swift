@@ -36,7 +36,7 @@ class SharedViewController: UIViewController {
             let ct = customer?.city
     {
          
-            lblPerson.text = "  Customer ID          :    \(id)\n\n  Customer Name  :    \(fn)\n\n  Customer Gender   :    \(gn)\n\n  Customer Age  :    \(ag)\n\n  Customer MobileNumber  :    \(mn)\n\n  Customer EmailID  :    \(em)\n\n  Customer Address  :    \(ad)\n\n  Customer City  :    \(ct)"
+            lblPerson.text = "  Customer ID                               :    \(id)\n\n  Customer Name                       :    \(fn)\n\n  Customer Gender               :    \(gn)\n\n  Customer Age                    :    \(ag)\n\n  Customer MobileNumber    :    \(mn)\n\n  Customer EmailID              :    \(em)\n\n  Customer Address            :    \(ad)\n\n  Customer City                       :    \(ct)"
             lblPerson.numberOfLines = 0
             lblPerson.font = UIFont.boldSystemFont(ofSize: 12)
             lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -46,7 +46,7 @@ class SharedViewController: UIViewController {
         else if let id = driver?.Id, let fn = driver?.fullName, let gn = driver?.gender, let ag = driver?.age, let hc = driver?.driverHistoryClear, let ln = driver?.driverLicenceNumber,
             let em = driver?.emailId, let mn = driver?.mobileNumber,  let sl = driver?.salary, let _ = driver?.userName, let _ = driver?.password {
            
-              lblPerson.text =  "Driver Id: \(id)\n\n Driver FullName: \(fn)\n\n Driver Gender: \(gn)\n\n Driver Age: \(ag)\n\n Driver History Clear: \(hc)\n\n   Driver License no:  \(ln)\n\n Driver EmailId:  \(em)\n\n Driver Mobilenumber: \(mn)\n\n  Driver Salary:  \(sl)"
+              lblPerson.text =  "Driver Id:     \(id)\n\n Driver FullName:  \(fn)\n\n Driver Gender:    \(gn)\n\n Driver Age:   \(ag)\n\n Driver History Clear:     \(hc)\n\n   Driver License no:      \(ln)\n\n Driver EmailId:   \(em)\n\n Driver Mobilenumber:  \(mn)\n\n  Driver Salary:   \(sl)"
               lblPerson.numberOfLines = 0
               lblPerson.font = UIFont.boldSystemFont(ofSize: 12)
               lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -57,7 +57,7 @@ class SharedViewController: UIViewController {
         else {
              if let id = owner?.Id, let fn = owner?.fullName, let gn = owner?.gender, let ag = owner?.age,let em = owner?.emailId, let mn = owner?.mobileNumber, let un = owner?.userName, let pw = owner?.password , let ct = owner?.companyTitle, let bno = owner?.businessLandLineNumber, let ws = owner?.website{
              
-                lblPerson.text =  "Owner Id: \(id)\n\n Owner FullName: \(fn)\n\n Owner Gender: \(gn)\n\n Owner Age: \(ag)\n\n Owner EmailId:  \(em)\n\n Owner Mobilenumber: \(mn)\n\n Owner UserName: \(un)\n\n Owner Password: \(pw)\n\n Owner Company Title: \(ct)\n\n Owner BusinessLandLine No : \(bno)\n\n Owner Website: \(ws)"
+                lblPerson.text =  "Owner Id :    \(id)\n\n Owner FullName :   \(fn)\n\n Owner Gender :     \(gn)\n\n Owner Age :    \(ag)\n\n Owner EmailId :    \(em)\n\n Owner Mobilenumber :   \(mn)\n\n Owner UserName :   \(un)\n\n Owner Password :   \(pw)\n\n Owner Company Title :  \(ct)\n\n Owner BusinessLandLine No :   \(bno)\n\n Owner Website :   \(ws)"
                 lblPerson.numberOfLines = 0
                 lblPerson.font = UIFont.boldSystemFont(ofSize: 12)
                 lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -147,7 +147,6 @@ extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
                 cell.textLabel?.text = "Vehicle Insurance Number : \(a.value.vin)\nDescription : \(a.value.vehicle_description)\nManufacturer : \(a.value.manufacturer_name)\nDriver : \(a.value.driver)\nInsurance Provider : \(a.value.insurance_provider)\nNumber of seats : \(a.value.seats)\nCar Seats : \(a.value.seats)\nFuel Type : \(a.value.fuel_type)\nBase Rate : \(a.value.base_rate)\nRate per Km : \(a.value.rate_per_km)"
                 cell.textLabel?.numberOfLines = 0
             }
-            
             return cell
         }
     }
