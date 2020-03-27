@@ -87,6 +87,9 @@ extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
         if (customer?.Id) != nil {
         return (customer?.vehicleRent.count)!
      }
+        else if (driver?.Id) != nil {
+            return 0
+        }
 //        else  (owner?.Id) != nil{
         else{
             return (owner?.vehicleList.count)!
