@@ -531,7 +531,7 @@
         <!--Add New Motorcycle View Controller-->
         <scene sceneID="O5L-xW-FVe">
             <objects>
-                <viewController id="Sjs-TA-ft6" customClass="AddNewMotorcycleViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewMotorcycleVC" id="Sjs-TA-ft6" customClass="AddNewMotorcycleViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWb-CW-O6t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

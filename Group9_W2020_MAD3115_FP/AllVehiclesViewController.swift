@@ -73,6 +73,13 @@ class AllVehiclesViewController: UIViewController {
                 if let viewController = sb.instantiateViewController(withIdentifier: "addNewBusVC") as? AddNewBusViewController{
                     self.navigationController?.pushViewController(viewController, animated: true)
             }
+               
+        }
+        else {
+                           let sb = UIStoryboard(name: "Main", bundle: nil)
+                               if let viewController = sb.instantiateViewController(withIdentifier: "addNewMotorcycleVC") as? AddNewMotorcycleViewController{
+                                   self.navigationController?.pushViewController(viewController, animated: true)
+                           }
         }
 }
 }
