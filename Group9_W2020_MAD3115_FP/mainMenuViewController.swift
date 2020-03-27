@@ -36,10 +36,10 @@ class mainMenuViewController: UIViewController {
     
     let tableView = UITableView(frame: .zero, style: .plain)
     
+    
     lazy var rowsToDisplay = customers
     
     @objc func handleSegmentChange(){
-    
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = customers
@@ -52,14 +52,14 @@ class mainMenuViewController: UIViewController {
     } 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
         sideView.isHidden = true
        // sideTblView.backgroundColor = UIColor.groupTableViewBackground
         isSideViewOpen = false
         tableView.dataSource = self
         tableView.delegate = self
         sideTblView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-
+        
         view.backgroundColor = .white
         navigationItem.title = "Persons"
         let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
@@ -75,16 +75,17 @@ class mainMenuViewController: UIViewController {
         segmentedControl.layer.borderColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
         segmentedControl.selectedSegmentTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         sideView.isHidden = true
-        
-//        customers.removeAll()
-//        drivers.removeAll()
-//        owners.removeAll()
+
         self.customers = DataRepo.getInstance().getAllCustomers()
         self.drivers = DataRepo.getInstance().getAlldrivers()
         self.owners = DataRepo.getInstance().getAllOwners()
         self.tableView.reloadData()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        tableView.reloadData()
     }
  
     @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
@@ -95,9 +96,10 @@ class mainMenuViewController: UIViewController {
             isSideViewOpen = true
             sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 717)
             sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 717)
-            UIView.setAnimationDuration(0.3)
+            UIView.setAnimationDuration(0.5)
             UIView.setAnimationDelegate(self)
             UIView.beginAnimations("TableAnimation", context: nil)
+            
             sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 717)
             sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 717)
             UIView.commitAnimations()
@@ -135,9 +137,17 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         return arrData.count
         }
         else {
-            return rowsToDisplay.count
+            if segmentedControl.selectedSegmentIndex == 0{
+                return customers.count
+            }
+            else if segmentedControl.selectedSegmentIndex == 1{
+            return drivers.count
+            }
+            else{
+                return owners.count
+            }
         }
-        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -151,13 +161,27 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         }
             
         else {
-            let cell = UITableViewCell()
-            let c = rowsToDisplay[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
+            if segmentedControl.selectedSegmentIndex == 0{
+                let c = customers[indexPath.row]
+                cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
+                return cell
+            }
+            else if segmentedControl.selectedSegmentIndex == 1{
+            let c = drivers[indexPath.row]
             cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
+            
             return cell
         }
+            else{
+                let c = owners[indexPath.row]
+                cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
+                
+                return cell
+
+            }
     }
-    
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == sideTblView{
         
@@ -257,8 +281,6 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
             cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-//            cell.layer.borderWidth = 1
-//            cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
     }
     

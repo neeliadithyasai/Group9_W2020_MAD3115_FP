@@ -25,15 +25,15 @@ class AllVehiclesViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = cars
-            print("5")
+            
         case 1 :
             rowsToDisplay = motorcycles
         default :
             rowsToDisplay = buses
         }
-        print("6")
+        
         tableView.reloadData()
-    print("7")
+    
     }
     
     let tableView = UITableView(frame: .zero, style: .plain)
@@ -60,20 +60,18 @@ class AllVehiclesViewController: UIViewController {
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: #selector(AllVehiclesViewController.populate), for: .valueChanged)
         tableView.addSubview(refresher)
-        
-        print("3")
         tableView.dataSource = self
         tableView.delegate = self
-        print("4")
+        
     }
     override func viewWillAppear(_ animated: Bool) {
 
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
-print("1")
+
         tableView.reloadData()
-        print("2")
+        
     }
     @objc func populate(){
         refresher.endRefreshing()
@@ -111,16 +109,34 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowsToDisplay.count
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return cars.count
+        }
+        else if segmentedControl.selectedSegmentIndex == 1{
+            return motorcycles.count
+        }
+        else
+        {return rowsToDisplay.count}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let c = rowsToDisplay[indexPath.row]
+        if segmentedControl.selectedSegmentIndex == 0{
+        let c = cars[indexPath.row]
         cell.textLabel?.text = c.manufacturer_name
         return cell
     }
-    
+        else if segmentedControl.selectedSegmentIndex == 1{
+            let c = motorcycles[indexPath.row]
+            cell.textLabel?.text = c.manufacturer_name
+            return cell
+        }
+        else{
+            let c = buses[indexPath.row]
+            cell.textLabel?.text = c.manufacturer_name
+            return cell
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentedControl.selectedSegmentIndex == 0 {
         let selectedTrail = cars[indexPath.row]
