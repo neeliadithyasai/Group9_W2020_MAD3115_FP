@@ -76,6 +76,8 @@ class SharedViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
+        else if owner?.Id 
+        
     }
 }
 

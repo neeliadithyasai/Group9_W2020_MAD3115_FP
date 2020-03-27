@@ -78,6 +78,13 @@ class DataRepo{
         self.drivers.remove(at: index)
     }
     
+    func removeCustomer(index: Int){
+        self.customers.remove(at: index)
+    }
+    
+    func removeOwner(index: Int){
+        self.owners.remove(at: index)
+    }
     
     
     
