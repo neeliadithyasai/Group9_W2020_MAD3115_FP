@@ -10,21 +10,36 @@ import UIKit
 
 class AddNewCarViewController: UIViewController {
 
+    @IBOutlet weak var carVin: UITextField!
+    
+    @IBOutlet weak var carDescription: UITextField!
+    
+    @IBOutlet weak var carManufacturer: UITextField!
+    
+    @IBOutlet weak var carSeats: UITextField!
+    
+    @IBOutlet weak var carColor: UITextField!
+    
+    @IBOutlet weak var carType: UITextField!
+    
+    @IBOutlet weak var carInsured: UITextField!
+    
+    @IBOutlet weak var carFuel: UITextField!
+    
+    @IBOutlet weak var carSelfDrive: UITextField!
+    
+    @IBOutlet weak var carInsuranceProvider: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveCar(_ sender: UIButton) {
+        
     }
-    */
-
+    
 }

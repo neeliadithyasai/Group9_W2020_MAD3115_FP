@@ -397,11 +397,26 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveCar:" destination="pR6-Pr-rHM" eventType="touchUpInside" id="hon-P1-GTO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="VhT-ju-aDW"/>
                     </view>
+                    <connections>
+                        <outlet property="carColor" destination="F6g-eG-Kpx" id="Y2e-Z2-KK8"/>
+                        <outlet property="carDescription" destination="DNT-nb-WNv" id="mQf-rO-AX8"/>
+                        <outlet property="carFuel" destination="bbi-cu-Ddi" id="7Ot-Mq-AJy"/>
+                        <outlet property="carInsuranceProvider" destination="8Oq-Ma-Lgf" id="dec-PY-YT7"/>
+                        <outlet property="carInsured" destination="HgA-EJ-FM1" id="YCL-JY-UAF"/>
+                        <outlet property="carManufacturer" destination="deX-Yc-Exc" id="zla-a6-I29"/>
+                        <outlet property="carSeats" destination="sQv-HW-ZLJ" id="MTw-g8-foo"/>
+                        <outlet property="carSelfDrive" destination="S4i-BC-q7a" id="Ytb-a5-Pqc"/>
+                        <outlet property="carType" destination="iHc-iH-4Nc" id="JgY-ft-wVV"/>
+                        <outlet property="carVin" destination="Pg2-it-IuM" id="Jip-nq-A2m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IV8-Gt-GtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
