@@ -50,11 +50,15 @@ class AllVehiclesViewController: UIViewController {
         
         view.addSubview(stackView)
         stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+    }
+    override func viewWillAppear(_ animated: Bool) {
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        tableView.reloadData()
     }
     
     @objc func addTapped(){

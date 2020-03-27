@@ -411,7 +411,7 @@
                         <outlet property="carFuel" destination="bbi-cu-Ddi" id="7Ot-Mq-AJy"/>
                         <outlet property="carInsuranceProvider" destination="8Oq-Ma-Lgf" id="dec-PY-YT7"/>
                         <outlet property="carInsured" destination="HgA-EJ-FM1" id="YCL-JY-UAF"/>
-                        <outlet property="carManufacturer" destination="deX-Yc-Exc" id="zla-a6-I29"/>
+                        <outlet property="carManufacturer" destination="M9S-ui-dhJ" id="TRV-xL-9lr"/>
                         <outlet property="carSeats" destination="sQv-HW-ZLJ" id="MTw-g8-foo"/>
                         <outlet property="carSelfDrive" destination="S4i-BC-q7a" id="Ytb-a5-Pqc"/>
                         <outlet property="carType" destination="iHc-iH-4Nc" id="JgY-ft-wVV"/>
