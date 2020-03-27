@@ -156,6 +156,10 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
                   }
             }
     }
-    
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+                cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    //            cell.layer.borderWidth = 1
+    //            cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+    }
 }

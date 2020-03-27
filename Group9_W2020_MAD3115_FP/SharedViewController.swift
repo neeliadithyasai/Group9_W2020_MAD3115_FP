@@ -96,13 +96,16 @@ extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-        if (section == 0) {
-            headerView.backgroundColor = UIColor.systemRed
-        } else {
-            headerView.backgroundColor = UIColor.clear
+         let label = UILabel()
+                   if section == 0{
+                       label.text = "  Vehicle Details"
+                       label.backgroundColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+                       label.font = UIFont.boldSystemFont(ofSize: 20)
+                       label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                       label.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                   } else {
         }
-        return headerView
+        return label
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
