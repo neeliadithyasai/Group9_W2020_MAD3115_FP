@@ -9,8 +9,8 @@
 import UIKit
 
 class AddNewCarViewController: UIViewController {
-
-   
+    
+    
     
     @IBOutlet weak var carVin: UITextField!
     
@@ -35,7 +35,7 @@ class AddNewCarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         
     }

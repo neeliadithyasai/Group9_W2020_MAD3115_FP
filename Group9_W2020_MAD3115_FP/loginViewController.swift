@@ -25,20 +25,20 @@ class loginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-                navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "Logout", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Logout", style: .plain, target: nil, action: nil)
         
-               let ud = UserDefaults.standard
-               let e = ud.string(forKey: "email")
-               let p = ud.string(forKey: "password")
-               
-               if let em = e {
-                   txtUserName.text = "\(em)"
-               }
-               
-               if let pa = p {
-                   txtPassword.text = "\(pa)"
-               }
+        let ud = UserDefaults.standard
+        let e = ud.string(forKey: "email")
+        let p = ud.string(forKey: "password")
+        
+        if let em = e {
+            txtUserName.text = "\(em)"
+        }
+        
+        if let pa = p {
+            txtPassword.text = "\(pa)"
+        }
     }
     
     func getPlist(withName name: String) -> [String: String]?
@@ -71,25 +71,25 @@ class loginViewController: UIViewController {
         }
         if canEnter
         {
-
-                if switchRememberMe.isOn
-                {
-                    UserDefaults.standard.set(txtUserName.text, forKey: "email")
-                    UserDefaults.standard.set(txtPassword.text, forKey: "password")
-                    
-                    let ud = UserDefaults.standard
-                    let email = ud.string(forKey: "email")
-                    txtUserName.text = email
-                    let password = ud.string(forKey: "password")
-                    txtPassword.text = password
-                }else
-                {
-                    UserDefaults.standard.removeObject(forKey: "email")
-                    UserDefaults.standard.removeObject(forKey: "password")
-                    txtUserName.text = ""
-                    txtPassword.text = ""
-                }
-                performSegue(withIdentifier: "segue", sender: self)
+            
+            if switchRememberMe.isOn
+            {
+                UserDefaults.standard.set(txtUserName.text, forKey: "email")
+                UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                
+                let ud = UserDefaults.standard
+                let email = ud.string(forKey: "email")
+                txtUserName.text = email
+                let password = ud.string(forKey: "password")
+                txtPassword.text = password
+            }else
+            {
+                UserDefaults.standard.removeObject(forKey: "email")
+                UserDefaults.standard.removeObject(forKey: "password")
+                txtUserName.text = ""
+                txtPassword.text = ""
+            }
+            performSegue(withIdentifier: "segue", sender: self)
         }
         else
         {
@@ -101,19 +101,13 @@ class loginViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        if let viewController = sb.instantiateViewController(identifier: "mainMenuViewController") as? mainMenuViewController {
-//            navigationController?.pushViewController(viewController, animated: true)
-//            
-//          
-//        }
+        
         
         
     }
     
     
     
-
+    
 }
 

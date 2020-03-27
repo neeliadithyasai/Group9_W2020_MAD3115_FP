@@ -34,18 +34,12 @@ class Car: Vehicle{
         self.insurance_provider = insurance_provider
         self.seats = seats
         self.fuel_type = fuel_type
-      //  self.base_rate = base_rate
-      //  self.rate_per_km = rate_per_km
+        
         self.carType = carType
         self.carColor = carColor
     }
     
     
-//    func totalBillOfCar(days: Int, distance: Int) -> Int {
-//        var a = 0
-//        a = (100 * days) + (5 * distance)
-//        return a
-//    }
     
     
     func display() {

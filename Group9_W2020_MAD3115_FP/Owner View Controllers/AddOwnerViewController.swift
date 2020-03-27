@@ -9,7 +9,7 @@
 import UIKit
 
 class AddOwnerViewController: UIViewController {
-
+    
     @IBOutlet weak var ownerId: UITextField!
     
     @IBOutlet weak var ownerFirstName: UITextField!
@@ -39,32 +39,32 @@ class AddOwnerViewController: UIViewController {
         createDatePicker()
         createToolBar()
     }
- 
+    
     @IBAction func saveOwner(_ sender: UIButton) {
         if let id = ownerId.text, let fn = ownerFirstName.text,let ln = ownerLastName.text , let gen = ownerGender.text, let bd = ownerBirthdate.text, let mob = ownerMobile.text, let em = ownerEmail.text , let company = ownerCompany.text, let landline = ownerLandline.text, let website = ownerWebsite.text
-                { if id == "" || fn == "" || ln == "" || gen == "" || bd == "" || mob == "" || em == "" || company == "" || landline == "" ||  website == "" {
-                    let alertController = UIAlertController(title: "ERROR", message:
-                        "Incomplete Form", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                    
-                    self.present(alertController, animated: true, completion: nil)
+        { if id == "" || fn == "" || ln == "" || gen == "" || bd == "" || mob == "" || em == "" || company == "" || landline == "" ||  website == "" {
+            let alertController = UIAlertController(title: "ERROR", message:
+                "Incomplete Form", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            do{
+                if gen == "Male"{
+                    DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                    self.navigationController?.popViewController(animated: true)
                 }
-                else{
-                    do{
-                        if gen == "Male"{
-                            DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
-                            self.navigationController?.popViewController(animated: true)
-                    }
-                        else {
-                            DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
-                            self.navigationController?.popViewController(animated: true)
-                        }
-                        
-                    }catch {
-                        print("Unrecognised Error")
-                    }
-
+                else {
+                    DataRepo.getInstance().addowner(owner: try Owner(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", companyTitle: company, businessLandLineNumber: landline, website: website))
+                    self.navigationController?.popViewController(animated: true)
                 }
+                
+            }catch {
+                print("Unrecognised Error")
+            }
+            
+            }
             
         }
     }

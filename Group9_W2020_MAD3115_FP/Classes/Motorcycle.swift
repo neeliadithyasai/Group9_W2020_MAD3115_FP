@@ -10,7 +10,7 @@ import Foundation
 
 class Motorcycle: Vehicle{
     
-
+    
     var vin: String
     var vehicle_description: String
     var manufacturer_name: String
@@ -36,8 +36,7 @@ class Motorcycle: Vehicle{
         self.insurance_provider = insurance_provider
         self.seats = seats
         self.fuel_type = fuel_type
-       // self.base_rate = base_rate
-       // self.rate_per_km = rate_per_km
+        
         self.maxSpeed = maxSpeed
         self.mileage = mileage
     }

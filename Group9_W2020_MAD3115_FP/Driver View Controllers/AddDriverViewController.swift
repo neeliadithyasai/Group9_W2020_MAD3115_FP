@@ -9,7 +9,7 @@
 import UIKit
 
 class AddDriverViewController: UIViewController {
-
+    
     @IBOutlet weak var driverId: UITextField!
     
     @IBOutlet weak var driverFirstName: UITextField!
@@ -54,7 +54,7 @@ class AddDriverViewController: UIViewController {
                 if gen == "Male"{
                     DataRepo.getInstance().addriver(driver: try Driver(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", driverLicenceNumber: license, driverHistoryClear: true, salary: Double(salary)!))
                     self.navigationController?.popViewController(animated: true)
-            }
+                }
                 else {
                     DataRepo.getInstance().addriver(driver: try Driver(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: bd.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", driverLicenceNumber: license, driverHistoryClear: true, salary: Double(salary)!))
                     self.navigationController?.popViewController(animated: true)
@@ -63,11 +63,11 @@ class AddDriverViewController: UIViewController {
             }catch {
                 print("Unrecognised Error")
             }
-
+            
+            }
+            
         }
-    
-}
-}
+    }
     func createDatePicker(){
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date

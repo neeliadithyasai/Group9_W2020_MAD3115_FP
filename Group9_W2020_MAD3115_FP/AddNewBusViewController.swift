@@ -9,7 +9,7 @@
 import UIKit
 
 class AddNewBusViewController: UIViewController {
-
+    
     @IBOutlet weak var busVin: UITextField!
     
     @IBOutlet weak var busDescription: UITextField!
@@ -35,10 +35,10 @@ class AddNewBusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func saveBus(_ sender: UIButton) {
         if let cv = busVin.text, let cd = busDescription.text, let cm = busManufacturer.text, let cs = busSeats.text, let ba = busAccessibility.text, let ct = busType.text, let ci = busInsured.text, let cf = busFuel.text, let csd = busSelfDrive.text, let cip = busInsuranceProvider.text, let bw = busWifi.text{
             if cv == "" || cd == "" || cm == "" || cs == "" || ba == "" || ct == "" || ci == "" || cf == "" || csd == "" || cip == "" || bw == ""{

@@ -35,7 +35,7 @@ class Driver: Person{
         self.gender = gender
         self.birthDate = birthDate
         guard mobileNumber.count == 10 else {
-                throw mobileCount.invalidMobile(error: "\(mobileNumber)")
+            throw mobileCount.invalidMobile(error: "\(mobileNumber)")
         }
         self.mobileNumber = mobileNumber
         guard emailId.isValidEmail(email: emailId) else {
@@ -56,29 +56,29 @@ class Driver: Person{
     }
     
     
-   
+    
     
     func display() {
         
-               print("\t\t\t***********  Driver's INFORMATION  ***********");
-               print("\t\t\tID : \(self.Id)")
-               print("\t\t\tFull name : \(self.fullName)")
-//               print("Last name : \(String(describing: self.lastName))")
-               print("\t\t\tGender : \(self.gender)")
-               print("\t\t\tBirthdate : \(self.birthDate)")
-               print("\t\t\tAge is : \(calculatedAge())")
-               print("\t\t\tMobile number : \(self.mobileNumber)")
-               print("\t\t\tEmail Id : \(self.emailId)")
-               print("\t\t\tUsername : \(self.userName)")
-               print("\t\t\tPassword : \( password)")
-       
-               print("\t\t\tDriving License number is : \(driverLicenceNumber)")
-               if driverHistoryClear {
-                   print("\t\t\tDriving history is clear ")
-               }
-               else{
-               print("\t\t\tDriving history is not satisfactory")
-                }
-               print("\t\t\tDriver's Salary is : \(salary)");
+        print("\t\t\t***********  Driver's INFORMATION  ***********");
+        print("\t\t\tID : \(self.Id)")
+        print("\t\t\tFull name : \(self.fullName)")
+        
+        print("\t\t\tGender : \(self.gender)")
+        print("\t\t\tBirthdate : \(self.birthDate)")
+        print("\t\t\tAge is : \(calculatedAge())")
+        print("\t\t\tMobile number : \(self.mobileNumber)")
+        print("\t\t\tEmail Id : \(self.emailId)")
+        print("\t\t\tUsername : \(self.userName)")
+        print("\t\t\tPassword : \( password)")
+        
+        print("\t\t\tDriving License number is : \(driverLicenceNumber)")
+        if driverHistoryClear {
+            print("\t\t\tDriving history is clear ")
+        }
+        else{
+            print("\t\t\tDriving history is not satisfactory")
+        }
+        print("\t\t\tDriver's Salary is : \(salary)");
     }
 }

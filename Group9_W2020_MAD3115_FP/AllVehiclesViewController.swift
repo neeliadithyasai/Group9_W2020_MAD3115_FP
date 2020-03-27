@@ -9,7 +9,7 @@
 import UIKit
 
 class AllVehiclesViewController: UIViewController {
-
+    
     lazy var cars : [Vehicle] = []
     lazy var motorcycles : [Vehicle] = []
     lazy var buses : [Vehicle] = []
@@ -33,7 +33,7 @@ class AllVehiclesViewController: UIViewController {
         }
         
         tableView.reloadData()
-    
+        
     }
     
     let tableView = UITableView(frame: .zero, style: .plain)
@@ -65,11 +65,11 @@ class AllVehiclesViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-
+        
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
-
+        
         tableView.reloadData()
         
     }
@@ -83,25 +83,25 @@ class AllVehiclesViewController: UIViewController {
     
     @objc func addTapped(){
         if segmentedControl.selectedSegmentIndex == 0 {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = sb.instantiateViewController(withIdentifier: "addNewCarVC") as? AddNewCarViewController{
-            self.navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-        else if segmentedControl.selectedSegmentIndex == 2{
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                if let viewController = sb.instantiateViewController(withIdentifier: "addNewBusVC") as? AddNewBusViewController{
-                    self.navigationController?.pushViewController(viewController, animated: true)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let viewController = sb.instantiateViewController(withIdentifier: "addNewCarVC") as? AddNewCarViewController{
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
-               
+        }
+        else if segmentedControl.selectedSegmentIndex == 2{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let viewController = sb.instantiateViewController(withIdentifier: "addNewBusVC") as? AddNewBusViewController{
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            
         }
         else {
-                           let sb = UIStoryboard(name: "Main", bundle: nil)
-                               if let viewController = sb.instantiateViewController(withIdentifier: "addNewMotorcycleVC") as? AddNewMotorcycleViewController{
-                                   self.navigationController?.pushViewController(viewController, animated: true)
-                           }
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let viewController = sb.instantiateViewController(withIdentifier: "addNewMotorcycleVC") as? AddNewMotorcycleViewController{
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
         }
-}
+    }
 }
 extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     
@@ -122,10 +122,10 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         if segmentedControl.selectedSegmentIndex == 0{
-        let c = cars[indexPath.row]
-        cell.textLabel?.text = c.manufacturer_name
-        return cell
-    }
+            let c = cars[indexPath.row]
+            cell.textLabel?.text = c.manufacturer_name
+            return cell
+        }
         else if segmentedControl.selectedSegmentIndex == 1{
             let c = motorcycles[indexPath.row]
             cell.textLabel?.text = c.manufacturer_name
@@ -139,43 +139,41 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentedControl.selectedSegmentIndex == 0 {
-        let selectedTrail = cars[indexPath.row]
+            let selectedTrail = cars[indexPath.row]
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
             if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
-        navigationController?.pushViewController(viewController, animated: true)
+                navigationController?.pushViewController(viewController, animated: true)
                 viewController.car = selectedTrail as? Car
                 viewController.index = indexPath.row
-          }
+            }
         }
-            else if segmentedControl.selectedSegmentIndex == 1{
-                let selectedTrail = motorcycles[indexPath.row]
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    
-                    if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
+        else if segmentedControl.selectedSegmentIndex == 1{
+            let selectedTrail = motorcycles[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
                 navigationController?.pushViewController(viewController, animated: true)
-                        viewController.motorcycle = selectedTrail as? Motorcycle
-                        viewController.index = indexPath.row
-                  }
-
+                viewController.motorcycle = selectedTrail as? Motorcycle
+                viewController.index = indexPath.row
             }
-            else{
-                let selectedTrail = buses[indexPath.row]
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    
-                    if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
+            
+        }
+        else{
+            let selectedTrail = buses[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "vehicleDisplayVC") as? VehicleDisplayViewController {
                 navigationController?.pushViewController(viewController, animated: true)
-                        viewController.bus = selectedTrail as? Bus
-                        viewController.index = indexPath.row
-                  }
+                viewController.bus = selectedTrail as? Bus
+                viewController.index = indexPath.row
             }
+        }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-                cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-    //            cell.layer.borderWidth = 1
-    //            cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            
+        cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
     }
 }

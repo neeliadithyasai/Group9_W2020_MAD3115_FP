@@ -9,7 +9,7 @@
 import UIKit
 
 class addNewCustomerViewController: UIViewController {
-
+    
     @IBOutlet weak var txtCustomerId: UITextField!
     
     @IBOutlet weak var txtCustomerName: UITextField!
@@ -54,23 +54,23 @@ class addNewCustomerViewController: UIViewController {
         }
         else{
             do{
-            if gen == "Male"{
-                DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
-                self.navigationController?.popViewController(animated: true)
-            }
-            else{
-                DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
-                self.navigationController?.popViewController(animated: true)
-            }
+                if gen == "Male"{
+                    DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Male, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+                    self.navigationController?.popViewController(animated: true)
+                }
+                else{
+                    DataRepo.getInstance().addCustomer(customer: try Customer(Id: id, firstName: fn, lastName: ln, gender: Gender.Female, birthDate: age.toDate(), mobileNumber: mob, emailId: em, userName: "\(fn)@gmail.com", password: "\(ln)", address: address, city: city))
+                    self.navigationController?.popViewController(animated: true)
+                }
             }catch {
                 print("Unrecognised Error")
             }
             
             }
-    }
+        }
         
-    
-}
+        
+    }
     func createDatePicker(){
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -110,7 +110,7 @@ class addNewCustomerViewController: UIViewController {
         txtCustomerGender.resignFirstResponder()
         txtCustomerAge.resignFirstResponder()
     }
-
+    
 }
 
 extension addNewCustomerViewController: UIPickerViewDataSource, UIPickerViewDelegate{

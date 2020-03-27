@@ -28,11 +28,11 @@ class mainMenuViewController: UIViewController {
     lazy var owners : [Person] = []
     
     let segmentedControl : UISegmentedControl = {
-           let sc = UISegmentedControl(items: ["Customers","Drivers","Owners"])
-           sc.selectedSegmentIndex = 0
-           sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
-           return sc
-       }()
+        let sc = UISegmentedControl(items: ["Customers","Drivers","Owners"])
+        sc.selectedSegmentIndex = 0
+        sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
+        return sc
+    }()
     
     let tableView = UITableView(frame: .zero, style: .plain)
     
@@ -54,7 +54,6 @@ class mainMenuViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
         sideView.isHidden = true
-       // sideTblView.backgroundColor = UIColor.groupTableViewBackground
         isSideViewOpen = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -78,7 +77,7 @@ class mainMenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         sideView.isHidden = true
-
+        
         self.customers = DataRepo.getInstance().getAllCustomers()
         self.drivers = DataRepo.getInstance().getAlldrivers()
         self.owners = DataRepo.getInstance().getAllOwners()
@@ -87,7 +86,7 @@ class mainMenuViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         tableView.reloadData()
     }
- 
+    
     @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
         sideTblView.isHidden = false
         sideView.isHidden = false
@@ -134,14 +133,14 @@ class mainMenuViewController: UIViewController {
 extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == sideTblView{
-        return arrData.count
+            return arrData.count
         }
         else {
             if segmentedControl.selectedSegmentIndex == 0{
                 return customers.count
             }
             else if segmentedControl.selectedSegmentIndex == 1{
-            return drivers.count
+                return drivers.count
             }
             else{
                 return owners.count
@@ -150,14 +149,14 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if tableView == sideTblView{
-        let cell : SideMenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "sideCell") as! SideMenuTableViewCell
-        cell.img.image = arrImg[indexPath.row]
-        cell.lbl.text = arrData[indexPath.row]
-        cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        cell.textLabel?.textColor = UIColor.white
-        return cell
+            let cell : SideMenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "sideCell") as! SideMenuTableViewCell
+            cell.img.image = arrImg[indexPath.row]
+            cell.lbl.text = arrData[indexPath.row]
+            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.textLabel?.textColor = UIColor.white
+            return cell
         }
             
         else {
@@ -168,119 +167,119 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                 return cell
             }
             else if segmentedControl.selectedSegmentIndex == 1{
-            let c = drivers[indexPath.row]
-            cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
-            
-            return cell
-        }
+                let c = drivers[indexPath.row]
+                cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
+                
+                return cell
+            }
             else{
                 let c = owners[indexPath.row]
                 cell.textLabel?.text = "\(c.firstName) \(c.lastName)"
                 
                 return cell
-
+                
             }
-    }
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == sideTblView{
-        
-        if indexPath.row == 2{
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-
-            if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-
-            }
-        }
-        if indexPath.row == 1{
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-
-            if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-
-            }
-        }
-        else if indexPath.row == 0{
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-
-            if let viewController = sb.instantiateViewController(identifier: "allVehiclesVC") as? AllVehiclesViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-            }
-        }
-        else if indexPath.row == 3{
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-
-            if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-            }
-        }
-        else if indexPath.row == 4{
+            
+            if indexPath.row == 2{
                 let sb = UIStoryboard(name: "Main", bundle: nil)
-
+                
+                if let viewController = sb.instantiateViewController(identifier: "addDriver") as? AddDriverViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                    
+                }
+            }
+            if indexPath.row == 1{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "addNewCustomerViewController") as? addNewCustomerViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                    
+                }
+            }
+            else if indexPath.row == 0{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "allVehiclesVC") as? AllVehiclesViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+            else if indexPath.row == 3{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "addOwnerVC") as? AddOwnerViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+            else if indexPath.row == 4{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
                 if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
                     viewController.Transition = "contactUsViewController"
                     navigationController?.pushViewController(viewController, animated: true)
                 }
             }else if indexPath.row == 5{
                 let sb = UIStoryboard(name: "Main", bundle: nil)
-
+                
                 if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
-                     viewController.Transition = "aboutUsViewController"
+                    viewController.Transition = "aboutUsViewController"
                     navigationController?.pushViewController(viewController, animated: true)
                 }
             }
-        else if indexPath.row == 6{
-            let alert = UIAlertController(title: "Logged Out", message: "Session Over", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
-                (_)in
-                self.navigationController?.popViewController(animated: true)
-            })
-
-            alert.addAction(OKAction)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    else {
-            if segmentedControl.selectedSegmentIndex == 0 {
-        let selectedTrail = customers[indexPath.row]
+            else if indexPath.row == 6{
+                let alert = UIAlertController(title: "Logged Out", message: "Session Over", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+                    (_)in
+                    self.navigationController?.popViewController(animated: true)
+                })
                 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            
-            if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
-        navigationController?.pushViewController(viewController, animated: true)
-                viewController.customer = selectedTrail as? Customer
-                viewController.index = indexPath.row
-          }
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
+        else {
+            if segmentedControl.selectedSegmentIndex == 0 {
+                let selectedTrail = customers[indexPath.row]
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                    viewController.customer = selectedTrail as? Customer
+                    viewController.index = indexPath.row
+                }
+            }
             else if segmentedControl.selectedSegmentIndex == 1{
                 let selectedTrail = drivers[indexPath.row]
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    
-                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-                        viewController.driver = selectedTrail as? Driver
-                        viewController.index = indexPath.row
-                  }
-
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                    viewController.driver = selectedTrail as? Driver
+                    viewController.index = indexPath.row
+                }
+                
             }
             else{
                 let selectedTrail = owners[indexPath.row]
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    
-                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
-                navigationController?.pushViewController(viewController, animated: true)
-                        viewController.owner = selectedTrail as? Owner
-                        viewController.index = indexPath.row
-                  }
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                    navigationController?.pushViewController(viewController, animated: true)
+                    viewController.owner = selectedTrail as? Owner
+                    viewController.index = indexPath.row
+                }
             }
             
-    }
+        }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
     }
     
