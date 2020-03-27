@@ -21,7 +21,7 @@ class mainMenuViewController: UIViewController {
     
     
     var arrData = ["Display All Vehicles","Add New Customer", "Add new Driver", "Add new Owner","Contact Us","About Us", "Logout"]
-    var arrImg = [#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo"),#imageLiteral(resourceName: "carlogo")]
+    var arrImg = [#imageLiteral(resourceName: "icons8-car-50"),#imageLiteral(resourceName: "icons8-customer-50"),#imageLiteral(resourceName: "icons8-driving-50"),#imageLiteral(resourceName: "icons8-landlord-50"),#imageLiteral(resourceName: "icons8-email-50"),#imageLiteral(resourceName: "icons8-about-50"),#imageLiteral(resourceName: "icons8-logout-rounded-up-50")]
     
     lazy var customers : [Person] = []
     lazy var drivers : [Person] = []
@@ -58,7 +58,8 @@ class mainMenuViewController: UIViewController {
         isSideViewOpen = false
         tableView.dataSource = self
         tableView.delegate = self
-        
+        sideTblView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+
         view.backgroundColor = .white
         navigationItem.title = "All persons"
         let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
@@ -90,13 +91,13 @@ class mainMenuViewController: UIViewController {
         self.view.bringSubviewToFront(sideView)
         if !isSideViewOpen {
             isSideViewOpen = true
-            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 414)
-            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
+            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 717)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 717)
             UIView.setAnimationDuration(0.3)
             UIView.setAnimationDelegate(self)
             UIView.beginAnimations("TableAnimation", context: nil)
-            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 414)
-            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
+            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 717)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 717)
             UIView.commitAnimations()
         }
             
@@ -104,13 +105,13 @@ class mainMenuViewController: UIViewController {
             sideTblView.isHidden = true
             sideView.isHidden = true
             isSideViewOpen = false
-            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 414)
-            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 414)
+            sideView.frame = CGRect(x: 0, y: 96, width: 240, height: 717)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 240, height: 717)
             UIView.setAnimationDuration(0.3)
             UIView.setAnimationDelegate(self)
             UIView.beginAnimations("TableAnimation", context: nil)
-            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 414)
-            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
+            sideView.frame = CGRect(x: 0, y: 96, width: 3, height: 717)
+            sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 717)
             UIView.commitAnimations()
         }
     }
@@ -142,8 +143,11 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
         let cell : SideMenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "sideCell") as! SideMenuTableViewCell
         cell.img.image = arrImg[indexPath.row]
         cell.lbl.text = arrData[indexPath.row]
+        cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        cell.textLabel?.textColor = UIColor.white
         return cell
         }
+            
         else {
             let cell = UITableViewCell()
             let c = rowsToDisplay[indexPath.row]
