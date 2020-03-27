@@ -32,12 +32,23 @@ class VehicleDisplayViewController: UIViewController {
             
         else if let vin = bus?.vin, let vd = bus?.vehicle_description, let mn = bus?.manufacturer_name, let dr = bus?.driver, let sd = bus?.is_self_drive, let ip = bus?.insurance_provider, let ft = bus?.fuel_type, let asa = bus?.accessibility_service_available, let bt = bus?.busType, let se = bus?.seats, let br = bus?.base_rate, let rpk = bus?.rate_per_km, let wifi = bus?.wifi_available{
         
-            lblVehicle.text = "Identification Number : \(vin)\n\nDescription : \(vd)\n\nManufacturer : \(mn)\n\nDriver : \(dr)\n\nSelf Drive Available : Yes\n\nInsurance Provider : \(ip)\n\nFuel Type : \(ft)\n\nAccessibility Service Available : \(asa ? "Yes" : "No")\n\nType : \(bt)\n\nNumber of Seats : \(se)\n\nBase Rate : \(br)\n\nRate Per Km : \(rpk)\n\nWifi Available : \(wifi ?  "Yes" : "No")"
+            lblVehicle.text = "Identification Number : \(vin)\n\nDescription : \(vd)\n\nManufacturer : \(mn)\n\nDriver : \(dr)\n\nSelf Drive Available : \(sd ? "Yes" : "No")\n\nInsurance Provider : \(ip)\n\nFuel Type : \(ft)\n\nAccessibility Service Available : \(asa ? "Yes" : "No")\n\nType : \(bt)\n\nNumber of Seats : \(se)\n\nBase Rate : \(br)\n\nRate Per Km : \(rpk)\n\nWifi Available : \(wifi ?  "Yes" : "No")"
                 lblVehicle.numberOfLines = 0
                 lblVehicle.font = UIFont.boldSystemFont(ofSize: 12)
                 lblVehicle.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 lblVehicle.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
         
+        else {
+            if let vin = motorcycle?.vin, let vd = motorcycle?.vehicle_description, let mn = motorcycle?.manufacturer_name, let dr = motorcycle?.driver, let sd = motorcycle?.is_self_drive, let ip = motorcycle?.insurance_provider, let ft = motorcycle?.fuel_type, let se = motorcycle?.seats, let br = motorcycle?.base_rate, let rpk = motorcycle?.rate_per_km, let mx = motorcycle?.maxSpeed, let mi = motorcycle?.mileage{
+            
+                lblVehicle.text = "Identification Number : \(vin)\n\nDescription : \(vd)\n\nManufacturer : \(mn)\n\nDriver : \(dr)\n\nSelf Drive Available : \(sd ? "Yes" : "No")\n\nInsurance Provider : \(ip)\n\nFuel Type : \(ft)\n\nNumber of Seats : \(se)\n\nBase Rate : \(br)\n\nRate Per Km : \(rpk)\n\nMax Speed : \(mx)\n\nMileage : \(mi)"
+                    lblVehicle.numberOfLines = 0
+                    lblVehicle.font = UIFont.boldSystemFont(ofSize: 12)
+                    lblVehicle.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                    lblVehicle.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
+        
     }
+}
 }
