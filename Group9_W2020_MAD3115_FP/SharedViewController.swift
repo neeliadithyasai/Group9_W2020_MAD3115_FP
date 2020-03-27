@@ -57,7 +57,7 @@ class SharedViewController: UIViewController {
         else {
              if let id = owner?.Id, let fn = owner?.fullName, let gn = owner?.gender, let ag = owner?.age,let em = owner?.emailId, let mn = owner?.mobileNumber, let un = owner?.userName, let pw = owner?.password , let ct = owner?.companyTitle, let bno = owner?.businessLandLineNumber, let ws = owner?.website{
              
-                lblPerson.text =  "Owner Id: \(id)\n\n Driver FullName: \(fn)\n\n Owner Gender: \(gn)\n\n Owner Age: \(ag)\n\n Owner EmailId:  \(em)\n\n Owner Mobilenumber: \(mn)\n\n Owner UserName: \(un)\n\n Owner Password: \(pw)\n\n Owner Company Title: \(ct)\n\n Owner BusinessLandLine No : \(bno)\n\n Owner Website: \(ws)"
+                lblPerson.text =  "Owner Id: \(id)\n\n Owner FullName: \(fn)\n\n Owner Gender: \(gn)\n\n Owner Age: \(ag)\n\n Owner EmailId:  \(em)\n\n Owner Mobilenumber: \(mn)\n\n Owner UserName: \(un)\n\n Owner Password: \(pw)\n\n Owner Company Title: \(ct)\n\n Owner BusinessLandLine No : \(bno)\n\n Owner Website: \(ws)"
                 lblPerson.numberOfLines = 0
                 lblPerson.font = UIFont.boldSystemFont(ofSize: 12)
                 lblPerson.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
