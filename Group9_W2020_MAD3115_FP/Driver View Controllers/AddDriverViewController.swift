@@ -32,6 +32,7 @@ class AddDriverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Add New Driver"
         createBillPicker()
         createDatePicker()
         createToolBar()

@@ -34,6 +34,7 @@ class AddOwnerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Add New Owner"
         createBillPicker()
         createDatePicker()
         createToolBar()

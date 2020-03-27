@@ -61,7 +61,7 @@ class mainMenuViewController: UIViewController {
         sideTblView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
 
         view.backgroundColor = .white
-        navigationItem.title = "All persons"
+        navigationItem.title = "Persons"
         let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
         paddedStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
         paddedStackView.isLayoutMarginsRelativeArrangement = true

@@ -34,6 +34,8 @@ class addNewCustomerViewController: UIViewController {
     var selectedType : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Add New Customer"
+        
         createBillPicker()
         createDatePicker()
         createToolBar()
