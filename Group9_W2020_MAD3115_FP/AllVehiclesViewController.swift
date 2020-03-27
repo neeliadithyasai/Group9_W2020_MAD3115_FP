@@ -13,7 +13,7 @@ class AllVehiclesViewController: UIViewController {
     lazy var cars : [Vehicle] = []
     lazy var motorcycles : [Vehicle] = []
     lazy var buses : [Vehicle] = []
-    
+    var refresher: UIRefreshControl!
     let segmentedControl : UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Cars","Motorcycles","Buses"])
         sc.selectedSegmentIndex = 0
@@ -53,8 +53,20 @@ class AllVehiclesViewController: UIViewController {
         
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(AllVehiclesViewController.populate), for: .valueChanged)
+        tableView.addSubview(refresher)
     }
     override func viewWillAppear(_ animated: Bool) {
+        cars = DataRepo.getInstance().getAllCars()
+        motorcycles = DataRepo.getInstance().getAllmotorcycles()
+        buses = DataRepo.getInstance().getAllbuses()
+        tableView.reloadData()
+    }
+    @objc func populate(){
+        refresher.endRefreshing()
         cars = DataRepo.getInstance().getAllCars()
         motorcycles = DataRepo.getInstance().getAllmotorcycles()
         buses = DataRepo.getInstance().getAllbuses()
