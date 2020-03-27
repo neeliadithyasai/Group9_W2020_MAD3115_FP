@@ -122,13 +122,12 @@ extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
 }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sharedCell", for: indexPath)
-        cell.textLabel?.text = "abc"
         if (customer?.Id) != nil{
             
                 //let v = rentedVehicles[indexPath.row]
                 
                
-                    for i in customer!.vehicleRent
+            for i in customer!.vehicleRent
                     {
                         for a in i.value.vRented{
                             
@@ -141,6 +140,11 @@ extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
                 return cell
         }
         else {
+            for a in owner!.vehicleList{
+                cell.textLabel?.text = "Vehicle Insurance Number : \(a.value.vin)\nDescription : \(a.value.vehicle_description)\nManufacturer : \(a.value.manufacturer_name)\nDriver : \(a.value.driver)\nInsurance Provider : \(a.value.insurance_provider)\nNumber of seats : \(a.value.seats)\nCar Seats : \(a.value.seats)\nFuel Type : \(a.value.fuel_type)\nBase Rate : \(a.value.base_rate)\nRate per Km : \(a.value.rate_per_km)"
+                cell.textLabel?.numberOfLines = 0
+            }
+            
             return cell
         }
     }
