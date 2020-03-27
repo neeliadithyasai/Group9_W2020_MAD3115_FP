@@ -37,6 +37,7 @@ class mainMenuViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = customers
+            tableView.reloadData()
         case 1 :
             rowsToDisplay = drivers
         default :
@@ -109,40 +110,6 @@ class mainMenuViewController: UIViewController {
             sideTblView.frame = CGRect(x: 0, y: 0, width: 0, height: 414)
             UIView.commitAnimations()
         }
-    }
-    
-    
-    @IBAction func btnDisplayAllOwners(_ sender: Any) {
-        
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let viewController = sb.instantiateViewController(identifier: "ownersViewController") as? ownersViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-            
-        }
-        
-    }
-    
-    @IBAction func btnDisplayAllCustomers(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let viewController = sb.instantiateViewController(identifier: "customerViewController") as? customerViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-        
-        
-    }
-    
-    
-    @IBAction func btnDisplayAllDrivers(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = sb.instantiateViewController(identifier: "driversViewController") as? driversViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-            
-        }
-        
-        
     }
     
     @IBAction func btnDisplayAllVehicles(_ sender: UIButton) {
