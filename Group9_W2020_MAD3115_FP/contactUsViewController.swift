@@ -25,7 +25,7 @@ class contactUsViewController: UIViewController {
         }else{
             if Transition == "contactUsViewController"
             {
-                lblContactus.text = "Contact Us:\n 437 989 8043"
+                lblContactus.text = "Contact Us:\n\n  C0771915@mylambton.ca\n  C0777190@mylambton.ca\n  C0771910@mylambton.ca"
                 lblContactus.numberOfLines = 0
             }
         }
