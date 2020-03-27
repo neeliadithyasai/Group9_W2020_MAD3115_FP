@@ -33,57 +33,57 @@ class mainMenuViewController: UIViewController {
            sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
            return sc
        }()
+    
+    let tableView = UITableView(frame: .zero, style: .plain)
+    
+    lazy var rowsToDisplay = customers
+    
     @objc func handleSegmentChange(){
     
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = customers
-            tableView.reloadData()
         case 1 :
             rowsToDisplay = drivers
         default :
             rowsToDisplay = owners
         }
         tableView.reloadData()
-    }
-    
-    let tableView = UITableView(frame: .zero, style: .plain)
-    
-    lazy var rowsToDisplay = customers
-    
+    } 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sideView.isHidden = true
-        sideTblView.backgroundColor = UIColor.groupTableViewBackground
+       // sideTblView.backgroundColor = UIColor.groupTableViewBackground
         isSideViewOpen = false
-        
+        tableView.dataSource = self
+        tableView.delegate = self
         
         view.backgroundColor = .white
         navigationItem.title = "All persons"
         let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
         paddedStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
         paddedStackView.isLayoutMarginsRelativeArrangement = true
-        tableView.dataSource = self
-        tableView.delegate = self
+        
         let stackView = UIStackView(arrangedSubviews: [paddedStackView,tableView])
         stackView.axis = .vertical
         
         view.addSubview(stackView)
         stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         sideView.isHidden = true
         
-        customers = DataRepo.getInstance().getAllCustomers()
-        drivers = DataRepo.getInstance().getAlldrivers()
-        owners = DataRepo.getInstance().getAllOwners()
-        
-        tableView.reloadData()
+//        customers.removeAll()
+//        drivers.removeAll()
+//        owners.removeAll()
+        self.customers = DataRepo.getInstance().getAllCustomers()
+        self.drivers = DataRepo.getInstance().getAlldrivers()
+        self.owners = DataRepo.getInstance().getAllOwners()
+        self.tableView.reloadData()
     }
-    
-    
-    
+ 
     @IBAction func barMenuBtn(_ sender: UIBarButtonItem) {
         sideTblView.isHidden = false
         sideView.isHidden = false

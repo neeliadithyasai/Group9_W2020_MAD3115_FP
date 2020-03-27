@@ -39,6 +39,7 @@
 		E4C11ADD242D1CC100374351 /* SegmentLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADC242D1CC100374351 /* SegmentLayout.swift */; };
 		E4C11ADF242D63F000374351 /* SharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADE242D63F000374351 /* SharedViewController.swift */; };
 		E4C11AE1242DB2F600374351 /* VehicleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */; };
+		E4C11AE3242DD9C600374351 /* AddNewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		E4C11ADC242D1CC100374351 /* SegmentLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentLayout.swift; sourceTree = "<group>"; };
 		E4C11ADE242D63F000374351 /* SharedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewController.swift; sourceTree = "<group>"; };
 		E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDisplayViewController.swift; sourceTree = "<group>"; };
+		E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				7A24C7F5241F05A6005707E2 /* SceneDelegate.swift */,
 				7A24C7F7241F05A6005707E2 /* loginViewController.swift */,
 				7A24C8292420709C005707E2 /* mainMenuViewController.swift */,
+				E4C11ADE242D63F000374351 /* SharedViewController.swift */,
 				E4001D9E242BCA1B00C3DCFE /* SideMenuTableViewCell.swift */,
 				E4C11AD9242D0D4700374351 /* Customer View Controllers */,
 				E4C11AD7242D0D0700374351 /* Driver View Controllers */,
@@ -127,7 +130,7 @@
 				E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7AF5E5BB242D50040042019C /* contactUsViewController.swift */,
-				E4C11ADE242D63F000374351 /* SharedViewController.swift */,
+				E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				7A24C816241F20E7005707E2 /* Car.swift in Sources */,
 				7A24C82A2420709C005707E2 /* mainMenuViewController.swift in Sources */,
 				7A24C81A241F2145005707E2 /* Motorcycle.swift in Sources */,
+				E4C11AE3242DD9C600374351 /* AddNewCarViewController.swift in Sources */,
 				E4C11ADD242D1CC100374351 /* SegmentLayout.swift in Sources */,
 				E4001D9F242BCA1B00C3DCFE /* SideMenuTableViewCell.swift in Sources */,
 				E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */,

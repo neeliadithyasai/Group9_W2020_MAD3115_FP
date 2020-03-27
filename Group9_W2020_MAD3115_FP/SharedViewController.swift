@@ -82,7 +82,7 @@ class SharedViewController: UIViewController {
         }
         else {
             DataRepo.getInstance().removeCustomer(index: index!)
-            navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
         }
         
     }
