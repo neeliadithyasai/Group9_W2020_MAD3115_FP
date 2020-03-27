@@ -52,6 +52,8 @@ class AddNewCarViewController: UIViewController {
             }
             else{
                 DataRepo.getInstance().addcar(car: Car(vin: cv, vehicle_description: cd, manufacturer_name: cm, is_self_drive: true, driver: "mko", is_insured: true, insurance_provider: cip, seats: cs, fuel_type: Fuel.Diesel, carType: ct, carColor: cc))
+                self.navigationController?.popViewController(animated: true)
+                
             }
         }
         

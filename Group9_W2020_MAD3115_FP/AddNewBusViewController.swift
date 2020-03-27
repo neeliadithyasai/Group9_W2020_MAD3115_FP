@@ -40,7 +40,20 @@ class AddNewBusViewController: UIViewController {
     }
 
     @IBAction func saveBus(_ sender: UIButton) {
-        
+        if let cv = busVin.text, let cd = busDescription.text, let cm = busManufacturer.text, let cs = busSeats.text, let ba = busAccessibility.text, let ct = busType.text, let ci = busInsured.text, let cf = busFuel.text, let csd = busSelfDrive.text, let cip = busInsuranceProvider.text, let bw = busWifi.text{
+            if cv == "" || cd == "" || cm == "" || cs == "" || ba == "" || ct == "" || ci == "" || cf == "" || csd == "" || cip == "" || bw == ""{
+                let alertController = UIAlertController(title: "ERROR", message:
+                    "Incomplete Form", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else{
+                DataRepo.getInstance().addbus(bus: Bus(vin: cv, vehicle_description: cd, manufacturer_name: cm, is_self_drive: true, driver: "mn", is_insured: true, insurance_provider: cip, seats: cs, fuel_type: Fuel.Diesel, busType: ct, accessibility_service_available: true, wifi_available: true))
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+        }
         
     }
 }
