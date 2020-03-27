@@ -71,21 +71,35 @@ class SharedViewController: UIViewController {
     }
     @objc func addTapped(){
         
-        if driver?.Id != nil{
-            DataRepo.getInstance().removeDriver(index: index!)
-            self.navigationController?.popViewController(animated: true)
-        }
-        
-        else if owner?.Id != nil{
-            DataRepo.getInstance().removeOwner(index: index!)
-            self.navigationController?.popViewController(animated: true)
-        }
-        else {
-            DataRepo.getInstance().removeCustomer(index: index!)
-            self.navigationController?.popViewController(animated: true)
-        }
-        
+//        if driver?.Id != nil{
+    
+            
+                      let alertController = UIAlertController(title: "Deleting", message: "Are you sure", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                if self.driver?.Id != nil{ DataRepo.getInstance().removeDriver(index: self.index!)
+                self.navigationController?.popViewController(animated: true)
+                } else if self.owner?.Id != nil{
+                    DataRepo.getInstance().removeOwner(index: self.index!)
+                           self.navigationController?.popViewController(animated: true)
+                       }
+                       else {
+                    DataRepo.getInstance().removeCustomer(index: self.index!)
+                           self.navigationController?.popViewController(animated: true)
+                       }
+                       
+                   }
+            )
+                      let defaultAction2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+                      alertController.addAction(defaultAction)
+                      alertController.addAction(defaultAction2)
+
+                      self.present(alertController, animated: true, completion: nil)
+
+
     }
+        
+       
 }
 
 extension SharedViewController: UITableViewDataSource, UITableViewDelegate{
