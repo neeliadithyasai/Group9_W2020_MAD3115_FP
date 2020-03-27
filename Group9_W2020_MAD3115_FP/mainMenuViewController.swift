@@ -260,6 +260,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                     if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
                 navigationController?.pushViewController(viewController, animated: true)
                         viewController.driver = selectedTrail as? Driver
+                        viewController.index = indexPath.row
                   }
 
             }

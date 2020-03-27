@@ -13,12 +13,18 @@ class SharedViewController: UIViewController {
     var customer : Customer?
     var owner : Owner?
     var driver : Driver?
+    var index : Int?
     
     @IBOutlet weak var lblPerson: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Bill Details"
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor.gray
+        navBar?.isTranslucent = true
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(addTapped))
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +69,14 @@ class SharedViewController: UIViewController {
 
 
     }
-
+    @objc func addTapped(){
+        
+        if driver?.Id != nil{
+            DataRepo.getInstance().removeDriver(index: index!)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
 }
 
 extension SharedViewController: UITableViewDataSource, UITableViewDelegate{

@@ -73,7 +73,10 @@ class DataRepo{
     func addVehicleToCustomer(customer: Customer, vehicle: Array<VehicleRent>){
         self.customerVehicleRent.updateValue(vehicle, forKey: customer.Id)
     }
- 
+    
+    func removeDriver(index: Int){
+        self.drivers.remove(at: index)
+    }
     
     
     
