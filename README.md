@@ -5,7 +5,7 @@
 ## Mohit Kumar: C0777190
 ## Manish pawar: C0771915
 -----------------------------
-### Jira link: https://team-1581375347973.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=FPI&atlOrigin=eyJpIjoiOTA2MzYzZmI1OWUzNGZmNmIxN2U1YmYzYTNmNWU0OWIiLCJwIjoiaiJ9
+### Jira link: https://team-1581375347973.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=FPI&view=reporting&chart=sprintRetrospective&sprint=9
 -----------------------------
 ### References:
 ### https://www.ioscreator.com/tutorials/segmented-control-ios-tutorial
