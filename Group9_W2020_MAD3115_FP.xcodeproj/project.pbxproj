@@ -41,6 +41,7 @@
 		E4C11AE1242DB2F600374351 /* VehicleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */; };
 		E4C11AE3242DD9C600374351 /* AddNewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */; };
 		E4C11AE5242DE03200374351 /* AddNewBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE4242DE03200374351 /* AddNewBusViewController.swift */; };
+		E4C11AE7242DEE8700374351 /* AddNewMotorcycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE6242DEE8700374351 /* AddNewMotorcycleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDisplayViewController.swift; sourceTree = "<group>"; };
 		E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarViewController.swift; sourceTree = "<group>"; };
 		E4C11AE4242DE03200374351 /* AddNewBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBusViewController.swift; sourceTree = "<group>"; };
+		E4C11AE6242DEE8700374351 /* AddNewMotorcycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMotorcycleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				7AF5E5BB242D50040042019C /* contactUsViewController.swift */,
 				E4C11AE2242DD9C600374351 /* AddNewCarViewController.swift */,
 				E4C11AE4242DE03200374351 /* AddNewBusViewController.swift */,
+				E4C11AE6242DEE8700374351 /* AddNewMotorcycleViewController.swift */,
 			);
 			path = Group9_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				7AF5E5BC242D50040042019C /* contactUsViewController.swift in Sources */,
 				E4001DA7242C87C000C3DCFE /* AddOwnerViewController.swift in Sources */,
 				7A24C81C241F2167005707E2 /* VehicleRent.swift in Sources */,
+				E4C11AE7242DEE8700374351 /* AddNewMotorcycleViewController.swift in Sources */,
 				7A24C824241F227D005707E2 /* DataRepo.swift in Sources */,
 				7A24C826241F2290005707E2 /* dateExtensions.swift in Sources */,
 				7A24C8BE242B29F3005707E2 /* addNewCustomerViewController.swift in Sources */,

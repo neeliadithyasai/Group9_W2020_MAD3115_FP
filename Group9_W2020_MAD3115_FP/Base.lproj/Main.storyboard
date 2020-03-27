@@ -528,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="835.71428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Add New Motorcycle View Controller-->
         <scene sceneID="O5L-xW-FVe">
             <objects>
-                <viewController id="Sjs-TA-ft6" sceneMemberID="viewController">
+                <viewController id="Sjs-TA-ft6" customClass="AddNewMotorcycleViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWb-CW-O6t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,14 +596,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-QK-hPE">
+                                <rect key="frame" x="123" y="676" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save "/>
+                                <connections>
+                                    <action selector="saveMotorcycle:" destination="Sjs-TA-ft6" eventType="touchUpInside" id="6zQ-gH-hvL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="d2x-pt-PI7"/>
                     </view>
+                    <connections>
+                        <outlet property="motorcycleDescription" destination="fOe-gT-rCq" id="3Nf-Xh-8pA"/>
+                        <outlet property="motorcycleFuel" destination="WCe-XW-fHE" id="t3Y-hQ-z4c"/>
+                        <outlet property="motorcycleInsuranceProvider" destination="ubi-67-zE9" id="tJ5-xg-qxg"/>
+                        <outlet property="motorcycleInsured" destination="eKB-1o-96i" id="cgv-Pf-f7C"/>
+                        <outlet property="motorcycleManufacturer" destination="Cfb-Jb-Qzd" id="9n4-rg-i5N"/>
+                        <outlet property="motorcycleMaxSpeed" destination="aj6-NB-coG" id="X2G-wg-rhA"/>
+                        <outlet property="motorcycleMileage" destination="MKR-I6-h8h" id="0QH-pn-dBr"/>
+                        <outlet property="motorcycleSeats" destination="J4h-iO-Yr0" id="jEI-Xn-Cnb"/>
+                        <outlet property="motorcycleSelfDrive" destination="6nQ-Cs-daR" id="03R-RG-AYf"/>
+                        <outlet property="motorcycleVin" destination="be5-Hm-meg" id="gd9-H8-GZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gF-SJ-tBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="836"/>
+            <point key="canvasLocation" x="1600.0000000000002" y="835.71428571428567"/>
         </scene>
         <!--All Vehicles View Controller-->
         <scene sceneID="dbh-bH-30y">
