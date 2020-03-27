@@ -58,16 +58,20 @@ class AllVehiclesViewController: UIViewController {
     }
     
     @objc func addTapped(){
+        if segmentedControl.selectedSegmentIndex == 0 {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = sb.instantiateViewController(withIdentifier: "addNewCarVC") as? AddNewCarViewController{
             self.navigationController?.pushViewController(viewController, animated: true)
         }
-        
-        
     }
-
+        else if segmentedControl.selectedSegmentIndex == 2{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                if let viewController = sb.instantiateViewController(withIdentifier: "addNewBusVC") as? AddNewBusViewController{
+                    self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
 }
-
+}
 extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rowsToDisplay.count

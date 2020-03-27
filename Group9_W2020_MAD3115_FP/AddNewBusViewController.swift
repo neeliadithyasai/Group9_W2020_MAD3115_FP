@@ -10,8 +10,27 @@ import UIKit
 
 class AddNewBusViewController: UIViewController {
 
+    @IBOutlet weak var busVin: UITextField!
     
+    @IBOutlet weak var busDescription: UITextField!
     
+    @IBOutlet weak var busManufacturer: UITextField!
+    
+    @IBOutlet weak var busSeats: UITextField!
+    
+    @IBOutlet weak var busFuel: UITextField!
+    
+    @IBOutlet weak var busSelfDrive: UITextField!
+    
+    @IBOutlet weak var busInsured: UITextField!
+    
+    @IBOutlet weak var busAccessibility: UITextField!
+    
+    @IBOutlet weak var busWifi: UITextField!
+    
+    @IBOutlet weak var busType: UITextField!
+    
+    @IBOutlet weak var busInsuranceProvider: UITextField!
     
     
     override func viewDidLoad() {
@@ -19,16 +38,9 @@ class AddNewBusViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveBus(_ sender: UIButton) {
+        
+        
     }
-    */
-
 }

@@ -496,6 +496,9 @@
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBus:" destination="bCC-Iz-8fC" eventType="touchUpInside" id="yGR-yP-qY2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wifi Available?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fc-Tc-jwV">
                                 <rect key="frame" x="20" y="542" width="170" height="34"/>
@@ -507,6 +510,19 @@
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="v9N-lI-gnM"/>
                     </view>
+                    <connections>
+                        <outlet property="busAccessibility" destination="dIA-Tv-9VG" id="OaZ-St-P23"/>
+                        <outlet property="busDescription" destination="NFu-Lb-dCD" id="OV7-pF-2NH"/>
+                        <outlet property="busFuel" destination="SFF-Nl-aqs" id="lp2-JV-UTJ"/>
+                        <outlet property="busInsuranceProvider" destination="BWp-X2-2LO" id="mZl-ZS-52K"/>
+                        <outlet property="busInsured" destination="mI3-ny-nva" id="w9N-Q6-bvl"/>
+                        <outlet property="busManufacturer" destination="deX-Yc-Exc" id="PZE-sA-EpB"/>
+                        <outlet property="busSeats" destination="ERo-9f-Uvz" id="Soz-6z-6c2"/>
+                        <outlet property="busSelfDrive" destination="wxp-Kn-gtV" id="pg3-a3-hzh"/>
+                        <outlet property="busType" destination="6F8-2g-7Tt" id="hrc-5g-GgM"/>
+                        <outlet property="busVin" destination="FJp-Z9-QCz" id="1Cb-7A-Tq3"/>
+                        <outlet property="busWifi" destination="7fc-Tc-jwV" id="aKR-EY-vq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-RI-vsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
