@@ -34,6 +34,7 @@ class mainMenuViewController: UIViewController {
            return sc
        }()
     @objc func handleSegmentChange(){
+    
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
             rowsToDisplay = customers
@@ -47,6 +48,7 @@ class mainMenuViewController: UIViewController {
     }
     
     let tableView = UITableView(frame: .zero, style: .plain)
+    
     lazy var rowsToDisplay = customers
     
     override func viewDidLoad() {
@@ -69,13 +71,14 @@ class mainMenuViewController: UIViewController {
         
         view.addSubview(stackView)
         stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
-
     }
     override func viewWillAppear(_ animated: Bool) {
         sideView.isHidden = true
+        
         customers = DataRepo.getInstance().getAllCustomers()
         drivers = DataRepo.getInstance().getAlldrivers()
         owners = DataRepo.getInstance().getAllOwners()
+        
         tableView.reloadData()
     }
     
@@ -211,7 +214,7 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
     else {
             if segmentedControl.selectedSegmentIndex == 0 {
         let selectedTrail = customers[indexPath.row]
-            
+                
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
             if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {

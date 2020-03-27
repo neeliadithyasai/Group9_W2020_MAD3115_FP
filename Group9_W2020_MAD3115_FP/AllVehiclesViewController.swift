@@ -80,5 +80,42 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+        let selectedTrail = cars[indexPath.row]
+                
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+        navigationController?.pushViewController(viewController, animated: true)
+                viewController.customer = selectedTrail as? Customer
+                viewController.index = indexPath.row
+          }
+        }
+            else if segmentedControl.selectedSegmentIndex == 1{
+                let selectedTrail = motorcycles[indexPath.row]
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                        viewController.driver = selectedTrail as? Driver
+                        viewController.index = indexPath.row
+                  }
+
+            }
+            else{
+                let selectedTrail = buses[indexPath.row]
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    if let viewController = sb.instantiateViewController(identifier: "sharedVC") as? SharedViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+                        viewController.owner = selectedTrail as? Owner
+                        viewController.index = indexPath.row
+                  }
+            }
+    }
+    
     
 }

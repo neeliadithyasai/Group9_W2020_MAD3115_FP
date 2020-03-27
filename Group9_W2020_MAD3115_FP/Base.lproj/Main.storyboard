@@ -336,6 +336,33 @@
             </objects>
             <point key="canvasLocation" x="4535" y="-585"/>
         </scene>
+        <!--Vehicle Display View Controller-->
+        <scene sceneID="35j-fJ-t4D">
+            <objects>
+                <viewController storyboardIdentifier="vehicleDisplayVC" id="bgz-w1-ZQ1" customClass="VehicleDisplayViewController" customModule="Group9_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nVL-2K-E0g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKH-QZ-qWb">
+                                <rect key="frame" x="20" y="177" width="374" height="514"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bET-mF-80u"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblVehicle" destination="mKH-QZ-qWb" id="LQR-DY-0gg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umv-jj-jRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5294.202898550725" y="-584.59821428571422"/>
+        </scene>
         <!--Add Driver View Controller-->
         <scene sceneID="5oE-Xy-FPW">
             <objects>

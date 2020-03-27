@@ -38,6 +38,7 @@
 		E4C11ADB242D176200374351 /* AllVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */; };
 		E4C11ADD242D1CC100374351 /* SegmentLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADC242D1CC100374351 /* SegmentLayout.swift */; };
 		E4C11ADF242D63F000374351 /* SharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11ADE242D63F000374351 /* SharedViewController.swift */; };
+		E4C11AE1242DB2F600374351 /* VehicleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVehiclesViewController.swift; sourceTree = "<group>"; };
 		E4C11ADC242D1CC100374351 /* SegmentLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentLayout.swift; sourceTree = "<group>"; };
 		E4C11ADE242D63F000374351 /* SharedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewController.swift; sourceTree = "<group>"; };
+		E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E4C11AD5242D0C4B00374351 /* Classes */,
 				E4C11AD6242D0CCB00374351 /* Extensions */,
 				E4C11ADA242D176200374351 /* AllVehiclesViewController.swift */,
+				E4C11AE0242DB2F600374351 /* VehicleDisplayViewController.swift */,
 				7A24C823241F227D005707E2 /* DataRepo.swift */,
 				7AF5E5BB242D50040042019C /* contactUsViewController.swift */,
 				E4C11ADE242D63F000374351 /* SharedViewController.swift */,
@@ -276,6 +279,7 @@
 				7A24C7F4241F05A6005707E2 /* AppDelegate.swift in Sources */,
 				7A24C81E241F21FB005707E2 /* IntExtension.swift in Sources */,
 				7A24C80A241F1AEB005707E2 /* Person.swift in Sources */,
+				E4C11AE1242DB2F600374351 /* VehicleDisplayViewController.swift in Sources */,
 				7A24C814241F20B9005707E2 /* Driver.swift in Sources */,
 				7A24C822241F225B005707E2 /* ErrorHandling.swift in Sources */,
 				7A24C80C241F1BFE005707E2 /* Vehicle.swift in Sources */,
