@@ -219,6 +219,14 @@ extension mainMenuViewController : UITableViewDelegate, UITableViewDataSource{
                 let sb = UIStoryboard(name: "Main", bundle: nil)
 
                 if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
+                    viewController.Transition = "contactUsViewController"
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+            }else if indexPath.row == 5{
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+
+                if let viewController = sb.instantiateViewController(identifier: "contactUsViewController") as? contactUsViewController {
+                     viewController.Transition = "aboutUsViewController"
                     navigationController?.pushViewController(viewController, animated: true)
                 }
             }

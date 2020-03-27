@@ -9,75 +9,26 @@
 import UIKit
 
 class contactUsViewController: UIViewController {
-
-    lazy var customers : [Person] = []
-    lazy var drivers : [Person] = []
-    lazy var owners : [Person] = []
+  var Transition : String?
     
-    let segmentedControl : UISegmentedControl = {
-           let sc = UISegmentedControl(items: ["customers","drivers","owners"])
-           sc.selectedSegmentIndex = 0
-           sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
-           return sc
-       }()
-    @objc func handleSegmentChange(){
-        switch segmentedControl.selectedSegmentIndex{
-        case 0 :
-            rowsToDisplay = customers
-        case 1 :
-            rowsToDisplay = drivers
-        default :
-            rowsToDisplay = owners
-        }
-        tableView.reloadData()
-    }
-    
-    let tableView = UITableView(frame: .zero, style: .plain)
-    lazy var rowsToDisplay = customers
-   
+    @IBOutlet weak var lblContactus: UILabel!
     override func viewDidLoad() {
-         super.viewDidLoad()
-              view.backgroundColor = .white
-              navigationItem.title = "All persons"
-              let paddedStackView = UIStackView(arrangedSubviews: [segmentedControl])
-              paddedStackView.layoutMargins = .init(top: 12, left: 12, bottom: 12, right: 12)
-              paddedStackView.isLayoutMarginsRelativeArrangement = true
-              tableView.dataSource = self
-              tableView.delegate = self
-              let stackView = UIStackView(arrangedSubviews: [paddedStackView,tableView])
-              stackView.axis = .vertical
-              
-              view.addSubview(stackView)
-              stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .zero)
-              customers = DataRepo.getInstance().getAllCustomers()
-              drivers = DataRepo.getInstance().getAlldrivers()
-              owners = DataRepo.getInstance().getAllOwners()
+        super.viewDidLoad()
+
+        display()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func display(){
+        if Transition == "aboutUsViewController"{
+            lblContactus.text = "About Us:\n Adithya Sai Neeli- C0771910 \n Mohit Kumar- C0777190\n Manish pawar- C0771915"
+            lblContactus.numberOfLines = 0
+        }else{
+            if Transition == "contactUsViewController"
+            {
+                lblContactus.text = "Contact Us:\n 437 989 8043"
+                lblContactus.numberOfLines = 0
+            }
+        }
     }
-    */
 
-}
-
-extension contactUsViewController: UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowsToDisplay.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let c = rowsToDisplay[indexPath.row]
-        cell.textLabel?.text = c.firstName
-        return cell
-    }
-    
-    
 }
