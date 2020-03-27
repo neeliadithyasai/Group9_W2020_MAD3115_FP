@@ -76,7 +76,14 @@ class SharedViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-        else if owner?.Id 
+        else if owner?.Id != nil{
+            DataRepo.getInstance().removeCustomer(index: index!)
+            self.navigationController?.popViewController(animated: true)
+        }
+        else {
+            DataRepo.getInstance().removeOwner(index: index!)
+            self.navigationController?.popViewController(animated: true)
+        }
         
     }
 }
