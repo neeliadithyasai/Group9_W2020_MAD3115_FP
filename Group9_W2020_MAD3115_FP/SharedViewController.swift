@@ -55,7 +55,7 @@ class SharedViewController: UIViewController {
             
         }
         else {
-            if let id = owner?.Id, let fn = owner?.fullName, let gn = owner?.gender, let ag = owner?.age,let em = owner?.emailId, let mn = owner?.mobileNumber, let un = owner?.userName, let pw = owner?.password , let ct = owner?.companyTitle, let bno = owner?.businessLandLineNumber, let ws = owner?.website{
+            if let id = owner?.Id, let fn = owner?.fullName, let gn = owner?.gender, let ag = owner?.age,let em = owner?.emailId, let mn = owner?.mobileNumber, let _ = owner?.userName, let _ = owner?.password , let ct = owner?.companyTitle, let bno = owner?.businessLandLineNumber, let ws = owner?.website{
                 
                 lblPerson.text =  "Owner Id                               :    \(id)\n\n Owner FullName                 :   \(fn)\n\n Owner Gender                    :     \(gn)\n\n Owner Age                          :    \(ag)\n\n Owner EmailId                    :    \(em)\n\n Owner Mobile                    :   \(mn)\n\n Owner Company Title     :  \(ct)\n\n Owner LandLine               :   \(bno)\n\n Owner Website                :   \(ws)"
                 lblPerson.numberOfLines = 0

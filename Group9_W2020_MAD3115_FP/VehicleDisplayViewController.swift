@@ -20,6 +20,15 @@ class VehicleDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationItem.title = "Vehicle Details"
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor.gray
+        navBar?.isTranslucent = true
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(addTapped))
+        
+        
         if let vin = car?.vin, let vd = car?.vehicle_description, let mn = car?.manufacturer_name, let dr = car?.driver, let sd = car?.is_self_drive, let ip = car?.insurance_provider, let ft = car?.fuel_type, let cc = car?.carColor, let ct = car?.carType, let se = car?.seats, let br = car?.base_rate, let rpk = car?.rate_per_km{
             
             lblVehicle.text = "Identification Number : \(vin)\n\nDescription : \(vd)\n\nManufacturer : \(mn)\n\nDriver : \(dr)\n\nSelf Drive Available : \(sd ? "Yes" : "No")\n\nInsurance Provider : \(ip)\n\nFuel Type : \(ft)\n\nColor : \(cc)\n\nType : \(ct)\n\nNumber of Seats : \(se)\n\nBase Rate : \(br)\n\nRate Per Km : \(rpk)"
@@ -51,4 +60,34 @@ class VehicleDisplayViewController: UIViewController {
             
         }
     }
+
+    @objc func addTapped(){
+        
+        
+        
+        let alertController = UIAlertController(title: "Deleting", message: "Are you sure", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler: { (action: UIAlertAction!) in
+            if self.car?.vin != nil{ DataRepo.getInstance().removeCars(index: self.index!)
+                self.navigationController?.popViewController(animated: true)
+            } else if self.bus?.vin != nil{
+                DataRepo.getInstance().removeBuses(index: self.index!)
+                self.navigationController?.popViewController(animated: true)
+            }
+            else {
+                DataRepo.getInstance().removeMotorcycles(index: self.index!)
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+        }
+        )
+        let defaultAction2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        alertController.addAction(defaultAction2)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+    }
+
 }

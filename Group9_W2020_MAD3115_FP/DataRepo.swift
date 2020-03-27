@@ -86,7 +86,18 @@ class DataRepo{
     func removeOwner(index: Int){
         self.owners.remove(at: index)
     }
+    func removeCars(index: Int){
+        self.cars.remove(at: index)
+    }
     
+    func removeMotorcycles(index: Int){
+        self.motorcycles.remove(at: index)
+    }
+    
+    func removeBuses(index: Int){
+        self.buses.remove(at: index)
+    }
+
     
     
     

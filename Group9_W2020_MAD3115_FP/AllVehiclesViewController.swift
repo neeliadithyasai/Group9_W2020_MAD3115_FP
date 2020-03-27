@@ -116,7 +116,7 @@ extension AllVehiclesViewController: UITableViewDelegate,UITableViewDataSource{
             return motorcycles.count
         }
         else
-        {return rowsToDisplay.count}
+        {return buses.count}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
